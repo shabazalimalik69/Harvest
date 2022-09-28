@@ -1,8 +1,8 @@
 .Footer {
-    height: 500px;
     background-color: #1d1e1c;
     color: #ffff;
     font-weight: 600;
+    padding-bottom: 1px;
   }
   .footer {
     width: 80%;
@@ -79,6 +79,10 @@
     border: 1px solid #ffff;
     padding: 10px 0;
     border-radius: 20px;
+   }
+
+   .forcast:hover{
+    background-color: #a5a19c;
    }
 
    
