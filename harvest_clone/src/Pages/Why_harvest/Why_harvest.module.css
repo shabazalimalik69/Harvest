@@ -1,0 +1,378 @@
+.body{
+    background-color: #FFF8F1;
+}
+
+
+
+.main_div{
+background-image: url("https://19495563.fs1.hubspotusercontent-na1.net/hubfs/19495563/raw_assets/public/harvest-theme/images/auras/aura-spike-bottom-right.jpg");
+background-size: 687px 410px;
+background-repeat: no-repeat;
+background-position: calc(50% + 340px) bottom;
+background-position-x: calc(50% + 340px);
+background-position-y: bottom;
+width: 100%;
+height:425px;
+border-bottom: 1px solid rgba(250,93,0,100%);
+background-color: rgb(255, 246, 240);
+display:flex;
+
+
+}
+.main_div2{
+    background-image: url("https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/illoglyphs/footer-illo-comp.svg");
+    background-size: 380px 250px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 340px) bottom;
+    background-position-x: calc(50% + 340px);
+    background-position-y: center;
+    width: 100%;
+    height: 425px;
+    border-bottom: 1px solid rgba(250,93,0,100%);
+    background-color:white;
+    display:flex;
+    }
+
+
+.main_div>div{
+display: block;
+/* border: 1px solid; */
+width: 65%;
+}
+
+.h1{
+   
+    margin-left:8%;
+    margin-top: 7%;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #1d1e1c;
+    font-size: 50px;
+    font-weight: 100;
+    text-align: left;
+    
+    
+}
+.h3{
+    margin-left:8%;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: MuotoWeb,sans-serif;
+    font-style: normal;
+    color: #1d1e1c;
+    font-size: 29px;
+    text-align:left;
+    
+}
+.btn{
+
+   display: flex;
+   margin-top: 5%;
+   margin-left: 8%;
+   background-color:rgb(247, 98, 12);
+   padding: 12px 25px ;
+   color: #FFF8F1;
+   border-radius: 20px;
+   font-size: 20px;
+   font-weight: 700;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+   
+
+}
+.btn:hover{
+    background-color: #fc6107;
+    
+}
+.p_div{
+    width: 50%;
+    height: auto;
+    /* border: 1px solid; */
+    margin-left: -15%;
+
+}
+.p{
+    font-size: 18px;
+    color: gray;
+    margin-top: 8%;
+    /* margin-left: -25%; */
+    text-align: left;
+    /* font-weight: 700; */
+}
+.btn_And_p_div{
+    /* border: 1px solid; */
+    display: flex;
+    margin-left: 8%;
+    margin-top: 5%;
+    height: 50px;
+    width: 90%;
+    /* justify-content: space-between; */
+}
+.btn_div{
+    /* border: 1px solid red; */
+    width: 30%;
+}
+.btn_div{
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+.btn2{
+
+    display: flex;
+   margin-top: 5%;
+   /* margin-left: 8%; */
+   background-color:black;
+   padding: 12px 25px ;
+   color: #FFF8F1;
+   border-radius: 20px;
+   font-size: 20px;
+   font-weight: 700;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+}
+.btn2:hover{
+    background-color: #1d1e1c;
+}
+
+.second_div{
+
+  
+width: 90%;
+height: 625px;
+border-bottom: 1px solid rgba(250,93,0,100%);
+background-color: rgb(255, 246, 240);
+display:flex;
+margin: auto;
+}
+
+.second_div__first_div{
+    width: 47%;
+    height: 100%;
+    /* border: 1px solid; */
+}
+.second_div__second_div{
+    width: 55%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+.h4{
+
+    /* margin-left:8%; */
+    margin-top: 15%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: #1d1e1c;
+    font-weight: 500;
+    font-size: 42px;
+    text-align: left;
+    
+
+}
+.p1{
+    font-size: 20px;
+    /* margin-left: 7%; */
+    margin-top: 3%;
+    font-weight: 500;
+    text-align: left;
+    
+}
+.p2{
+    font-size: 20px;
+    /* margin-left: 7%; */
+    /* margin-top: 3%; */
+    font-weight: 500;
+    text-align: left;
+
+}
+
+.right_img_div{
+    /* border: 1px solid; */
+  
+    height: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 15%;
+}
+.bellow_picture_text{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 18px;
+    color: gray;
+}
+.company_name{
+    width: 100%;
+    height:200px;
+    border-bottom: 1px solid #fc6107;
+    display: flex;
+    justify-content: space-around;
+
+}
+.company_name_img{
+    width: 60px;
+    height: 60px;
+    margin-top: 5%;
+    background-color:transparent;
+}
+@media screen and (min-width:950px) and (max-width:1210px) {
+
+    .main_div{
+        width: 100%;
+        height: 500px;
+        
+        }
+        .main_div>div{
+            /* border: 1px solid; */
+            width: 90%;
+
+            
+        }
+
+        .btn_And_p_div{
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-left:5%;
+           /* border: 1px solid; */
+        }
+        .p_div{
+            /* border: 1px solid; */
+            width: 100%;
+            margin-left: 5%;
+            margin-top: -5%;
+        }
+        /* .h1{
+            margin-left: 1%;
+        } */
+        .p{
+            /* border: 1px solid; */
+            width: 100%;
+            
+        }
+        .second_div{
+            /* border: 1px solid; */
+            height: 715px;
+        }
+        .right_img_div{
+            /* border: 1px solid; */
+            margin-top: 30%;
+        }
+        .main_div2{
+
+            background-image: url("https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/illoglyphs/footer-illo-comp.svg");
+            background-size: 350px 200px;
+            background-position-x: calc(30% + 340px);
+            height: 430px;
+    
+        }
+        .main_div2>div{
+            /* border: 1px solid; */
+            width: 50%;
+           
+        }
+}
+
+@media screen and (min-width:350px) and (max-width:950px) {
+
+    .main_div{
+        width: 100%;
+        height: 500px;
+        /* border: 1px solid; */
+        
+        }
+        .main_div>div{
+            width: 100%;
+            
+        }
+        .h1{
+            font-size: 41px;
+        }
+
+        .btn_And_p_div{
+            display: block;
+            width: 90%;
+            height: auto;
+            margin:auto;
+          
+        }
+        .btn_div{
+           
+            width: 100%;
+        }
+        .btn{
+            display: inline-block;
+            margin: auto;
+            /* padding: 10px 140px 10px 140px ; */
+            margin-top: 5%;
+            width: 100%;
+            
+
+        }
+        .p_div{
+            
+            margin: auto;
+            width: 100%;
+            
+        }
+        .p{
+            text-align: center;
+            margin-top:5%;
+        }
+        .second_div{
+            display: flex;
+            flex-direction: column;
+            /* border: 1px solid; */
+            height:auto;
+        }
+
+        .second_div__first_div{
+            /* border: 1px solid blue; */
+            width: 100%;
+        }
+        .second_div__second_div{
+            /* border: 1px solid red; */
+            width: 100%;
+        }
+        .btn_div2{
+            /* display: flex; */
+            margin: auto;
+            width: 100%;
+            /* border: 1px solid; */
+            
+        }
+        .btn2{
+            display: inline-block;
+            width: 100%;
+            
+            font-size: 20px;
+            
+            margin-top: 10%;
+        }
+        .main_div2{
+            background-image:none;
+            
+            width: 100%;
+            height: 425px;
+            border-bottom: 1px solid rgba(250,93,0,100%);
+            background-color:white;
+            display:flex;
+            }
+            .company_name{
+                margin-top: 40%;
+                /* border: 1px solid; */
+            }
+            .company_name_img{
+                margin-top: 10%;
+            }
+            .second_div__first_div{
+                /* border: 1px solid; */
+                height: 650px;
+                order:0;
+                
+            }
+            .second_div__second_div{
+                /* border: 1px solid blue; */
+                margin-top: -10%;
+                order: -1;
+            }
+}
