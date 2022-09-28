@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Footer } from "../Components/Footer/Footer";
 import Navbar1 from "../Components/Navbar/Navbar1/Navbar1";
 import Feature from "../Pages/Features/Features";
+
 import Pricing from "../Pages/Pricing/Pricing";
 
 
@@ -21,7 +22,6 @@ const AllRoutes = () => {
     } />
 
       <Route path="/customers" element={<h1>Customers</h1>} />
-
       <Route path="/intregations" element={<h1>Intregations</h1>} />
       <Route path="/pricing" element={
       <>
@@ -30,6 +30,9 @@ const AllRoutes = () => {
       <Footer/>
       </>
     } />
+    
+      <Route path="/pricing" element={<Pricing/>} />
+
 
       <Route path="/signin" element={<h1>signin</h1>} />
     </Routes>

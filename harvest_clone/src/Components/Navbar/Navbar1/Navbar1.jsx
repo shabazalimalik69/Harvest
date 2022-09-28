@@ -40,9 +40,9 @@ const Navbar1 = () => {
   };
 
   return (
-    <Box>
+    <Box  bgColor="rgb(255,248,242)">
       <Box
-        bgColor={logo ? "white" : "rgb(251,242,235)"}
+        bgColor={logo ? "white" : "rgb(255,248,242)"}
         h="90px"
         pt={1}
         position="fixed"
@@ -90,7 +90,7 @@ const Navbar1 = () => {
               justifyContent="flex-end"
             >
               <AiOutlineMenu />
-              <Text>Menu</Text>
+              <Text>&nbsp; Menu</Text>
             </Text>
           </ListItem>
 

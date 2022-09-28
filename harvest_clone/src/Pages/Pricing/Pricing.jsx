@@ -7,12 +7,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+
+import { useEffect } from "react";
 import { useState } from "react";
 import style from "./Pricing.module.css";
 
 const Pricing = () => {
   const [toggle, setToggle] = useState(false);
   const [iniValue, setIniValue] = useState(12);
+
 
   const toggleChange = () => {
     setToggle(!toggle);
