@@ -1,5 +1,6 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+
+import Customers from "../Pages/Customers/Customers";
+
 import { Footer } from "../Components/Footer/Footer";
 import Navbar1 from "../Components/Navbar/Navbar1/Navbar1";
 import Feature from "../Pages/Features/Features";
@@ -21,7 +22,14 @@ const AllRoutes = () => {
       </>
     } />
 
-      <Route path="/customers" element={<h1>Customers</h1>} />
+
+ <Route path="/pricing" element={
+      <>
+      <Navbar1/>
+      <Customers/>
+      <Footer/>
+      </>
+    } />
       <Route path="/intregations" element={<h1>Intregations</h1>} />
       <Route path="/pricing" element={
       <>
