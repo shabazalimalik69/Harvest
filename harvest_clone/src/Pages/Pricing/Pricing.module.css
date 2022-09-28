@@ -1,0 +1,10 @@
+.text1 {
+  font-size: 35px;
+  left: 12px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1030px) {
+  .text1 {
+    font-size: 20px;
+  }
+}
