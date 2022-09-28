@@ -40,7 +40,7 @@ const Navbar1 = () => {
   };
 
   return (
-    <Box>
+    <Box >
       <Box
         bgColor={logo ? "white" : "rgb(251,242,235)"}
         h="90px"
