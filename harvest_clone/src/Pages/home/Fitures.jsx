@@ -16,7 +16,7 @@ const Feature = () => {
     </Box>
 
     <Box display="flex" gap="50px" mt='35px'>
-        <Box width="30%">
+        <Box width="40%">
             <Grid templateColumns='repeat(1, 1fr)' templateRows='repeat(3, 1fr)' gap='35px' >
                 <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px'>
                    <Box mt='25px'>

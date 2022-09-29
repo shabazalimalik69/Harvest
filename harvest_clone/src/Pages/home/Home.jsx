@@ -7,6 +7,7 @@ import Feature from './Fitures'
 import styles from "./Home.module.css"
 import Intregation from './Intregation'
 import Learning from './Learning'
+import StartTracking from './StartTracking'
 const Home = () => {
   return (
     <Box className={styles.home}>
@@ -104,8 +105,10 @@ const Home = () => {
        <CustomersStory/>
 
        <Learning/>
+       <Divider borderColor={'#FA5D00'} orientation='horizontal' />
+       {/* <BottomSection/> */}
 
-       <BottomSection/>
+       <StartTracking/>
 
        
             
