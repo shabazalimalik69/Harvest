@@ -40,12 +40,12 @@ const Navbar2 = ({setToken}) => {
           </li>
 
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/time" className={style.link1}>
               Time
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/expenses" className={style.link1}>
               Expenses
             </Link>
           </li>
@@ -55,22 +55,22 @@ const Navbar2 = ({setToken}) => {
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/team" className={style.link1}>
               Team
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/reports" className={style.link1}>
               Reports
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/invoices" className={style.link1}>
               Invoices
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/manage" className={style.link1}>
               Manage
             </Link>
           </li>
@@ -93,7 +93,7 @@ const Navbar2 = ({setToken}) => {
           </li>
 
           <li className={style.li1} style={{ float: "right" }}>
-            <Link to="" className={style.link1}>
+            <Link to="/company_account" className={style.link1}>
               Setting
             </Link>
           </li>
