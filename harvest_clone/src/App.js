@@ -4,26 +4,25 @@ import { Box } from "@chakra-ui/react";
 import Navbar2 from "./Components/Navbar/Navbar2/Navbar2";
 import { useState } from "react";
 import "./App.css";
-import Expanses from "./Pages/Expanses/Expanses";
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   const [token, setToken] = useState(false);
   return (
     <div className="App">
-      <Expanses />
-      {/* 
-      {token?
-      <Box>
-      <Navbar2 setToken={setToken}/>
-      </Box>
-      :
-      <Box>
-      <Navbar1 setToken={setToken}/>
-      <Box pt="90px">
-
-      <AllRoutes/>
-      </Box>
-      </Box>} */}
+      {token ? (
+        <Box>
+          <Navbar2 setToken={setToken} />
+        </Box>
+      ) : (
+        <Box>
+          <Navbar1 setToken={setToken} />
+          <Box pt="90px">
+            <AllRoutes />
+            <Footer />
+          </Box>
+        </Box>
+      )}
     </div>
   );
 }

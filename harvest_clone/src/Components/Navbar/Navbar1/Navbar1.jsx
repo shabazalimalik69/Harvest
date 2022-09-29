@@ -40,9 +40,9 @@ const Navbar1 = ({setToken}) => {
   };
 
   return (
-    <Box  bgColor="rgb(255,248,242)">
+    <Box  bgColor="rgb(255,244,236)">
       <Box
-        bgColor={logo ? "white" : "rgb(255,248,242)"}
+        bgColor={logo ? "white" : "rgb(255,244,236)"}
         h="90px"
         pt={1}
         position="fixed"
