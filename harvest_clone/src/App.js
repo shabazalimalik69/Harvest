@@ -5,6 +5,7 @@ import { Box } from '@chakra-ui/react';
 import Navbar2 from './Components/Navbar/Navbar2/Navbar2';
 import { useState } from 'react';
 import "./App.css";
+import { Footer } from './Components/Footer/Footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Box pt="90px">
 
       <AllRoutes/>
+      <Footer />
       </Box>
       </Box>}
 
