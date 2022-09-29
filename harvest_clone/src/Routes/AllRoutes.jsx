@@ -4,6 +4,8 @@ import Why_harvest from "../Pages/Why_harvest/Why_harvest";
 
 import Pricing from "../Pages/Pricing/Pricing";
 import Feature from "../Pages/Feature/Feature";
+import Signup from "../Pages/Signup/Signup";
+import Signin from "../Pages/Signin/Signin";
 
 const AllRoutes = () => {
   return (
@@ -17,7 +19,8 @@ const AllRoutes = () => {
 
       <Route path="/intregations" element={<h1>Intregations</h1>} />
       <Route path="/pricing" element={<Pricing />} />
-      <Route path="/signin" element={<h1>signin</h1>} />
+      <Route path="/signin" element={<Signin/>} />
+      <Route path="/signup" element={<Signup/>} />
 
       {/* Afer sign in Routes */}
     </Routes>
