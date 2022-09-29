@@ -1,5 +1,5 @@
 import Customers from "../Pages/Customers/Customers";
-
+import { Route, Routes } from "react-router-dom";
 import { Footer } from "../Components/Footer/Footer";
 import Navbar1 from "../Components/Navbar/Navbar1/Navbar1";
 import Feature from "../Pages/Features/Features";
