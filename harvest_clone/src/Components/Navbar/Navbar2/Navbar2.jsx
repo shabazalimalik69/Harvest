@@ -50,7 +50,7 @@ const Navbar2 = ({setToken}) => {
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="" className={style.link1}>
+            <Link to="/project" className={style.link1}>
               Projects
             </Link>
           </li>
