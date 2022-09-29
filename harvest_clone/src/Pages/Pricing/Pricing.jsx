@@ -7,12 +7,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+
 import { useState } from "react";
 import style from "./Pricing.module.css";
 
 const Pricing = () => {
   const [toggle, setToggle] = useState(false);
-  const [iniValue, setIniValue] = useState(12);
+
 
   const toggleChange = () => {
     setToggle(!toggle);
@@ -20,9 +21,9 @@ const Pricing = () => {
 
   return (
     <Box
-      bgColor="rgb(251,242,235)"
+      bgColor="rgb(255,244,236)"
       h="100vh"
-      bgImage="url('https://19495563.fs1.hubspotusercontent-na1.net/hubfs/19495563/raw_assets/public/harvest-theme/images/auras/aura-spike-bottom-right.jpg')"
+      
     >
       <Text fontSize={50} fontWeight={350} paddingTop={5}>
         Pricing

@@ -15,7 +15,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-const Navbar1 = () => {
+const Navbar1 = ({setToken}) => {
   const [logo, setLogo] = useState(false);
   const [show, hide] = useState(false);
 
@@ -40,9 +40,9 @@ const Navbar1 = () => {
   };
 
   return (
-    <Box >
+    <Box  bgColor="rgb(255,244,236)">
       <Box
-        bgColor={logo ? "white" : "rgb(251,242,235)"}
+        bgColor={logo ? "white" : "rgb(255,244,236)"}
         h="90px"
         pt={1}
         position="fixed"
@@ -74,11 +74,11 @@ const Navbar1 = () => {
           </ListItem>
 
           <ListItem className={style.display}>
-            <Link to="intregations">Intregations</Link>
+            <Link to="/intregations">Intregations</Link>
           </ListItem>
 
           <ListItem className={style.display}>
-            <Link to="pricing">Pricing</Link>
+            <Link to="/pricing">Pricing</Link>
           </ListItem>
 
           <ListItem className={style.display1}>
@@ -90,7 +90,7 @@ const Navbar1 = () => {
               justifyContent="flex-end"
             >
               <AiOutlineMenu />
-              <Text>Menu</Text>
+              <Text>&nbsp; Menu</Text>
             </Text>
           </ListItem>
 
@@ -117,7 +117,7 @@ const Navbar1 = () => {
             </Box>
           </ListItem>
           <ListItem className={style.right}>
-            <Link to="/signin">Sign in</Link>
+           <Text onClick={()=>setToken(true)}> <Link to="/signin">Sign in</Link></Text>
           </ListItem>
         </UnorderedList>
       </Box>
