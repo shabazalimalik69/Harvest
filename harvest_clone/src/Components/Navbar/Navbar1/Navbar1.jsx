@@ -74,11 +74,11 @@ const Navbar1 = ({setToken}) => {
           </ListItem>
 
           <ListItem className={style.display}>
-            <Link to="intregations">Intregations</Link>
+            <Link to="/intregations">Intregations</Link>
           </ListItem>
 
           <ListItem className={style.display}>
-            <Link to="pricing">Pricing</Link>
+            <Link to="/pricing">Pricing</Link>
           </ListItem>
 
           <ListItem className={style.display1}>
