@@ -1,30 +1,35 @@
-import { Box, Button, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Image,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Navbar2.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
 
-const Navbar2 = ({setToken}) => {
+const Navbar2 = ({ setToken }) => {
   const [show, hide] = useState(false);
-  const [text,setText]=useState("");
+  const [text, setText] = useState("");
 
   const handleNav2 = () => {
     hide(!show);
   };
 
   const handleClose = (value) => {
-    setText(value)
-    console.log(value)
+    setText(value);
+    console.log(value);
     setTimeout(() => {
       hide(false);
-    
     }, 500);
   };
 
-
-  const handleSignOut=()=>{
-    setToken(false)
-  }
+  const handleSignOut = () => {
+    setToken(false);
+  };
   return (
     <Box>
       <Box className={style.box_main}>
@@ -45,7 +50,7 @@ const Navbar2 = ({setToken}) => {
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="/expenses" className={style.link1}>
+            <Link to="/expanses" className={style.link1}>
               Expenses
             </Link>
           </li>
@@ -78,17 +83,57 @@ const Navbar2 = ({setToken}) => {
             <Link to="" className={style.link1}>
               Akash Keshari
             </Link>
-            <Box className={style.dropbox} >
-              <Box w="100%" display="flex" justifyContent="center" alignItems="center">
-                <Text display="flex"  justifyContent="start" alignItems="center" gap="10px" paddingLeft={5}><Image src="favicon.ico" alt="user pic" borderRadius="50%" w="20%"/><Box w="80%" fontSize={22} textAlign="justify" ><Text>Akash Keshari</Text><Text mt={-2}>masai</Text></Box> </Text>
+            <Box className={style.dropbox}>
+              <Box
+                w="100%"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Text
+                  display="flex"
+                  justifyContent="start"
+                  alignItems="center"
+                  gap="10px"
+                  paddingLeft={5}
+                >
+                  <Image
+                    src="favicon.ico"
+                    alt="user pic"
+                    borderRadius="50%"
+                    w="20%"
+                  />
+                  <Box w="80%" fontSize={22} textAlign="justify">
+                    <Text>Akash Keshari</Text>
+                    <Text mt={-2}>masai</Text>
+                  </Box>{" "}
+                </Text>
               </Box>
-             <Text className={style.text11}> <Link to="">My Profile</Link></Text>
-             <Text className={style.text11}> <Link to="">My time reports</Link></Text>
-             <Text className={style.text11}> <Link to="">Notifications</Link></Text>
-             <Text className={style.text11}> <Link to="">refer a friend</Link></Text>
-             <hr/>
-             <Text className={style.text11}> <Link to="">Switch accounts</Link></Text>
-             <Text className={style.text11}> <Text onClick={handleSignOut}>Sign out</Text></Text>
+              <Text className={style.text11}>
+                {" "}
+                <Link to="">My Profile</Link>
+              </Text>
+              <Text className={style.text11}>
+                {" "}
+                <Link to="">My time reports</Link>
+              </Text>
+              <Text className={style.text11}>
+                {" "}
+                <Link to="">Notifications</Link>
+              </Text>
+              <Text className={style.text11}>
+                {" "}
+                <Link to="">refer a friend</Link>
+              </Text>
+              <hr />
+              <Text className={style.text11}>
+                {" "}
+                <Link to="">Switch accounts</Link>
+              </Text>
+              <Text className={style.text11}>
+                {" "}
+                <Text onClick={handleSignOut}>Sign out</Text>
+              </Text>
             </Box>
           </li>
 
@@ -101,114 +146,122 @@ const Navbar2 = ({setToken}) => {
       </Box>
 
       <Box className={show ? style.box1 : style.box2}>
-        <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" >
-        <Box h="-moz-max-content" w="90%">
-          <Box className={style.box3}>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Time")} >Time</Box>
-              </Link>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+        >
+          <Box h="-moz-max-content" w="90%">
+            <Box className={style.box3}>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Time")}>Time</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Expenses")}>Expenses</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Projects")}>Projects</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Team")}>Team</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Reports")}>Reports</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Invoices")}>Invoices</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Manage")}>Manage</Box>
+                </Link>
+              </Box>
+              <Box className={style.box31}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Setting")}>Setting</Box>
+                </Link>
+              </Box>
             </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Expenses")}>Expenses</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Projects")}>Projects</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Team")}>Team</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Reports")}>Reports</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Invoices")}>Invoices</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Manage")}>Manage</Box>
-              </Link>
-            </Box>
-            <Box className={style.box31}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Setting")}>Setting</Box>
-              </Link>
+          </Box>
+
+          <Box w="90%">
+            <Box className={style.box41}>
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("My Profile")}>
+                    My Profile
+                  </Box>
+                </Link>
+              </Box>
+
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("My Time Report")}>
+                    My Time Report
+                  </Box>
+                </Link>
+              </Box>
+
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Notifications")}>
+                    Notifications
+                  </Box>
+                </Link>
+              </Box>
+
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Refer a friend")}>
+                    Refer a friend
+                  </Box>
+                </Link>
+              </Box>
+
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Switch Account")}>
+                    Switch Account
+                  </Box>
+                </Link>
+              </Box>
+
+              <Box className={style.box411}>
+                {" "}
+                <Link to="">
+                  <Box onClick={() => handleClose("Signout")}>Signout</Box>
+                </Link>
+              </Box>
             </Box>
           </Box>
         </Box>
-
-
-        <Box w="90%"  >
-          <Box className={style.box41}>
-        <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("My Profile")}>My Profile</Box>
-              </Link>
-            </Box>
-
-            <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("My Time Report")}>My Time Report</Box>
-              </Link>
-            </Box>
-
-            <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Notifications")}>Notifications</Box>
-              </Link>
-            </Box>
-
-            <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Refer a friend")}>Refer a friend</Box>
-              </Link>
-            </Box>
-
-            <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Switch Account")}>Switch Account</Box>
-              </Link>
-            </Box>
-
-            <Box className={style.box411}>
-              {" "}
-              <Link to="">
-                <Box onClick={()=>handleClose("Signout")}>Signout</Box>
-              </Link>
-            </Box>
-
-
-            </Box>
-        </Box>
-
-        </Box>
-
       </Box>
-
-
     </Box>
   );
 };
