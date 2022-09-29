@@ -10,7 +10,7 @@ const ReportAnalysis = () => {
     <GridItem className={styles.gridItem4}>
      <Text className={styles.text4}>Reports & analysis</Text>
      <Text className={styles.text5}>A wide selection of visual reports keep projects running smoothly and your team supported.</Text>
-     <Link textDecoration="none" to="/signup"> <Button className={styles.button}>Start your free trial</Button></Link>
+     <Link textDecoration="none" to="/signup"> <Button display="block" alignItems = "flex-start" color="white" backgroundColor="#FA5D00" borderRadius="10px">Start your free trial</Button></Link>
     </GridItem>
     <GridItem className={styles.gridItem2}>
         <Image borderTopLeftRadius="10px" borderBottomRightRadius="10px" src='https://www.getharvest.com/hs-fs/hubfs/screenshot-features-projects.png?width=787&name=screenshot-features-projects.png'/>
