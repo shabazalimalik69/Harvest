@@ -5,6 +5,7 @@ import Navbar2 from "./Components/Navbar/Navbar2/Navbar2";
 import { useState } from "react";
 import "./App.css";
 import { Footer } from "./Components/Footer/Footer";
+import AllRoutes2 from "./Routes/AllRoutes2";
 
 function App() {
   const [token, setToken] = useState(false);
@@ -13,6 +14,9 @@ function App() {
       {token ? (
         <Box>
           <Navbar2 setToken={setToken} />
+          <Box pt="40px">
+            <AllRoutes2 />
+          </Box>
         </Box>
       ) : (
         <Box>
