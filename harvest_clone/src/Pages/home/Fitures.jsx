@@ -18,7 +18,7 @@ const Feature = () => {
     <Box display="flex" gap="50px" mt='35px'>
         <Box width="40%">
             <Grid templateColumns='repeat(1, 1fr)' templateRows='repeat(3, 1fr)' gap='35px' >
-                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px'>
+                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px' className={styles.Feature_Section_txt}>
                    <Box mt='25px'>
                     <Image mb='20px' width='50px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-time.svg' />
                    </Box> 
@@ -27,7 +27,7 @@ const Feature = () => {
                     <Text fontSize='17px'>Simple and intuitive time tracking your team will love.</Text>
                    </Box>
                 </GridItem>
-                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px'>
+                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px' className={styles.Feature_Section_txt}>
                    <Box mt='25px'>
                     <Image mb='20px' width='50px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-reporting.svg' />
                    </Box> 
@@ -36,7 +36,7 @@ const Feature = () => {
                     <Text fontSize='17px'>Unlock the insights that help your business thrive.</Text>
                    </Box>
                 </GridItem>
-                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px'>
+                <GridItem border="1px solid #FA5D00" display='flex' gap='30px' padding='20px' borderRadius='25px' className={styles.Feature_Section_txt}>
                    <Box mt='25px'>
                     <Image mb='20px' width='50px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-invoicing.svg' />
                    </Box> 

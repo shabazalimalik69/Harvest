@@ -13,7 +13,7 @@ const Home = () => {
     <Box className={styles.home}>
         <Box className={styles.TimeTracking} bg="#fff4ec">
             <Box className={styles.TimeTracking_box1}>
-                <Box display='flex' mt='2' alignItems='center'>
+                <Box display='flex' mt='2' alignItems='center' mb='20px'>
                     {Array(5).fill('').map((_, i) => (
                     <StarIcon key={i} color={i < 5 ? '#fa5d00' : 'gray.300'}/>))}
                     <Text>4.6</Text>
@@ -21,21 +21,21 @@ const Home = () => {
                         (748 reviews)
                     </Box>
                 </Box>
-                <Box width="80%">
+                <Box width="80%" className={styles.TimeTracking_Sbox1}>
                     <Text fontFamily="WT Monarch Nova" fontStyle="normal" fontSize="48px" noOfLines={[1, 2]} lineHeight='56px' marginBottom='24px'>
                      Time tracking your team wants to use
                     </Text>
-                    <Text fontWeight='600' fontSize= '18px' lineHeight= '26px' color= '#6D6E6D' marginBottom= "20px">
+                    <Text fontWeight='600' fontSize= '18px' lineHeight= '26px' color= '#6D6E6D' marginBottom= "20px" >
                     Finally, an easy way to track time across projects. Reports, invoicing, and more. All in just a few clicks.
                     </Text>
                 </Box>
 
-                <Box>
-                    <Input variant='outline' placeholder='Work Email' size='lg' width="70%" bg="#ffff"/>
+                <Box className={styles.TimeTracking_Sbox2}>
+                    <Input className={styles.TimeTracking_Sbox2_inp} variant='outline' placeholder='Work Email' size='lg' width="70%" bg="#ffff" />
                     <Button marginLeft='15px' bg="#fa5d00" color="#ffff" size='lg' borderRadius='10px'>
                         Get Started
                     </Button>
-                    <Text fontWeight='600' fontSize= '15px' lineHeight= '20px' color= '#9F9F9F' marginBottom= "20px 0 0">Free 30-day trial. No credit card required.
+                    <Text fontWeight='600' fontSize= '15px' lineHeight= '20px' color= '#9F9F9F' marginBottom= "20px 0 0" className={styles.TimeTracking_Sbox1_txt}>Free 30-day trial. No credit card required.
                     </Text>
                 </Box>
             </Box>
