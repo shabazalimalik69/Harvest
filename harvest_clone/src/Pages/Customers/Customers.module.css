@@ -417,7 +417,11 @@
 /* -------------------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 0px) and (max-width: 648px) {
   .customer_top {
+<<<<<<< HEAD
     padding: 15% 5%;
+=======
+    padding: 25% 5%;
+>>>>>>> 83fea43cb01f896256555741487c8c764a7f63dc
   }
   .customer_top1 {
     text-align: left;
