@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import style from "./Footer.module.css";
 import logo from "./logo.png"
 
-export function Footer() {
+export const Footer = () => {
+
   return (
     <div className={style.Footer}>
       <div className={style.footer}>
         <div className={style.sitemap}>
-        <div className={style.harvest}>
-           <img src={logo} alt="" />
+          <div className={style.harvest}>
+            <img src={logo} alt="" />
           </div>
           <div className={style.harvest}>
             <h4>Harvest</h4>
@@ -114,10 +115,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
 
         <div className={style.forcast}>
-        We also make: Harvest Forecast – the fast and simple way to schedule your team across projects.
+          We also make: Harvest Forecast – the fast and simple way to schedule your team across projects.
         </div>
 
 
@@ -127,18 +128,18 @@ export function Footer() {
           </div>
           <div>
             <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
-            <Link>Twitter</Link>
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+              <Link>Twitter</Link>
             </div>
 
             <div>
-            <img src="https://cdn-icons-png.flaticon.com/128/4008/4008233.png" alt="LinkedIn" />
-            <Link>LinkedIn</Link>
+              <img src="https://cdn-icons-png.flaticon.com/128/4008/4008233.png" alt="LinkedIn" />
+              <Link>LinkedIn</Link>
             </div>
 
             <div>
               <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Instagram" />
-            <Link>Instagram</Link>
+              <Link>Instagram</Link>
             </div>
           </div>
         </div>
@@ -146,3 +147,5 @@ export function Footer() {
     </div>
   );
 }
+
+
