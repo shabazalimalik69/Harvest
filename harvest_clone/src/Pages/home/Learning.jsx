@@ -13,7 +13,7 @@ const Learning = () => {
         {/* <Divider borderColor={'#FA5D00'} orientation='horizontal' /> */}
         <Box w='50%' margin='auto'>
         <Grid templateColumns='repeat(1, 1fr)' templateRows='repeat(3, 1fr)'  >
-                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' >
+                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' className={styles.Learning_Section_txt} >
                    <Box mt='25px'>
                     <Image mb='20px' h='75px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/illo-75-folder.svg' />
                    </Box> 
@@ -28,7 +28,7 @@ const Learning = () => {
                     
                    </Box>
                 </GridItem>
-                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' >
+                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' className={styles.Learning_Section_txt} >
                    <Box mt='25px'>
                     <Image mb='20px' h='75px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/illo-75-laptop.svg' />
                    </Box> 
@@ -43,7 +43,7 @@ const Learning = () => {
                     
                    </Box>
                 </GridItem>
-                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' >
+                <GridItem borderTop="1px solid #FA5D00"  display='flex' gap='30px' padding='20px' className={styles.Learning_Section_txt} >
                    <Box mt='25px'>
                     <Image mb='20px' h='75px' src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/illo-75-help.svg' />
                    </Box> 
