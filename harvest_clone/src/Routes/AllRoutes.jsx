@@ -11,42 +11,10 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/harvest" element={<h1>Harvest</h1>} />
       <Route path="/whyHarvest" element={<h1>whyHarvest</h1>} />
-
-      <Route
-        path="/features"
-        element={
-          <>
-            <Navbar1 />
-            <Feature />
-            <Footer />
-          </>
-        }
-      />
-
-      <Route
-        path="/customers"
-        element={
-          <>
-            <Navbar1 />
-            <Customers />
-            <Footer />
-          </>
-        }
-      />
+      <Route path="/features" element={<Feature />} />
+      <Route path="/customers" element={<Customers />} />
       <Route path="/intregations" element={<h1>Intregations</h1>} />
-      <Route
-        path="/pricing"
-        element={
-          <>
-            <Navbar1 />
-            <Pricing />
-            <Footer />
-          </>
-        }
-      />
-
       <Route path="/pricing" element={<Pricing />} />
-
       <Route path="/signin" element={<h1>signin</h1>} />
     </Routes>
   );
