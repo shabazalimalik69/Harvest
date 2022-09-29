@@ -15,7 +15,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-const Navbar1 = () => {
+const Navbar1 = ({setToken}) => {
   const [logo, setLogo] = useState(false);
   const [show, hide] = useState(false);
 
@@ -117,7 +117,7 @@ const Navbar1 = () => {
             </Box>
           </ListItem>
           <ListItem className={style.right}>
-            <Link to="/signin">Sign in</Link>
+           <Text onClick={()=>setToken(true)}> <Link to="/signin">Sign in</Link></Text>
           </ListItem>
         </UnorderedList>
       </Box>
