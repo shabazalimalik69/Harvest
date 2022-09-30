@@ -185,7 +185,7 @@
     display: flex;
     height: 60px;
     margin-left: 5%;
-    margin-top: -2%;
+    margin-top: 2%;
     justify-content: space-around;
 }
 .saveProjectbtn{
@@ -277,6 +277,131 @@ opacity: 0.5;
     cursor: pointer;
     text-decoration: underline;
 }
+.budget{
+    width: 90%;
+    height: 450px;
+    border-bottom: 1px solid gray;
+    
+    margin: auto;
+    margin-top: -1%;
+    display: flex;
+}
+.left_budget{
+    border-bottom: 1px solid gray;
+    width: 20%;
+    height: 100%;
+    
+
+}
+.right_budget{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+.top_budget{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.top_budget_box{
+    border: 1px solid red;
+    width: 32%;
+    height: 80%;
+    border-radius: 8px;
+}
+.top_budget_box:hover{
+    background-color: #FFE7D9;
+    cursor: pointer;
+    /* border: 2px solid black; */
+
+}
+.p4{
+    text-align: center;
+    font-size: 13px;
+}
+.p5{
+    font-weight: 500;
+}
+.top_budget_box1{
+    font-weight: 500;
+    background-color:#FFE7D9;
+    border: 1px solid red;
+    width: 32%;
+    height: 80%;
+    border-radius: 8px;
+    
+}
+
+.bottom_box{
+    border: 1px solid red;
+    width: 100%;
+    height: 75%;
+    background-color:#FFF8F1 ;
+}
+.bottom_box>div{
+
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100%;
+
+}
+.p10{
+    text-align: justify;
+    font-weight: 500;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.p11{
+    color: gray;
+    text-align: justify;
+    margin-top:5px;
+    margin-left: 2%;
+}
+.budget_first_box{
+    /* border: 1px solid; */
+    width: 50%;
+    height: 15%;
+    /* margin-left: 2%; */
+    margin-top: 5px;
+    display: flex;
+}
+.budget_first_box>input{
+    border: 1px solid gray;
+    height: 40px;
+    margin-left: 3%;
+    border-radius: 5px;
+    margin-top: 1%;
+    color: black;
+}
+.checkbox{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 100px;
+}
+.checkbox>div{
+    display: flex;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.p13{
+    margin-left: 5px;
+}
+.onebox{
+    width: 100px;
+    border: 1px solid gray;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #1D1E1C12;
+    font-size: 13px;
+}
+
+
+
 /* @media screen and (min-width:920px) and (max-width:1210px){
     .main_div{
         width: 100%;

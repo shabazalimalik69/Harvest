@@ -40,8 +40,8 @@
     overflow: hidden;
     cursor: pointer;
     border-radius: 5px;
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(100%); /* FF 35+ */
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(100%); 
   }
   .f_title {
     width: 70%;
@@ -66,8 +66,8 @@
   }
   
   .f_card:hover {
-    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-    filter: grayscale(0%); /* FF 35+ */
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); 
     border: 2px solid #fa6102;
   }
 
@@ -118,4 +118,84 @@
   }
   
  
+  @media screen  and (min-width:770px) and (max-width:850px){
+    .footer {
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 949px) {
+    .footer {
+      width: 95%;
+    }
+    .copyright>div>div{
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+    }
+  }
   
+  @media screen and (min-width: 580px) and (max-width: 750px) {
+    .footer {
+      width: 100%;
+    }
+    .copyright{
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .copyright>div>div{
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+    }
+  }
+  
+  @media screen and (min-width: 450px) and (max-width: 580px) {
+    .footer {
+      width: 80%;
+    }
+    .sitemap {
+      display: block;
+      margin: auto;
+    }
+    .f_card{
+      display: block;
+      margin: auto;
+    }
+    .copyright{
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .copyright>div>div{
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+    }
+  }
+  
+  @media screen and (min-width: 385px) and (max-width: 450px) {
+    .footer {
+      width: 100%;
+    }
+    .sitemap {
+      display: block;
+      margin: auto;
+    }
+    .f_card{
+      display: block;
+      margin: auto;
+    }
+    .copyright{
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .copyright>div>div{
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
+  
+  }

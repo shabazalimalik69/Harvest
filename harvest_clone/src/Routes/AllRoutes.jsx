@@ -6,19 +6,22 @@ import Pricing from "../Pages/Pricing/Pricing";
 import Feature from "../Pages/Feature/Feature";
 import Signup from "../Pages/Signup/Signup";
 import Signin from "../Pages/Signin/Signin";
+import Home from "../Pages/home/Home";
+import Intregations from "../Pages/intregations/Intregations";
+
 
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/harvest" element={<h1>Harvest</h1>} />
+      <Route path="/" element={<Home/>} />
       <Route path="/whyHarvest" element={<Why_harvest />} />
 
       <Route path="/features" element={<Feature />} />
 
       <Route path="/customers" element={<Customers />} />
 
-      <Route path="/intregations" element={<h1>Intregations</h1>} />
+      <Route path="/intregations" element={<Intregations/>} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/signin" element={<Signin/>} />
       <Route path="/signup" element={<Signup/>} />
