@@ -1,13 +1,12 @@
-import axios from "axios";
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
 import style from "./Expanses.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 const getProjectData = async () => {
-  const response = await axios.get("http://localhost:8000/expenses/expenses");
+  const response = await axios.get(
+    "http://localhost:8000/expenses/expenses"
+    // "http://localhost:8000/expenses/expenses?project_name=Abishek"
+  );
 
   return response.data;
 };
@@ -28,7 +27,6 @@ const Expanses = () => {
       const response = await axios.post(
         "http://localhost:8000/expenses/expenses",
         {
-          id: data.length + 1,
           project_name: project,
           category: category,
           date: date,
@@ -79,8 +77,8 @@ const Expanses = () => {
   const handleData = async () => {
     try {
       const pData = await getProjectData();
-      console.log(pData);
-      setData(pData);
+      console.log(pData.data);
+      setData(pData.data);
     } catch (err) {
       console.log(err.message);
     }
@@ -168,7 +166,21 @@ const Expanses = () => {
 
         <div className="show_added_data">
           {data.map((elem) => (
-            <div key={elem._id}> {elem.project_name}</div>
+            <div className={style.show_elem}>
+              <div className={style.elem_date}>
+                <p>{elem.date}</p>
+              </div>
+              <div className={style.elem_project_name}>
+                <h3>{elem.project_name}</h3>
+                <p>{elem.category}</p>
+              </div>
+              <div className={style.elem_amount}>
+                <p>{elem.amount}</p>
+              </div>
+              <button className={style.elem_button} type="button">
+                Edit
+              </button>
+            </div>
           ))}
         </div>
 
