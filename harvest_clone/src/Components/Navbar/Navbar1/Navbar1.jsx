@@ -203,7 +203,7 @@ const Navbar1 = () => {
               >
 
                 <Box onClick={handleToggle2}>Sign in</Box>
-
+                
               </Button>{" "}
             </Box>
             <Box className={style.box41} onClick={handleClose}>

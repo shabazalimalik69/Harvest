@@ -1,6 +1,7 @@
 import { StarIcon } from '@chakra-ui/icons'
 import { Box, Button, Divider, Image, Input, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
+import BotChat from '../../Components/botChat/BotChat'
 import BottomSection from '../Feature/BottomSection'
 import CustomersStory from './customerStory/CustomersStory'
 import Feature from './Fitures'
@@ -95,10 +96,8 @@ return (
     <Divider borderColor={'#FA5D00'} orientation='horizontal' />
     {/*
     <BottomSection /> */}
-
+ <BotChat/>
     <StartTracking />
-
-
 
 </Box>
 )
