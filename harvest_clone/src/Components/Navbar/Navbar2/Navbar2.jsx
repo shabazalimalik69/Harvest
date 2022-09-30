@@ -88,10 +88,11 @@ const Navbar2 = () => {
               Manage
             </Link>
           </li>
-          <li className={style.li1} style={{ float: "right" }}>
-            <Link to="" className={style.link1}>
-              Akash Keshari
-            </Link>
+          <li className={style.li1} style={{ float: "right" }} >
+          
+            {/* <Box display="flex"  border="1px solid white"> <Box w="30px" h="30px" borderRadius="50%" border="1px solid rgb(93,64,55)" bgColor="rgb(93,64,55)"><Image src=""  borderRadius="50%" w="100%"/></Box> <Text>Akash Keshari</Text></Box> */}
+            <Text color="white"  display="flex" alignItems="center" gap={2} pt={2} pl={1} pr={1} _hover={{bgColor:"rgba(218, 218, 218,.3)"}}><Box w="35px" h="35px" border="1px solid rgb(93,64,55)" borderRadius="50%" bgColor="rgb(93,64,55)"><Image src="profile.ico" borderRadius="50%" /></Box><Text>Akash</Text></Text>
+          
             <Box className={style.dropbox} >
               <Box
                 w="100%"
@@ -106,12 +107,16 @@ const Navbar2 = () => {
                   gap="10px"
                   paddingLeft={5}
                 >
+                  <Box w="20%" borderRadius="50%" border="1px solid rgb(93,64,55)">
                   <Image
-                    src="favicon.ico"
+                    w="100%"
+                    src="profile.ico"
                     alt="user pic"
                     borderRadius="50%"
-                    w="20%"
+              
+                    bgSize="cover" 
                   />
+                  </Box >
                   <Box w="80%" fontSize={22} textAlign="justify" >
                     <Text>Akash Keshari</Text>
                     <Text mt={-2}>masai</Text>
