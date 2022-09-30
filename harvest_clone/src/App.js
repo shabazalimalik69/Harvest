@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer/Footer";
 import AllRoutes2 from "./Routes/AllRoutes2";
 import { useSelector } from "react-redux";
 
+
 function App() {
   const token = useSelector((store)=>store.auth.token);
   console.log(token);

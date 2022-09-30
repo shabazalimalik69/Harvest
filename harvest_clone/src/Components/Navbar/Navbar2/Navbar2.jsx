@@ -60,7 +60,11 @@ const Navbar2 = () => {
             </Link>
           </li>
           <li className={style.li1}>
+
+            
+
             <Link to="/projects" className={style.link1}>
+
               Projects
             </Link>
           </li>
@@ -151,6 +155,114 @@ const Navbar2 = () => {
       </Box>
 
       <Box className={show ? style.box1 : style.box2}>
+        <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" >
+        <Box h="-moz-max-content" w="90%">
+          <Box className={style.box3}>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Time")} >Time</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Expenses")}>Expenses</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Projects")}>Projects</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Team")}>Team</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Reports")}>Reports</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Invoices")}>Invoices</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Manage")}>Manage</Box>
+              </Link>
+            </Box>
+            <Box className={style.box31}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Setting")}>Setting</Box>
+              </Link>
+            </Box>
+          </Box>
+        </Box>
+
+
+        <Box w="90%"  >
+          <Box className={style.box41}>
+        <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("My Profile")}>My Profile</Box>
+              </Link>
+            </Box>
+
+            <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("My Time Report")}>My Time Report</Box>
+              </Link>
+            </Box>
+
+            <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Notifications")}>Notifications</Box>
+              </Link>
+            </Box>
+
+            <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Refer a friend")}>Refer a friend</Box>
+              </Link>
+            </Box>
+
+            <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Switch Account")}>Switch Account</Box>
+              </Link>
+            </Box>
+
+            <Box className={style.box411}>
+              {" "}
+              <Link to="">
+                <Box onClick={()=>handleClose("Signout")}>Signout</Box>
+              </Link>
+            </Box>
+
+
+            </Box>
+        </Box>
+
+        </Box>
+
+      </Box>
+
+
         <Box
           display="flex"
           justifyContent="center"
@@ -267,7 +379,6 @@ const Navbar2 = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
   );
 };
 

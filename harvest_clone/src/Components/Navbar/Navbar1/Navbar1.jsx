@@ -62,7 +62,7 @@ const Navbar1 = () => {
       >
         <UnorderedList className={logo ? style.topnav1 : style.topnav}>
           <ListItem>
-            <Link to="/harvest" className={style.active}>
+            <Link to="/" className={style.active}>
               <Image src="harvest_Logo.png" w="100%" mt={-5} />
             </Link>
           </ListItem>

@@ -19,6 +19,7 @@ root.render(
     <App />
     </Provider>
     </BrowserRouter>
+
     </ChakraProvider>
   </React.StrictMode>
 );
