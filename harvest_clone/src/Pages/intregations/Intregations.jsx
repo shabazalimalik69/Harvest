@@ -13,7 +13,7 @@ return (
             </div>
             <div className={style.customer_top2}>
                 <h3>
-                Harvest works with the most popular tools so your team can track time effortlessly.
+                    Harvest works with the most popular tools so your team can track time effortlessly.
                 </h3>
             </div>
         </div>
@@ -296,35 +296,63 @@ return (
                 </p>
             </div>
             <div>
-                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/outlook.png?width=300&name=outlook.png"
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations/donedone-icon@2x.png?width=300&name=donedone-icon@2x.png"
                     alt="img" />
-                <h2>Outlook.com</h2>
+                <h2>
+                    DoneDone</h2>
                 <p>
-                    Pull your Outlook calendar events into your Harvest timesheet.
+                    Start and stop timers right from this web-based issue tracker.
                 </p>
             </div>
             <div>
-                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/google-calendar.png?width=300&name=google-calendar.png"
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/formstack.png?width=300&name=formstack.png"
                     alt="img" />
-                <h2>Google Calendar</h2>
+                <h2>Formstack</h2>
                 <p>
-                    Pull your Google Calendar events into your Harvest timesheet.
+
+                    Generate custom invoices and letters with your Harvest data.
                 </p>
             </div>
             <div>
-                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/zapier.png?width=300&name=zapier.png"
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/freshservice.png?width=300&name=freshservice.png"
                     alt="img" />
-                <h2>Zapier</h2>
+                <h2>Freshservice</h2>
                 <p>
-                    Connect Harvest to 1,000+ apps with automated workflows using Zapier.
+                    Generate custom invoices and letters with your Harvest data.
                 </p>
             </div>
             <div>
-                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/outlook.png?width=300&name=outlook.png"
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations-new/parakeeto.png?width=300&name=parakeeto.png"
                     alt="img" />
-                <h2>Outlook.com</h2>
+                <h2>Parakeeto</h2>
                 <p>
-                    Pull your Outlook calendar events into your Harvest timesheet.
+                    Create estimates in seconds using your Harvest data.
+                </p>
+            </div>
+
+            <div>
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations/databox-icon@2x.png?width=300&name=databox-icon@2x.png"
+                    alt="img" />
+                <h2>Databox</h2>
+                <p>
+                    Combine data from Harvest and other tools to create custom KPI dashboards.
+                </p>
+            </div>
+
+            <div>
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations/price-cost-icon@2x.png?width=300&name=price-cost-icon@2x.png"
+                    alt="img" />
+                <h2> Price&Cost</h2>
+                <p>
+                    Sync Harvest timesheets and expenses to see which projects make or lose money.
+                </p>
+            </div>
+            <div>
+                <img src="https://www.getharvest.com/hs-fs/hubfs/integrations/herobi-icon@2x.png?width=300&name=herobi-icon@2x.png"
+                    alt="img" />
+                <h2>heroBI</h2>
+                <p>
+                    Include Harvest data in this performance tracker for your agency.
                 </p>
             </div>
 
@@ -350,7 +378,7 @@ return (
             <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/illoglyphs/footer-illo-comp.svg"
                 alt="img" />
         </div>
-        
+
     </div>
 </div>
 );
