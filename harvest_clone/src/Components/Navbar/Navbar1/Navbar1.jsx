@@ -7,7 +7,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar1.module.css";
 import {
   AiOutlineApple,
@@ -15,7 +15,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-const Navbar1 = ({setToken}) => {
+const Navbar1 = () => {
   const [logo, setLogo] = useState(false);
   const [show, hide] = useState(false);
 
@@ -26,6 +26,12 @@ const Navbar1 = ({setToken}) => {
       setLogo(false);
     }
   };
+  const navigate = useNavigate();
+ 
+  const handleToggle = ()=>{
+  
+   navigate("/signin")
+  }
 
   window.addEventListener("scroll", changeBackground);
 
@@ -119,7 +125,7 @@ const Navbar1 = ({setToken}) => {
             </Box>
           </ListItem>
           <ListItem className={style.right}>
-           <Text onClick={()=>setToken(true)}> <Link to="/signin">Sign in</Link></Text>
+           <Text onClick={handleToggle}> <Link to="/signin">Sign in</Link></Text>
           </ListItem>
         </UnorderedList>
       </Box>
