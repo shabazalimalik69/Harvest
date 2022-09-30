@@ -32,6 +32,8 @@ const Navbar1 = () => {
     navigate("/signin");
   };
 
+  
+
   window.addEventListener("scroll", changeBackground);
 
   const handleNav = () => {
@@ -43,6 +45,14 @@ const Navbar1 = () => {
       hide(false);
     }, 500);
   };
+
+
+  const handleToggle2 = ()=>{
+  
+    navigate("/signin")
+    handleClose()
+   }
+ 
 
   return (
     <Box bgColor="rgb(255,244,236)">
@@ -191,11 +201,14 @@ const Navbar1 = () => {
                   bgColor: "rgb(65, 65, 65)",
                 }}
               >
-                <Box onClick={() => handleToggle}>Sign in</Box>
+
+                <Box onClick={handleToggle2}>Sign in</Box>
+
               </Button>{" "}
             </Box>
-            <Box className={style.box41}>
+            <Box className={style.box41} onClick={handleClose}>
               {" "}
+              <Link to="/signup">
               <Button
                 w="100%"
                 h="100%"
@@ -211,7 +224,7 @@ const Navbar1 = () => {
                 }}
               >
                 <Box>Try Harvest Free</Box>
-              </Button>
+              </Button></Link>
             </Box>
           </Box>
         </Box>

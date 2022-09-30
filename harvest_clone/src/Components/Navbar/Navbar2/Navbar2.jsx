@@ -160,49 +160,49 @@ const Navbar2 = () => {
           <Box className={style.box3}>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/time">
                 <Box onClick={()=>handleClose("Time")} >Time</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="expanses">
                 <Box onClick={()=>handleClose("Expenses")}>Expenses</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/projects">
                 <Box onClick={()=>handleClose("Projects")}>Projects</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/team">
                 <Box onClick={()=>handleClose("Team")}>Team</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/reports">
                 <Box onClick={()=>handleClose("Reports")}>Reports</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="invoices">
                 <Box onClick={()=>handleClose("Invoices")}>Invoices</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/manage">
                 <Box onClick={()=>handleClose("Manage")}>Manage</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/company_account">
                 <Box onClick={()=>handleClose("Setting")}>Setting</Box>
               </Link>
             </Box>
@@ -250,7 +250,7 @@ const Navbar2 = () => {
             <Box className={style.box411}>
               {" "}
               <Link to="">
-                <Box onClick={()=>handleClose("Signout")}>Signout</Box>
+                <Box onClick={handleSignout }>Signout</Box>
               </Link>
             </Box>
 
@@ -262,7 +262,7 @@ const Navbar2 = () => {
 
       </Box>
 
-
+{/* 
         <Box
           display="flex"
           justifyContent="center"
@@ -379,7 +379,7 @@ const Navbar2 = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
   );
 };
