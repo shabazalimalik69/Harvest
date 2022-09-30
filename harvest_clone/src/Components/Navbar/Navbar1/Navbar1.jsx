@@ -182,7 +182,7 @@ const Navbar1 = () => {
                   bgColor: "rgb(65, 65, 65)",
                 }}
               >
-                <Box onClick={()=>setToken(true)}>Sign in</Box>
+                <Box onClick={handleToggle}>Sign in</Box>
               </Button>{" "}
             </Box>
             <Box className={style.box41}>

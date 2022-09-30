@@ -1,14 +1,19 @@
 import {
   Box,
   Button,
-  FormControl,
   FormLabel,
+  Grid,
+  GridItem,
   Switch,
   Text,
+  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 
 import { useState } from "react";
+import { AskedQsn } from "./AskedQsn";
+import FeaturesSection from "./FeaturesSection";
+import FeaturesSection2 from "./FeaturesSection2";
 import style from "./Pricing.module.css";
 
 const Pricing = () => {
@@ -202,6 +207,63 @@ const Pricing = () => {
           </Box>
         </Box>
       </Box>
+
+
+{/* companies section */}
+
+
+      <Box className={style.customer_Count}>
+        <Box className={style.mytexttitle}>
+            <Text>
+                <Box as='span' color='#fa5d00' fontSize='md' fontWeight="600">
+                    70,000+
+                </Box>
+                companies track time with Harvest
+            </Text>
+        </Box>
+
+        <Box className={style.divider}>
+            <Divider borderColor={'#FA5D00'} orientation='horizontal' />
+        </Box>
+    </Box>
+    <Box className={style.customer_logos}>
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-vw.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-aclu.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-conde.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-dell.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-amnesty.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-deloitte.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-lululemon.svg?noresize"
+            alt="img" />
+        <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/customer-logos/featured-yale.svg?noresize"
+            alt="img" />
+    </Box>
+    <Divider borderColor={'#FA5D00'} orientation='horizontal' paddingBottom='50px' />
+
+
+
+
+
+    {/* Features section  */}
+
+    
+
+    <FeaturesSection/>
+
+<FeaturesSection2/>
+<Divider borderColor={'#FA5D00'} orientation='horizontal' />
+<AskedQsn/>
+<Divider borderColor={'#FA5D00'} orientation='horizontal' />
+
+<Button bg='#FA5D00' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' onClick={() => {
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        }}>Back To plan & Pricing</Button>
     </Box>
   );
 };
