@@ -27,11 +27,10 @@ const Navbar1 = () => {
     }
   };
   const navigate = useNavigate();
- 
-  const handleToggle = ()=>{
-  
-   navigate("/signin")
-  }
+
+  const handleToggle = () => {
+    navigate("/signin");
+  };
 
   
 
@@ -56,7 +55,7 @@ const Navbar1 = () => {
  
 
   return (
-    <Box  bgColor="rgb(255,244,236)">
+    <Box bgColor="rgb(255,244,236)">
       <Box
         bgColor={logo ? "white" : "rgb(255,244,236)"}
         h="90px"
@@ -118,24 +117,34 @@ const Navbar1 = () => {
               alignItems="center"
               // paddingTop={1}
             >
-             <Link to="/signup">
-              <Button
-                borderRadius={10}
-                bgColor="rgb(250,93,0)"
-                fontSize="18px"
-                paddingTop={1.5}
-                paddingBottom={1.5}
-                color="white"
-                mt={-2}
-                _hover={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
-                _focus={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
-              >
-                Try Harvest Free
-              </Button></Link>
+              <Link to="/signup">
+                <Button
+                  borderRadius={10}
+                  bgColor="rgb(250,93,0)"
+                  fontSize="18px"
+                  paddingTop={1.5}
+                  paddingBottom={1.5}
+                  color="white"
+                  mt={-2}
+                  _hover={{
+                    outline: "rgb(250,93,0)",
+                    bgColor: "rgb(250,93,0)",
+                  }}
+                  _focus={{
+                    outline: "rgb(250,93,0)",
+                    bgColor: "rgb(250,93,0)",
+                  }}
+                >
+                  Try Harvest Free
+                </Button>
+              </Link>
             </Box>
           </ListItem>
           <ListItem className={style.right}>
-           <Text onClick={handleToggle}> <Link to="/signin">Sign in</Link></Text>
+            <Text onClick={handleToggle}>
+              {" "}
+              <Link to="/signin">Sign in</Link>
+            </Text>
           </ListItem>
         </UnorderedList>
       </Box>
@@ -192,7 +201,9 @@ const Navbar1 = () => {
                   bgColor: "rgb(65, 65, 65)",
                 }}
               >
+
                 <Box onClick={handleToggle2}>Sign in</Box>
+
               </Button>{" "}
             </Box>
             <Box className={style.box41} onClick={handleClose}>
