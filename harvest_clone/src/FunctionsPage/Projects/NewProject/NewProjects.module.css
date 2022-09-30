@@ -1,0 +1,299 @@
+.main_div{
+    background-color: #FFFFFF;
+}
+.first_div{
+    border-bottom: 1px solid gray;
+    width: 90%;
+    height: 65px;
+    margin: auto;
+    margin-top: 3%;
+    text-align: left;
+}
+.h1{
+    font-size: 30px;
+    font-weight: 500;
+   
+}
+.second_div{
+    /* border-bottom: 1px solid gray; */
+    display: flex;
+   
+    width: 90%;
+    margin: auto;
+    height: 600px;
+}
+.second_left_div{
+    display: flex;
+    flex-direction: column;
+    
+    border-bottom: 1px solid gray;
+    width:15%;
+    height: 550px;
+   
+    
+}
+.h2{
+    margin-top: 30%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+}
+.clientcss{
+    margin-top: 15%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+}
+.second_right_div{
+    border-bottom: 1px solid gray;
+    width:85%;
+    height: 550px;
+}
+.client_div{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 35px;
+    margin-top: 2%;
+    display: flex;
+}
+.search_client{
+    border: 1px solid gray;
+    width: 85%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+.p{
+    margin-left: 5px;
+    
+}
+.clent_btn{
+    border: 1px solid gray;
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 8px;
+    padding: 1px 20px 1px 20px;
+}
+.projectName{
+    border: 1px solid gray;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 2%;
+    font-size: 16px;
+
+}
+.projectNamecss{
+    margin-top: 16%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+
+}
+.projectCode{
+   width: 30%;
+   height: 35px;
+   margin-right:800px;
+   margin-top: 2%; 
+   border: 1px solid gray;
+   border-radius: 5px;
+   
+}
+.projectCodecss{
+    margin-top: 16%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+
+}
+.p1{
+    text-align: justify;
+    color: gray;
+    font-size: 13px;
+}
+.date_start_end{
+    /* border: 1px solid; */
+    display: flex;
+    width: 50%;
+    height: 70px;
+    margin-left:-1% ;
+    margin-top: 2%;
+}
+.date{
+    width: 45%;
+    height: 90%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left:2% ;
+    
+
+}
+.p2{
+    margin-top: 3%;
+    font-size: 15px;
+    margin-left:5px ;
+    color: black;
+}
+.notescss{
+    margin-top: 55%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+    
+}
+.Notes{
+    width: 100%;
+   height: 75px;
+   /* margin-right:800px; */
+   margin-top: 2%; 
+   border: 1px solid gray;
+   border-radius: 5px;
+
+}
+.Permissionscss{
+    margin-top: 55%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: justify;
+    
+}
+.radiobtn{
+    /* border: 1px solid; */
+    width: 80%;
+    height: 75px;
+    margin-top: 2%;
+
+}
+.radiobtn div{
+    display: flex;
+}
+
+.radiobtn p{
+    margin-left: 2%;
+}
+.link{
+    margin-left: 2%;
+    margin-top: 0.1%;
+    font-size: 13px;
+    color: blue;
+}
+.last_btn{
+    /* border: 1px solid; */
+    width: 20%;
+    display: flex;
+    height: 60px;
+    margin-left: 5%;
+    margin-top: -2%;
+    justify-content: space-around;
+}
+.saveProjectbtn{
+    background-color: #188433;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 4%;
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+
+}
+.saveProjectbtn:hover{
+    background-color: #116325;
+}
+.cancelcss{
+    background-color:#FFFFFF;
+    color:black;
+    display: inline-block;
+    margin-left: 1%;
+    margin-top: 4%;
+    padding: 5px 25px 5px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    border: 1px solid;
+
+}
+.cancelcss:hover{
+    border: 1px solid gray;
+}
+.footer{
+    /* border: 1px solid; */
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-top: 5%;
+}
+.footer_btn{
+    display: flex;
+    /* border: 1px solid; */
+    height: 30px;
+    margin: auto;
+    width: 50%;
+}
+.footer>div>button{
+    background-color:#FFFFFF;
+    color:black;
+    display: inline-block;
+    margin-left: 5%;
+    /* margin-top: 4%; */
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    border: 1px solid gray;
+    display: inline-block;
+    
+    
+}
+.footer_end{
+    /* border: 1px solid; */
+    width: 60%;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer_end>img{
+width: 100px;
+height: 60px;
+opacity: 0.5;
+}
+.footer_end>img:hover{
+    
+    opacity:0.9;
+    cursor: pointer;
+    }
+
+.p3{
+   
+    color: gray;
+    font-size: 13px;
+    margin: 5px;
+    margin-top: 5%;
+
+}
+.p3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* @media screen and (min-width:920px) and (max-width:1210px){
+    .main_div{
+        width: 100%;
+        height: auto;
+        border: 1px solid;
+    }
+    .first_div{
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+    .second_div{
+        width: 100%;
+        height: auto;
+        border: 1px solid;
+    }
+    .second_left_div{
+        height: auto;
+    }
+} */
