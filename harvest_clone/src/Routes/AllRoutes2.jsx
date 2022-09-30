@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Expanses from "../Pages/Expanses/Expanses";
+import Time from "../Pages/Time/Time";
 const AllRoutes2 = () => {
   return (
     <Routes>
-      <Route path="/time" element={<h1>Time</h1>} />
+      <Route path="/time" element={<Time/>} />
       <Route path="/expanses" element={<Expanses />} />
       <Route path="/projects" element={<h1>Projects</h1>} />
       <Route path="/team" element={<h1>Team</h1>} />

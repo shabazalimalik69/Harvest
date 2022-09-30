@@ -7,7 +7,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar1.module.css";
 import {
   AiOutlineApple,
@@ -15,7 +15,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-const Navbar1 = ({setToken}) => {
+const Navbar1 = () => {
   const [logo, setLogo] = useState(false);
   const [show, hide] = useState(false);
 
@@ -26,6 +26,12 @@ const Navbar1 = ({setToken}) => {
       setLogo(false);
     }
   };
+  const navigate = useNavigate();
+ 
+  const handleToggle = ()=>{
+  
+   navigate("/signin")
+  }
 
   window.addEventListener("scroll", changeBackground);
 
@@ -102,13 +108,15 @@ const Navbar1 = ({setToken}) => {
               alignItems="center"
               // paddingTop={1}
             >
-             <Link to="/signup"><Button
+             <Link to="/signup">
+              <Button
                 borderRadius={10}
                 bgColor="rgb(250,93,0)"
                 fontSize="18px"
                 paddingTop={1.5}
                 paddingBottom={1.5}
                 color="white"
+                mt={-2}
                 _hover={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
                 _focus={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
               >
@@ -117,7 +125,7 @@ const Navbar1 = ({setToken}) => {
             </Box>
           </ListItem>
           <ListItem className={style.right}>
-           <Text onClick={()=>setToken(true)}> <Link to="/signin">Sign in</Link></Text>
+           <Text onClick={handleToggle}> <Link to="/signin">Sign in</Link></Text>
           </ListItem>
         </UnorderedList>
       </Box>
@@ -174,7 +182,7 @@ const Navbar1 = ({setToken}) => {
                   bgColor: "rgb(65, 65, 65)",
                 }}
               >
-                <Box>Sign in</Box>
+                <Box onClick={()=>setToken(true)}>Sign in</Box>
               </Button>{" "}
             </Box>
             <Box className={style.box41}>

@@ -10,10 +10,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Navbar2.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutAPI } from "../../../Store/auth/auth.actions";
 
-const Navbar2 = ({ setToken }) => {
+const Navbar2 = () => {
   const [show, hide] = useState(false);
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
+  const token = useSelector((store)=>store.auth.token);
 
   const handleNav2 = () => {
     hide(!show);
@@ -27,9 +31,10 @@ const Navbar2 = ({ setToken }) => {
     }, 500);
   };
 
-  const handleSignOut = () => {
-    setToken(false);
+  const handleSignout = () => {
+    dispatch(logoutAPI())
   };
+
   return (
     <Box>
       <Box className={style.box_main}>
@@ -87,7 +92,7 @@ const Navbar2 = ({ setToken }) => {
             <Link to="" className={style.link1}>
               Akash Keshari
             </Link>
-            <Box className={style.dropbox}>
+            <Box className={style.dropbox} >
               <Box
                 w="100%"
                 display="flex"
@@ -107,7 +112,7 @@ const Navbar2 = ({ setToken }) => {
                     borderRadius="50%"
                     w="20%"
                   />
-                  <Box w="80%" fontSize={22} textAlign="justify">
+                  <Box w="80%" fontSize={22} textAlign="justify" >
                     <Text>Akash Keshari</Text>
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}
@@ -136,7 +141,7 @@ const Navbar2 = ({ setToken }) => {
               </Text>
               <Text className={style.text11}>
                 {" "}
-                <Text onClick={handleSignOut}>Sign out</Text>
+                <Text onClick={handleSignout}>Sign out</Text>
               </Text>
             </Box>
           </li>
@@ -367,7 +372,9 @@ const Navbar2 = ({ setToken }) => {
               <Box className={style.box411}>
                 {" "}
                 <Link to="">
-                  <Box onClick={() => handleClose("Signout")}>Signout</Box>
+
+                  <Box onClick={handleSignout}>Sign Out</Box>
+
                 </Link>
               </Box>
             </Box>
