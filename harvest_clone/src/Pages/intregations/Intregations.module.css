@@ -182,10 +182,10 @@
     font-weight: 600;
   }
   .bottom_section {
-    margin: 100px 0px;
-    padding: 0px 80px;
+    padding: 100px 80px;
     display: flex;
     gap: 10%;
+    background-color: #ffff;
   }
   .bottom_section > div:first-child {
     text-align: left;
@@ -325,6 +325,7 @@
     
     .bottom_section {
       padding: 80px 5%;
+      
       gap: 10%;
     }
     .bottom_section > div:first-child {
