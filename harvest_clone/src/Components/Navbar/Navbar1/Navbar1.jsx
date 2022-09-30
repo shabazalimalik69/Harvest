@@ -56,7 +56,7 @@ const Navbar1 = ({setToken}) => {
       >
         <UnorderedList className={logo ? style.topnav1 : style.topnav}>
           <ListItem>
-            <Link to="/harvest" className={style.active}>
+            <Link to="/" className={style.active}>
               <Image src="harvest_Logo.png" w="100%" mt={-5} />
             </Link>
           </ListItem>
@@ -100,9 +100,9 @@ const Navbar1 = ({setToken}) => {
               h="100%"
               display="flex"
               alignItems="center"
-              paddingTop={1}
+              // paddingTop={1}
             >
-              <Button
+             <Link to="/signup"><Button
                 borderRadius={10}
                 bgColor="rgb(250,93,0)"
                 fontSize="18px"
@@ -113,7 +113,7 @@ const Navbar1 = ({setToken}) => {
                 _focus={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
               >
                 Try Harvest Free
-              </Button>
+              </Button></Link>
             </Box>
           </ListItem>
           <ListItem className={style.right}>
