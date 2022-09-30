@@ -22,8 +22,8 @@ const Pricing = () => {
   return (
     <Box
       bgColor="rgb(255,244,236)"
-      h="100vh"
-      
+      // h="100vh"
+      pb='60px'
     >
       <Text fontSize={50} fontWeight={350} paddingTop={5}>
         Pricing
