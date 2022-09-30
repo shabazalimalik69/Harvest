@@ -14,6 +14,8 @@ function App() {
   console.log(token);
   return (
     <div className="App">
+
+
       {token ? (
         <Box>
           <Navbar2 />

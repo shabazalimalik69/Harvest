@@ -11,7 +11,7 @@ app.post("/login", async (req, res) => {
     if (!user) {
       res.status(401).send("Authentication failed!");
     } else {
-      res.send({ token: `${user.id}:${user.email}:${user.password}` });
+      res.send({ token: `${Math.random() * 10000}:${user.id}:${user.email}:${Math.random() * 10000}:${Math.random() * 10000}` });
     }
   } catch (e) {
     res.status(500).send(e.message);

@@ -92,7 +92,7 @@ const Navbar2 = () => {
             <Link to="" className={style.link1}>
               Akash Keshari
             </Link>
-            <Box className={style.dropbox}>
+            <Box className={style.dropbox} >
               <Box
                 w="100%"
                 display="flex"
@@ -112,7 +112,7 @@ const Navbar2 = () => {
                     borderRadius="50%"
                     w="20%"
                   />
-                  <Box w="80%" fontSize={22} textAlign="justify">
+                  <Box w="80%" fontSize={22} textAlign="justify" >
                     <Text>Akash Keshari</Text>
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}
@@ -372,7 +372,9 @@ const Navbar2 = () => {
               <Box className={style.box411}>
                 {" "}
                 <Link to="">
+
                   <Box onClick={handleSignout}>Sign Out</Box>
+
                 </Link>
               </Box>
             </Box>

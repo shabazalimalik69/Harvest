@@ -1,6 +1,5 @@
 .box_main{
     /* border: 1px solid red; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     position: fixed;
     top:0;
     width: 100%;
@@ -12,17 +11,16 @@
     padding: 0;
     overflow: hidden;
     background-color: rgb(250, 93, 0);
+    padding-left: 55px;
+    padding-right: 55px;
   }
   
   .li1 {
     float: left;
-    border-right:1px solid #bbb;
+    /* border-right:1px solid #bbb; */
   }
   
-  .li1:last-child {
-    border-right: none;
-  }
-  
+ 
 .link1 {
     display: block;
     color: white;
@@ -57,11 +55,14 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 padding-top: 10px;
 padding-bottom: 10px;
+z-index: 1000;
+background-color: #ffffff;
 }
 
 .li1:hover .dropbox{
   display: flex;
   flex-direction: column;
+
 }
 
 .text11{
@@ -81,17 +82,25 @@ padding-bottom: 10px;
   color: #ffffff;
 }
 
-  @media screen  and (min-width:770px) and (max-width:850px){
+  @media screen  and (min-width:770px) and (max-width:944px){
     .li1:last-child {
         display: none;
     }
+    .ul1 {
+
+      padding-left: 15px;
+      padding-right: 15px;
+  }
   }
   @media screen  and  (max-width:770px){
 
     .ul1 {
         padding-top: 7px;
         padding-bottom: 7px;
+        padding-left: 10px;
+       
     }
+   
     .li1{
         display: none;
     }
