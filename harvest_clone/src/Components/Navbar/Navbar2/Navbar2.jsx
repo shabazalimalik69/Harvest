@@ -87,7 +87,7 @@ const Navbar2 = ({ setToken }) => {
             <Link to="" className={style.link1}>
               Akash Keshari
             </Link>
-            <Box className={style.dropbox}>
+            <Box className={style.dropbox} >
               <Box
                 w="100%"
                 display="flex"
@@ -107,7 +107,7 @@ const Navbar2 = ({ setToken }) => {
                     borderRadius="50%"
                     w="20%"
                   />
-                  <Box w="80%" fontSize={22} textAlign="justify">
+                  <Box w="80%" fontSize={22} textAlign="justify" >
                     <Text>Akash Keshari</Text>
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}
@@ -367,7 +367,7 @@ const Navbar2 = ({ setToken }) => {
               <Box className={style.box411}>
                 {" "}
                 <Link to="">
-                  <Box onClick={() => handleClose("Signout")}>Signout</Box>
+                  <Box onClick={handleSignOut}>Signout</Box>
                 </Link>
               </Box>
             </Box>

@@ -12,6 +12,8 @@ function App() {
   const [token, setToken] = useState(false);
   return (
     <div className="App">
+
+
       {token ? (
         <Box>
           <Navbar2 setToken={setToken} />
