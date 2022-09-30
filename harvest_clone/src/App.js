@@ -7,10 +7,13 @@ import "./App.css";
 import { Footer } from "./Components/Footer/Footer";
 import AllRoutes2 from "./Routes/AllRoutes2";
 
+
 function App() {
   const [token, setToken] = useState(false);
   return (
     <div className="App">
+
+
       {token ? (
         <Box>
           <Navbar2 setToken={setToken} />

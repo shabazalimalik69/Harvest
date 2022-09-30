@@ -102,13 +102,15 @@ const Navbar1 = ({setToken}) => {
               alignItems="center"
               // paddingTop={1}
             >
-             <Link to="/signup"><Button
+             <Link to="/signup">
+              <Button
                 borderRadius={10}
                 bgColor="rgb(250,93,0)"
                 fontSize="18px"
                 paddingTop={1.5}
                 paddingBottom={1.5}
                 color="white"
+                mt={-2}
                 _hover={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
                 _focus={{ outline: "rgb(250,93,0)", bgColor: "rgb(250,93,0)" }}
               >
@@ -174,7 +176,7 @@ const Navbar1 = ({setToken}) => {
                   bgColor: "rgb(65, 65, 65)",
                 }}
               >
-                <Box>Sign in</Box>
+                <Box onClick={()=>setToken(true)}>Sign in</Box>
               </Button>{" "}
             </Box>
             <Box className={style.box41}>
