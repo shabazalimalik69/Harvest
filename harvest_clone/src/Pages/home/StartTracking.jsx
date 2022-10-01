@@ -1,7 +1,9 @@
 import { Link } from '@chakra-ui/react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import WhyHarvest from './Home.module.css'
 const StartTracking = () => {
+  const navigate = useNavigate();
   return (
     <>
        <div className={WhyHarvest.main_div2}>
@@ -11,7 +13,7 @@ const StartTracking = () => {
       <div className={WhyHarvest.btn_And_p_div}>
 
       <div className={WhyHarvest.btn_div}>
-      <Link to="/signin"><button className={WhyHarvest.btn}>Try Harvest Free</button></Link>
+      <button className={WhyHarvest.btn} onClick={()=>{navigate("/signup")}}>Try Harvest Free</button>
       </div>
 
       <div className={WhyHarvest.p_div}>
