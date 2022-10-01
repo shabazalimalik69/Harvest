@@ -17,7 +17,8 @@ const Intregation = () => {
           </Text>
           <Text className={styles.Intregation_Section_box2_txt_3}>Your favorite apps work seamlessly with Harvest so you can keep projects on track however you work.
           </Text>
-          <Button bg='#1D1E1C' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' className={styles.Intregation_Section_box2_btn}> Browse integrations </Button>   
+          <Link to="/intregations">
+          <Button bg='#1D1E1C' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' className={styles.Intregation_Section_box2_btn}> Browse integrations </Button>   </Link>
         </Box>
       
     </Box>
