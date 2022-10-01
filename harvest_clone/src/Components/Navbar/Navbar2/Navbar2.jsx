@@ -1,4 +1,4 @@
-import { Box, Button, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Box, Image, Text} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar2.module.css";
@@ -10,7 +10,8 @@ const Navbar2 = () => {
   const [show, hide] = useState(false);
   const [text, setText] = useState("");
   const dispatch = useDispatch();
-  const token = useSelector((store)=>store.auth.token);
+  const {first_name} = useSelector((store)=>store.auth);
+  console.log(first_name);
   const navigate=useNavigate()
   const handleNav2 = () => {
     hide(!show);
@@ -83,7 +84,7 @@ const Navbar2 = () => {
           <li className={style.li1} style={{ float: "right" }} >
           
             {/* <Box display="flex"  border="1px solid white"> <Box w="30px" h="30px" borderRadius="50%" border="1px solid rgb(93,64,55)" bgColor="rgb(93,64,55)"><Image src=""  borderRadius="50%" w="100%"/></Box> <Text>Akash Keshari</Text></Box> */}
-            <Text color="white"  display="flex" alignItems="center" gap={2} pt={2} pl={1} pr={1} _hover={{bgColor:"rgba(218, 218, 218,.3)"}}><Box w="35px" h="35px" border="1px solid rgb(93,64,55)" borderRadius="50%" bgColor="rgb(93,64,55)"><Image src="profile.ico" borderRadius="50%" /></Box><Text>Akash</Text></Text>
+            <Text color="white"  display="flex" alignItems="center" gap={2} pt={2} pl={1} pr={1} _hover={{bgColor:"rgba(218, 218, 218,.3)"}}><Box w="35px" h="35px" border="1px solid rgb(93,64,55)" borderRadius="50%" bgColor="rgb(93,64,55)"><Image src="profile.ico" borderRadius="50%" /></Box><Text>{first_name}</Text></Text>
           
             <Box className={style.dropbox} >
               <Box
@@ -110,7 +111,9 @@ const Navbar2 = () => {
                   />
                   </Box >
                   <Box w="80%" fontSize={22} textAlign="justify" >
-                    <Text>Akash Keshari</Text>
+
+                    <Text>{first_name}</Text>
+
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}
                 </Text>

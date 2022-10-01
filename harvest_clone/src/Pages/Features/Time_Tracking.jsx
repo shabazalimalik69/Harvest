@@ -1,5 +1,6 @@
 import { Box, Button, Divider, Grid, GridItem, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from "./Feature.module.css";
 
 const TimeTracking = () => {
