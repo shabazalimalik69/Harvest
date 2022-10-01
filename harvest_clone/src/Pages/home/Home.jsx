@@ -95,10 +95,7 @@ return (
     <Divider borderColor={'#FA5D00'} orientation='horizontal' />
     {/*
     <BottomSection /> */}
-
     <StartTracking />
-
-
 
 </Box>
 )

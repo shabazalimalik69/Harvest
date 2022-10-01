@@ -1,0 +1,6 @@
+@media (prefers-reduced-motion: no-preference) {
+    .box12 {
+      animation: aura 100s infinite linear;
+      animation-iteration-count: 1;
+    }
+  }

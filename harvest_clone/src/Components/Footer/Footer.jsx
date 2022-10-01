@@ -123,10 +123,10 @@ export const Footer = () => {
 
 
         <div className={style.copyright}>
-          <div cl>
+          <div className={style.copyright_box1}>
             <Link>© 2006-2022 Harvest</Link>
           </div>
-          <div>
+          <div className={style.copyright_box2}>
             <div>
               <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
               <Link>Twitter</Link>

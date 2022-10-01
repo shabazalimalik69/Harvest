@@ -9,7 +9,8 @@ const projectsSchema= new mongoose.Schema({
   project_code:{type:Number,required:true},
   date:{type:String,required:true},
   notes:{type:String},
-  budgetperhour:{type:Number,required:true}
+  cost:{type:Number},
+  budgetperhour:{type:Number}
 })
 
 const projectsModel=mongoose.model("project",projectsSchema);

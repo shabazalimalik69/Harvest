@@ -8,6 +8,7 @@ import Signup from "../Pages/Signup/Signup";
 import Signin from "../Pages/Signin/Signin";
 import Home from "../Pages/home/Home";
 import Intregations from "../Pages/intregations/Intregations";
+import { Footer } from "../Components/Footer/Footer";
 
 
 

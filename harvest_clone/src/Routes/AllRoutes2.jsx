@@ -3,11 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import NewProjects from "../FunctionsPage/Projects/NewProject/NewProjects";
 import Projects from "../FunctionsPage/Projects/Projects";
 import Expanses from "../Pages/Expanses/Expanses";
+import Time from "../Pages/Time/Time";
 const AllRoutes2 = () => {
   return (
     <Routes>
-      <Route path="/time" element={<h1>Time</h1>} />
-      <Route path="/expanses" element={<Expanses />} />
+      <Route path="/time" element={<Time/>} />
+      <Route path="/expenses" element={<Expanses />} />
       <Route path="/projects" element={<Projects/>} />
       <Route path="/team" element={<h1>Team</h1>} />
       <Route path="/reports" element={<h1>Reports</h1>} />

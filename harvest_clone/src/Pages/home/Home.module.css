@@ -285,12 +285,31 @@ Features page */
 }
 
 
-@media screen and (min-width:950px) and (max-width:1100px) {
 
+@media screen and (min-width:950px) and (max-width:1100px) {
+  .Feature_Section{
+    width: 95%;
+    margin: auto;
+  }
+.Feature_Section_box2{
+display: block;
+}
+.Feature_Section_GI{
+  width: 100%;
+}
+.Feature_Section_box2_sb{
+  /* display: block; */
+  width:95%;
+}
 }
 
 
+
 @media screen and (max-width:950px) {
+  .Feature_Section{
+    width: 95%;
+    margin: auto;
+  }
 .Feature_Section_box2{
 display: block;
 }
@@ -299,7 +318,7 @@ display: block;
 }
 .Feature_Section_box2_sb{
   display: block;
-  width:90%;
+  width:100%;
 }
 
 }
@@ -307,6 +326,145 @@ display: block;
 
 
 
+/* Customer Section */
+
+.customer_Section {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  padding-top: 80px;
+  background: #fff4ec;
+  text-align: start;
+  margin-top: 40px;
+}
+
+.customer_Section_box1{
+  margin-top: 80px;
+}
+
+.customer_Section_box1_txt1{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #FA5D00;
+}
+
+
+.customer_Section_box1_txt2{
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+
+.customer_Section_box1_txt3{
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+
+.customer_Section_box2{
+  margin-bottom: 80px;
+}
+
+
+.customer_Section_box2_sl{
+ border-radius: 2 px solid #FA5D00;
+ border-radius: 10px;
+}
+
+.customer_Section_car_box{
+  display: flex;
+  gap: 40px;
+}
+
+.customer_Section_car_box_sb1{
+  margin: 0 0 20px;
+  width: 43%;
+  padding: 0 50px 0 25px;
+  text-align: start;
+}
+
+
+.customer_Section_car_box_txt1{
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+
+}
+
+.customer_Section_car_box_txt2{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+
+}
+
+.customer_Section_car_box_btn{
+  margin: 40px 0;
+  border-radius: 15px;
+}
+
+.customer_Section_car_box_sb2{
+  width: 45%;
+}
+
+.customer_Section_car_box_sb2_img{
+  width: 100%;
+}
+
+@media screen and (min-width:950px) and (max-width:1100px){
+  .customer_Section{
+    width: 95%;
+    margin: auto;
+  }
+
+
+  
+  .customer_Section_box2{
+    margin: auto;
+  }
+  .customer_Section_box2_sl{
+    margin: auto;
+  }
+}
+
+
+@media screen and (max-width:950px) {
+  .customer_Section{
+    display: block;
+    width: 95%;
+    margin: auto;
+  }
+  .customer_Section_box1{
+    width: auto;
+  }
+
+  .customer_Section_car_box{
+    display: block;
+    margin: auto;
+    
+  }
+  .customer_Section_car_box_sb1{
+    width: 90%;
+    margin: auto;
+  }
+
+  .customer_Section_car_box_txt1{
+    width: 100%;
+    
+  }
+  .customer_Section_car_box_sb2{
+    width: 90%;
+    margin: auto;
+  }
+}
 
 
 
@@ -366,11 +524,228 @@ display: block;
 .Intregation_Section {
   width: 90%;
   margin: auto;
-  margin-top: -80px;
-  padding-top: 80px;
+  text-align: start;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 50px;
+  margin-top: 60px;
+  padding-top: 40px;
   background: #fff4ec;
 }
 
+.Intregation_Section_box1{
+  width: 50%;
+}
+
+.Intregation_Section_box1_img{
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+.Intregation_Section_box2{
+  width: 50%;
+}
+
+.Intregation_Section_box2_txt1{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #FA5D00;
+
+}
+
+.Intregation_Section_box2_txt2{
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+
+.Intregation_Section_box2_txt_3{
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+
+
+@media screen and (min-width:950px) and (max-width:1100px){
+  .Intregation_Section {
+    width: 95%;
+    gap: 40px;
+  }
+  
+  .Intregation_Section_box1_img{
+    width: 150%;
+    margin-top: 80px;
+  }
+
+  .Intregation_Section_box2{
+    width: 55%;
+  }
+}
+
+
+@media screen and (max-width:950px) {
+  .Intregation_Section {
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 0px;
+  }
+
+  .Intregation_Section_box1{
+    width: 90%;
+    margin: auto;
+  }
+
+  .Intregation_Section_box2{
+    width: 90%;
+  }
+  
+  .Intregation_Section_box2_txt1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #FA5D00;
+  
+  }
+  
+  .Intregation_Section_box2_txt2{
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 19px;
+    color: #1D1E1C;
+  }
+  
+  
+  .Intregation_Section_box2_txt_3{
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1D1E1C;
+  }
+  
+  .Intregation_Section_box2_btn{
+    width: 100%;
+  }
+}
+
+
+
+/* Learning Section  */
+
+.Learning_Section{
+  display: flex;
+  text-align: start;
+  margin-top: 40px;
+  gap: 50px;
+  margin-bottom: 60px;
+  
+}
+
+.Learning_Section_box1{
+  width: 35%;
+  margin: auto;
+}
+
+.Learning_Section_box1_txt1{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #FA5D00;
+}
+
+.Learning_Section_box1_txt2{
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+.Learning_Section_box2{
+  width: 50%;
+  margin: auto;
+}
+
+.Learning_Section_box2_G{
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.Learning_Section_box2_GI{
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-top: 1px solid #FA5D00;
+}
+
+.Learning_Section_box2_GI_sb1{
+  margin-top: 25px;
+
+}
+
+.Learning_Section_box2_GI_sb1_img{
+  margin-bottom: 20px;
+  height: 75px;
+}
+
+.Learning_Section_box2_GI_sb2{
+  width: 65%;
+  text-align: start;
+  display: flex;
+}
+
+
+
+@media screen and (min-width:950px) and (max-width:1100px){
+  .Learning_Section{
+    width: 95%;
+    text-align: start;
+    margin-top: 40px;
+    margin: auto;
+    gap: 40px;
+    margin-bottom: 60px;
+    
+  }
+  .Learning_Section_box1{
+    width: 40%;
+    margin: auto;
+  }
+  .Learning_Section_box2{
+    width: 55%;
+    margin: auto;
+  }
+}
+
+
+@media screen and (max-width:950px){
+
+  .Learning_Section{
+    display: block;
+    width: 95%;
+    text-align: start;
+    margin-top: 40px;
+    margin: auto;
+    gap: 40px;
+    margin-bottom: 60px;
+    
+  }
+
+  .Learning_Section_box1{
+    width: 95%;
+    margin: auto;
+  }
+  .Learning_Section_box2{
+    width: 95%;
+    margin: auto;
+  }
+
+}
 
 
 /* Intregation_Section page */
@@ -396,6 +771,11 @@ display: block;
   color: #FA5D00;
   background-color: #ffeee0;
 }
+
+
+
+
+
 
 
 

@@ -64,7 +64,7 @@
 
 @media screen and (min-width:950px) and (max-width:1100px) { 
     .grid1{
-        width: 95%;
+        width: 100%;
         margin: auto;
         grid-template-columns: repeat(1,1fr);
         gap: 40px;
@@ -97,7 +97,7 @@
 
 @media screen and (max-width:950px){
     .grid1{
-        width: 95%;
+        width: 100%;
         margin: auto;
         grid-template-columns: repeat(1,1fr);
         gap: 40px;
@@ -136,4 +136,5 @@
     .text4{
         font-size: 28px;
     }
+    
 }

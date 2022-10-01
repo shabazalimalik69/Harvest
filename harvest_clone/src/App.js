@@ -6,22 +6,24 @@ import { useState } from "react";
 import "./App.css";
 import { Footer } from "./Components/Footer/Footer";
 import AllRoutes2 from "./Routes/AllRoutes2";
+import { useSelector } from "react-redux";
 
 
 function App() {
-  const [token, setToken] = useState(false);
+  const token = useSelector((store)=>store.auth.token);
+  console.log(token);
   return (
-    <div className="App">
+    <div className="App"  >
       {token ? (
-        <Box>
-          <Navbar2 setToken={setToken} />
-          <Box pt="40px">
+        <Box >
+          <Navbar2 />
+          <Box pt="40px"  bgColor="rgb(255,248,240)">
             <AllRoutes2 />
           </Box>
         </Box>
       ) : (
         <Box>
-          <Navbar1 setToken={setToken} />
+          <Navbar1 />
           <Box pt="90px">
             <AllRoutes />
             <Footer />

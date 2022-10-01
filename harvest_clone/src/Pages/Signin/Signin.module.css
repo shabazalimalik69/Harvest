@@ -1,0 +1,20 @@
+
+.signinSection{
+    width:40%;
+    background: #fff4ec;
+    margin: auto;
+    border: 1px solid #FA5D00 ;
+    padding: 30px;
+}
+
+
+
+@media screen and (max-width:950px){
+    
+    .signinSection{
+        width:90%;
+        margin: auto;
+        border: 1px solid #FA5D00 ;
+        padding: 30px;
+    }
+}

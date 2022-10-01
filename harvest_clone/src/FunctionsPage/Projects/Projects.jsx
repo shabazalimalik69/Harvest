@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getProject } from "../../store/project2/project.action";
+import { getProject } from "../../Store/project2/project.action";
 import ProjectCSS from "./Projects.module.css";
 // import Search2Icon from "@chakra-ui/icons"
 // import NewProjects from "./NewProject/NewProjects";

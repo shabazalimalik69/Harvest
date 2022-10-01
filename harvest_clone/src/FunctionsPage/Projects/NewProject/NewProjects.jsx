@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getProject, postData } from "../../../store/project2/project.action";
+import { getProject, postData } from "../../../Store/project2/project.action";
 
 const NewProjects = () => {
   let { loading, data } = useSelector((store) => store.projects);
