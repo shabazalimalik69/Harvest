@@ -10,7 +10,8 @@ export const signinAPI = (userData)=>async(dispatch)=>{
     try{
        let response = await axios.post("http://localhost:8000/users/login",userData);
        dispatch({type:AUTH_SIGNIN_SUCCESS,payload:response.data});
-       console.log(response);
+       
+       console.log(response.data);
        return response.data;
        
     }catch(err){

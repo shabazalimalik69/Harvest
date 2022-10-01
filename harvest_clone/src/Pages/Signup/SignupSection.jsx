@@ -38,16 +38,7 @@ const SignupSection = () => {
         const {name,value} = e.target;
         setUserData({...userData,[name]:value})
     };
-   
-  
-  //  const handleLenCheck = (e)=>{
-  //   //console.log(e)
-  //   const {value} = e.target;
-  //  const passLenCheck = (value.length)>=8;
-  // //  console.log(passLenCheck)
-  //  setCheck({passLenCheck});
-  //  }
-  //  console.log(check.passLenCheck);
+
 
 
 
@@ -139,8 +130,6 @@ const SignupSection = () => {
      <HashLink to="/signin"><Text>Already a customer? Sign in</Text></HashLink>
      <Text marginTop="30px">By creating an account, you agree to the Harvest Terms of service and Privacy policy.</Text>
     </GridItem>
-    {/* <PasswordRequired passLengthFlag={check.passLenCheck?"Valid":"Invalid"}/> */}
-    {/* <Text className={check.passLenCheck?"Valid":"Invalid"}>Password length must be min 8</Text> */}
     </Box>
   )
 }

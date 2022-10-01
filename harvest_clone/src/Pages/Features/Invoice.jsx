@@ -1,6 +1,8 @@
 import { Box, Button, Grid, GridItem, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 import styles from "./Feature.module.css";
+import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Invoice = () => {
   return (
@@ -10,7 +12,7 @@ const Invoice = () => {
         <GridItem className={styles.gridItem4}>
          <Text className={styles.text4}>Invoicing & payments</Text>
          <Text className={styles.text5}>Turn your team’s tracked time and expenses into invoices and collect payment quickly with integrated online payments.</Text>
-         <Button className={styles.button}>Start your free trial</Button>
+       <HashLink to="/signin">  <Button className={styles.button}>Start your free trial</Button></HashLink>
         </GridItem>
         <GridItem className={styles.gridItem2}>
             <Image borderTopLeftRadius="10px" borderBottomRightRadius="10px" src='https://www.getharvest.com/hs-fs/hubfs/screenshot-features-invoices-1.png?width=787&name=screenshot-features-invoices-1.png'/>
