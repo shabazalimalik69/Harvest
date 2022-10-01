@@ -7,6 +7,7 @@ import TimeTracking from './Time_Tracking';
 import ReportAnalysis from './Report_Analysis';
 import Invoice from './Invoice';
 import BottomSection from './BottomSection';
+import { HashLink } from 'react-router-hash-link';
 
 const Feature = () => {
   return (
@@ -17,21 +18,21 @@ const Feature = () => {
     <Text className={styles.text2}>Intuitive time tracking and powerful insights that help your team thrive.</Text>
     <Grid className={styles.grid1}>
     
-    <Link to="time_tracking" className={styles.box1}>
+    <HashLink to="/time_tracking" className={styles.box1}>
      <Image className={styles.image} src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/features/illo-nav-time.svg" alt="" />
      <Text className={styles.text3}>Time tracking</Text>
      <ArrowDownIcon color="#FA5D00" w={6} h={6} />
-     </Link>
-     <Link to="report_analysis" className={styles.box1}>
+     </HashLink>
+     <HashLink to="/report_analysis" className={styles.box1}>
      <Image className={styles.image} src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/features/illo-nav-report.svg" alt="" />
      <Text  className={styles.text3}>Reports & analysis</Text>
      <ArrowDownIcon color="#FA5D00" w={6} h={6} />
-     </Link>
-     <Link to="invoice" className={styles.box1}>
+     </HashLink>
+     <HashLink to="/invoice" className={styles.box1}>
      <Image className={styles.image} src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/features/illo-nav-invoice.svg" alt="" />
      <Text className={styles.text3}>Invoice & payments</Text>
      <ArrowDownIcon color="#FA5D00" w={6} h={6} />
-     </Link>
+     </HashLink>
     </Grid>
     </Box>
 
