@@ -12,7 +12,7 @@ const Navbar2 = () => {
   const dispatch = useDispatch();
 
   const first_name = useSelector((store)=>store.auth.first_name);
-
+console.log(first_name)
   const navigate=useNavigate()
   const handleNav2 = () => {
     hide(!show);

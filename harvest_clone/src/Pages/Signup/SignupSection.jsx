@@ -1,8 +1,11 @@
 import { Box, Button, FormControl, Grid, GridItem, Image, Input, Link, Text } from '@chakra-ui/react';
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signupAPI } from '../../Store/auth/auth.actions';
 import styles from "./Signup.module.css";
+import {useDispatch ,useSelector} from "react-redux"
+
 
 const initData={
     first_name:"",
