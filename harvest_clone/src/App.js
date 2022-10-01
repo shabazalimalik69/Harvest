@@ -14,8 +14,6 @@ function App() {
   console.log(token);
   return (
     <div className="App">
-
-
       {token ? (
         <Box>
           <Navbar2 />
@@ -28,7 +26,7 @@ function App() {
           <Navbar1 />
           <Box pt="90px">
             <AllRoutes />
-            {/* <Footer /> */}
+            <Footer />
           </Box>
         </Box>
       )}

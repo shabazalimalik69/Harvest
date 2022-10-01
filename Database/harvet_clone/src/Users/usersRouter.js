@@ -19,7 +19,7 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  let { email } = await req.body;
+  let { email,first_name} = await req.body;
 
   try {
     let user = await usersModel.findOne({ email });
@@ -27,13 +27,17 @@ app.post("/signup", async (req, res) => {
     if (user) {
       res.status(401).send("Email is already exists");
     } else {
-      let newUser = await usersModel.create(req.body);
-      let token = `${newUser.email}:${newUser.id}:${Math.random() * 10000}`;
-      res.send({ token });
+          await usersModel.create(req.body);
+      // let token = `${newUser.email}:${newUser.id}:${Math.random() * 10000}`;
+
+      res.send({first_name});
     }
   } catch (e) {
     res.status(500).send(e.message);
   }
 });
+
+
+
 
 module.exports = app;
