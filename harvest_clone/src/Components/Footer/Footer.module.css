@@ -3,9 +3,10 @@
     color: #ffff;
     font-weight: 600;
     padding-bottom: 1px;
+    text-align: start;
   }
   .footer {
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding-top: 20px;
   }
@@ -14,9 +15,10 @@
   }
   .harvest {
     width: 25%;
+    margin-right: 10px;
   }
   .harvest > h4 {
-    margin: 10px;
+    margin: 10px 0;
   }
   .harvest > div {
     padding: 3px 0px;
@@ -117,16 +119,19 @@
     width: 21px;
   }
   
+  
  
   @media screen  and (min-width:770px) and (max-width:850px){
     .footer {
       width: 90%;
+      margin: auto;
     }
   }
 
   @media screen and (min-width: 750px) and (max-width: 949px) {
     .footer {
       width: 95%;
+      margin: auto;
     }
     .copyright>div>div{
       display: block;
@@ -137,7 +142,8 @@
   
   @media screen and (min-width: 580px) and (max-width: 750px) {
     .footer {
-      width: 100%;
+      width: 95%;
+      margin: auto;
     }
     .copyright{
       display: block;
@@ -154,6 +160,7 @@
   @media screen and (min-width: 450px) and (max-width: 580px) {
     .footer {
       width: 80%;
+      margin: auto;
     }
     .sitemap {
       display: block;
@@ -177,7 +184,8 @@
   
   @media screen and (min-width: 385px) and (max-width: 450px) {
     .footer {
-      width: 100%;
+      width: 90%;
+      margin: auto;
     }
     .sitemap {
       display: block;
@@ -197,5 +205,7 @@
       margin: auto;
       margin-top: 50px;
     }
+
   
+   
   }

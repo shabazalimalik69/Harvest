@@ -285,6 +285,7 @@ Features page */
 }
 
 
+
 @media screen and (min-width:950px) and (max-width:1100px) {
   .Feature_Section{
     width: 95%;
@@ -376,32 +377,92 @@ display: block;
  border-radius: 10px;
 }
 
+.customer_Section_car_box{
+  display: flex;
+  gap: 40px;
+}
+
+.customer_Section_car_box_sb1{
+  margin: 0 0 20px;
+  width: 43%;
+  padding: 0 50px 0 25px;
+  text-align: start;
+}
+
+
+.customer_Section_car_box_txt1{
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+
+}
+
+.customer_Section_car_box_txt2{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+
+}
+
+.customer_Section_car_box_btn{
+  margin: 40px 0;
+  border-radius: 15px;
+}
+
+.customer_Section_car_box_sb2{
+  width: 45%;
+}
+
+.customer_Section_car_box_sb2_img{
+  width: 100%;
+}
+
 @media screen and (min-width:950px) and (max-width:1100px){
   .customer_Section{
     width: 95%;
     margin: auto;
   }
 
-  .customer_Section_box1{
-    width: 55%;
-  }
+
   
   .customer_Section_box2{
-    width: 50%;
+    margin: auto;
   }
   .customer_Section_box2_sl{
-    width: 100%;
+    margin: auto;
   }
 }
 
 
 @media screen and (max-width:950px) {
   .customer_Section{
+    display: block;
     width: 95%;
     margin: auto;
   }
   .customer_Section_box1{
     width: auto;
+  }
+
+  .customer_Section_car_box{
+    display: block;
+    margin: auto;
+    
+  }
+  .customer_Section_car_box_sb1{
+    width: 90%;
+    margin: auto;
+  }
+
+  .customer_Section_car_box_txt1{
+    width: 100%;
+    
+  }
+  .customer_Section_car_box_sb2{
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -576,6 +637,116 @@ display: block;
 
 
 
+/* Learning Section  */
+
+.Learning_Section{
+  display: flex;
+  text-align: start;
+  margin-top: 40px;
+  gap: 50px;
+  margin-bottom: 60px;
+  
+}
+
+.Learning_Section_box1{
+  width: 35%;
+  margin: auto;
+}
+
+.Learning_Section_box1_txt1{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #FA5D00;
+}
+
+.Learning_Section_box1_txt2{
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #1D1E1C;
+}
+
+.Learning_Section_box2{
+  width: 50%;
+  margin: auto;
+}
+
+.Learning_Section_box2_G{
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.Learning_Section_box2_GI{
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border-top: 1px solid #FA5D00;
+}
+
+.Learning_Section_box2_GI_sb1{
+  margin-top: 25px;
+
+}
+
+.Learning_Section_box2_GI_sb1_img{
+  margin-bottom: 20px;
+  height: 75px;
+}
+
+.Learning_Section_box2_GI_sb2{
+  width: 65%;
+  text-align: start;
+  display: flex;
+}
+
+
+
+@media screen and (min-width:950px) and (max-width:1100px){
+  .Learning_Section{
+    width: 95%;
+    text-align: start;
+    margin-top: 40px;
+    margin: auto;
+    gap: 40px;
+    margin-bottom: 60px;
+    
+  }
+  .Learning_Section_box1{
+    width: 40%;
+    margin: auto;
+  }
+  .Learning_Section_box2{
+    width: 55%;
+    margin: auto;
+  }
+}
+
+
+@media screen and (max-width:950px){
+
+  .Learning_Section{
+    display: block;
+    width: 95%;
+    text-align: start;
+    margin-top: 40px;
+    margin: auto;
+    gap: 40px;
+    margin-bottom: 60px;
+    
+  }
+
+  .Learning_Section_box1{
+    width: 95%;
+    margin: auto;
+  }
+  .Learning_Section_box2{
+    width: 95%;
+    margin: auto;
+  }
+
+}
+
 
 /* Intregation_Section page */
 
@@ -600,6 +771,11 @@ display: block;
   color: #FA5D00;
   background-color: #ffeee0;
 }
+
+
+
+
+
 
 
 
