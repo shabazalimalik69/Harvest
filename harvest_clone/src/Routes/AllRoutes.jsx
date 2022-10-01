@@ -11,6 +11,7 @@ import Intregations from "../Pages/intregations/Intregations";
 import { Footer } from "../Components/Footer/Footer";
 
 
+
 const AllRoutes = () => {
   return (
     <Routes>

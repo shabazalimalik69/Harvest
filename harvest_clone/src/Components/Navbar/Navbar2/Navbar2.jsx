@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Image,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Button, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar2.module.css";
@@ -24,10 +17,11 @@ const Navbar2 = () => {
   };
 
   const handleClose = (value) => {
-    setText(value);
-    console.log(value);
+    setText(value)
+    console.log(value)
     setTimeout(() => {
       hide(false);
+    
     }, 500);
   };
 
@@ -57,16 +51,12 @@ const Navbar2 = () => {
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="/expanses" className={style.link1}>
+            <Link to="/expenses" className={style.link1}>
               Expenses
             </Link>
           </li>
           <li className={style.li1}>
-
-            
-
             <Link to="/projects" className={style.link1}>
-
               Projects
             </Link>
           </li>
