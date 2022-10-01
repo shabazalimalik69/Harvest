@@ -10,6 +10,7 @@ import BottomSection from './BottomSection';
 import { HashLink } from 'react-router-hash-link';
 
 const Feature = () => {
+  
   return (
     <Box className={styles.Feature_Section}>
       {/* Top Section */}

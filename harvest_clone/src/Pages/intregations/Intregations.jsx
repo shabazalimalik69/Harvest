@@ -3,7 +3,9 @@ import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import React from "react";
 import style from "./Intregations.module.css";
 import img from './int.png'
+import { useNavigate } from "react-router-dom";
 const Intregations = () => {
+    const navigate = useNavigate();
 return (
 <div className={style.main}>
     <div className={style.customer_top}>
@@ -359,6 +361,21 @@ return (
         </div>
     </div>
     <div className={style.horizontal_line}></div>
+
+    <div className={style.build}>
+        <div className={style.build_box1}>
+            <img src="https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/illoglyphs/illo-180-integrations.svg" alt="img" />
+        </div>
+        <div className={style.build_box2}>
+            <h3>Build your own Harvest integration</h3>
+            <h4>Extend the functionality of your app by easily adding Harvest timers, or build a bespoke integration with the Harvest API.</h4>
+            <button className={style.btn} onClick={()=>{navigate("/signup")}}>Browse options</button>
+        </div>
+    </div>
+
+
+
+
     <div className={style.bottom_section}>
         <div>
             <h1>Start tracking time today</h1>
@@ -366,7 +383,7 @@ return (
                 Join 70,000+ companies spending their time wisely with Harvest.
             </h2>
             <div className={style.bottom_button}>
-                <div className={style.try_harvest_button}>
+                <div className={style.try_harvest_button} onClick={()=>{navigate("/signup")}}>
                     <a href="/signin">
                         <div>Try Harvest free</div>
                     </a>

@@ -3,6 +3,7 @@ import React from 'react'
 import styles from "./Feature.module.css";
 
 const TimeTracking = () => {
+
   return (
     <Box name="time_tracking" >
       <Box mb="100px" mt="100px"  >
@@ -10,7 +11,7 @@ const TimeTracking = () => {
         <GridItem className={styles.gridItem1}>
          <Text className={styles.text4}>Time tracking</Text>
          <Text className={styles.text5}>An intuitive, lightweight time tracking experience that’s easy to adopt and use every day.</Text>
-         <Button className={styles.button}>Start your free trial</Button>
+        <Link to="/signin"><Button className={styles.button} >Start your free trial</Button></Link> 
         </GridItem>
         <GridItem className={styles.gridItem2}>
             <Image borderTopLeftRadius="10px" borderBottomRightRadius="10px" src='https://www.getharvest.com/hs-fs/hubfs/screenshot-features-timesheets.png?width=787&name=screenshot-features-timesheets.png'/>

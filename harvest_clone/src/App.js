@@ -14,11 +14,11 @@ function App() {
   const token = useSelector((store)=>store.auth.token);
   console.log(token);
   return (
-    <div className="App">
+    <div className="App"  >
       {token ? (
-        <Box>
+        <Box >
           <Navbar2 />
-          <Box pt="40px">
+          <Box pt="40px"  bgColor="rgb(255,248,240)">
             <AllRoutes2 />
           </Box>
         </Box>
@@ -27,7 +27,7 @@ function App() {
           <Navbar1 />
           <Box pt="90px">
             <AllRoutes />
-            {/* <Footer /> */}
+            <Footer />
           </Box>
         </Box>
       )}

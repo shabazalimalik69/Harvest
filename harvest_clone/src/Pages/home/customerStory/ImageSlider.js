@@ -1,28 +1,31 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from "react-router-dom";
+import styles from "../Home.module.css";
 
 // If you want to use your own Selectors look up the Advancaed Story book examples
 const ImageSlider = ({ slides }) => {
+  const navigate = useNavigate();
   return (
     <>
         <Carousel infiniteLoop >
       {slides.map((slide) => {
-        return <Box display='flex' gap='30px'>
-            <Box m='0 0 20px' w='43%' p='0 50px 0 25px' textAlign='start'>
+        return <Box  className={styles.customer_Section_car_box}>
+            <Box className={styles.customer_Section_car_box_sb1} >
 
-                <Text fontSize="30px" fontWeight='400' mb='20px' color='#1D1E1C'>
+                <Text className={styles.customer_Section_car_box_txt1}>
                     <span style={{color:"#FA5D00",fontSize:"30px", fontWeight:'700'}} >"</span>
                     {slide.story}
                     <span style={{color:"#FA5D00",fontSize:"30px", fontWeight:'700'}} >"</span>
                     </Text>
-                <Text fontSize="20px" fontWeight='700' mb='20px' color='black'>
+                <Text className={styles.customer_Section_car_box_txt2}>
                     {slide.user} 
                     </Text>
-                    <Button bg='#1D1E1C' color='#ffff' margin='40px 0' size='lg' borderRadius='15px'> Meet our customers </Button>
+                    <Button bg='#1D1E1C' color='#ffff' size='lg' className={styles.customer_Section_car_box_btn} onClick={()=>{navigate("/customers")}}> Meet our customers </Button>
             </Box>
-            <Box w='45%'>
-                <Image src={slide.image} height="auto"/>
+            <Box className={styles.customer_Section_car_box_sb2}>
+                <Image src={slide.image} height="auto" className={styles.customer_Section_car_box_sb2_img}/>
             </Box>
 
             </Box> ;

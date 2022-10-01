@@ -20,7 +20,6 @@
     border: 8px solid #fbf2eb;
   }
   .customer_top1 {
-    
     font-size: 50px;
     width: 100%;
   }
@@ -28,7 +27,8 @@
    
     text-align: left;
     font-size: 30px;
-    padding-bottom: 50px;margin-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 20px;
   }
   .customer_top3 {
     display: flex;
@@ -218,6 +218,54 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  .build{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background-color: #fbf2eb;
+    padding: 100px 80px;
+  }
+
+  .build_box1{
+    width: 30%;
+    padding-left: 10%;
+  }
+
+  .build_box2{
+    width: 60%;
+  }
+
+  .build_box2 h3{
+    text-align: start;
+    font-size: 50px;
+    width: 100%;
+  }
+  .build_box2 h4{
+   
+    text-align: start;
+    font-size: 30px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+  }
+
+  .btn{
+
+    display: flex;
+   margin-top: 30px;
+   /* margin-left: 8%; */
+   background-color:black;
+   padding: 12px 25px ;
+   color: #FFF8F1;
+   border-radius: 20px;
+   font-size: 20px;
+   font-weight: 700;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+}
+.btn:hover{
+    background-color: #1d1e1c;
+}
   /* --------------------------------------------------------------------------------------------------------------------- */
   @media all and (min-width: 850px) and (max-width: 950px) {
     .customer_top {
@@ -353,6 +401,56 @@
       font-size: 20px;
       font-weight: 500;
     }
+    .build{
+      gap: 50px;
+    }
+    .build_box2{
+      width: 65%;
+    }
+
+    .build{
+      width: 100%;
+      margin: auto;
+      display: block;
+      
+    }
+
+    .build_box1{
+      margin: auto;
+      width: 40%;
+      margin-top: -30px;
+    }
+  
+  
+    .build_box1 img{
+      
+      
+      margin: auto;
+      margin-bottom: 30px;
+      
+    }
+  
+    .build_box2{
+      width: 100%;
+      margin: auto;
+    }
+  
+    .build_box2 h3{
+      text-align: start;
+      font-size: 40px;
+      width: 100%;
+    }
+    .build_box2 h4{
+     
+      padding-bottom: 40px;
+      margin-top: 20px;
+    }
+  
+    .btn{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
   }
   /* --------------------------------------------------------------------------------- */
   @media screen and (min-width: 649px) and (max-width: 849px) {
@@ -470,6 +568,56 @@
     .try_harvest_button {
       /* width: 100%; */
     }
+
+    .build{
+      gap: 50px;
+    }
+    .build_box2{
+      width: 65%;
+    }
+
+    .build{
+      width: 100%;
+      margin: auto;
+      display: block;
+      
+    }
+
+    .build_box1{
+      margin: auto;
+      width: 40%;
+      margin-top: -30px;
+    }
+  
+  
+    .build_box1 img{
+      width: 180%;
+      margin: auto;
+      margin-bottom: 30px;
+      
+    }
+  
+    .build_box2{
+      width: 95%;
+      margin: auto;
+    }
+  
+    .build_box2 h3{
+      text-align: start;
+      font-size: 38px;
+      width: 100%;
+    }
+    .build_box2 h4{
+     
+      padding-bottom: 35px;
+      margin-top: 22px;
+    }
+  
+    .btn{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
   }
   /* -------------------------------------------------------------------------------------------------------------------------- */
   @media screen and (min-width: 0px) and (max-width: 648px) {
@@ -585,5 +733,55 @@
     .try_harvest_button {
       width: 100%;
     }
+
+    .build{
+      gap: 50px;
+    }
+    .build_box2{
+      width: 65%;
+    }
+
+    .build{
+      width: 100%;
+      margin: auto;
+      display: block;
+      
+    }
+
+    .build_box1{
+      margin: auto;
+      width: 40%;
+      margin-top: -40px;
+    }
+  
+  
+    .build_box1 img{
+      width: 180px;
+      margin: auto;
+      margin-bottom: 30px;
+      
+    }
+  
+    .build_box2{
+      width: 100%;
+      margin: auto;
+    }
+  
+    .build_box2 h3{
+      text-align: start;
+      font-size: 35px;
+      width: 100%;
+    }
+    .build_box2 h4{
+     
+      padding-bottom: 40px;
+      margin-top: 22px;
+    }
+  
+    .btn{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
   }
   

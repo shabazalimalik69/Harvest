@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import style from "./Footer.module.css";
 import logo from "./logo.png"
 
@@ -16,24 +16,24 @@ export const Footer = () => {
             <h4>Harvest</h4>
             <div>
               {" "}
-              <Link>Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div>
-              <Link>Why Harvest?</Link>
+              <Link to="/whyHarvest">Why Harvest?</Link>
               <br />
             </div>
             <div>
               {" "}
-              <Link>Features</Link>
+              <Link to="/features">Features</Link>
               <br />
             </div>
             <div>
-              <Link>Pricing</Link>
+              <Link to="/pricing">Pricing</Link>
               <br />
             </div>
             <div>
               {" "}
-              <Link>Integrations</Link>
+              <Link to='/intregations'>Integrations</Link>
               <br />
             </div>
             <div>
@@ -52,7 +52,7 @@ export const Footer = () => {
             <h4>Community</h4>
             <div>
               {" "}
-              <Link>Customer Stories</Link>
+              <Link to='/customers'>Customer Stories</Link>
             </div>
             <div>
               <Link>Resources</Link>
@@ -69,7 +69,7 @@ export const Footer = () => {
             </div>
             <div>
               {" "}
-              <Link>Integrate with Harvest</Link>
+              <Link to='/intregations'>Integrate with Harvest</Link>
               <br />
             </div>
             <div>
@@ -123,10 +123,10 @@ export const Footer = () => {
 
 
         <div className={style.copyright}>
-          <div cl>
+          <div className={style.copyright_box1}>
             <Link>© 2006-2022 Harvest</Link>
           </div>
-          <div>
+          <div className={style.copyright_box2}>
             <div>
               <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
               <Link>Twitter</Link>

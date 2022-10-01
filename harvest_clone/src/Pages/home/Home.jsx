@@ -1,6 +1,7 @@
 import { StarIcon } from '@chakra-ui/icons'
 import { Box, Button, Divider, Image, Input, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import BottomSection from '../Feature/BottomSection'
 import CustomersStory from './customerStory/CustomersStory'
 import Feature from './Fitures'
@@ -33,9 +34,11 @@ return (
 
             <Box className={styles.TimeTracking_Sbox3}>
                 <Input className={styles.TimeTracking_Sbox3_inp} variant='outline'  width= '60%' size='lg' bg='white' placeholder='Work Email'/>
+                <Link to='/signup'>
                 <button className={styles.TimeTracking_Sbox3_btn}>
                     Get Started
                 </button>
+                </Link>
                 <Text className={styles.TimeTracking_Sbox3_txt1}>Free 30-day trial. No credit card required.
                 </Text>
             </Box>
@@ -95,10 +98,7 @@ return (
     <Divider borderColor={'#FA5D00'} orientation='horizontal' />
     {/*
     <BottomSection /> */}
-
     <StartTracking />
-
-
 
 </Box>
 )

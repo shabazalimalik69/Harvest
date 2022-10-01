@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./Customers.module.css";
 
 const Customers = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={style.main}>
       <div className={style.customer_top}>
@@ -65,7 +68,7 @@ const Customers = () => {
               with clients.
             </h2>
             <a href="#">
-              <div className={style.story_button}>Read customer story</div>
+              <div className={style.story_button}onClick={()=>{navigate("/customers")}}>Read customer story</div>
             </a>
           </div>
         </div>
@@ -326,10 +329,8 @@ const Customers = () => {
             Join 70,000+ companies spending their time wisely with Harvest.
           </h2>
           <div className={style.bottom_button}>
-            <div className={style.try_harvest_button}>
-              <a href="/signin">
+            <div className={style.try_harvest_button} onClick={()=>{navigate("/signup")}}>
                 <div>Try Harvest free</div>
-              </a>
             </div>
             <p>Free 30-day trial. No credit card required.</p>
           </div>

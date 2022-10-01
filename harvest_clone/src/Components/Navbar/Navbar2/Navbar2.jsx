@@ -1,13 +1,6 @@
-import {
-  Box,
-  Button,
-  Image,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Button, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar2.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,21 +11,24 @@ const Navbar2 = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
   const token = useSelector((store)=>store.auth.token);
-
+  const navigate=useNavigate()
   const handleNav2 = () => {
     hide(!show);
   };
 
   const handleClose = (value) => {
-    setText(value);
-    console.log(value);
+    setText(value)
+    console.log(value)
     setTimeout(() => {
       hide(false);
+    
     }, 500);
   };
 
   const handleSignout = () => {
+ 
     dispatch(logoutAPI())
+    navigate("/")
   };
 
   return (
@@ -55,16 +51,12 @@ const Navbar2 = () => {
             </Link>
           </li>
           <li className={style.li1}>
-            <Link to="/expanses" className={style.link1}>
+            <Link to="/expenses" className={style.link1}>
               Expenses
             </Link>
           </li>
           <li className={style.li1}>
-
-            
-
             <Link to="/projects" className={style.link1}>
-
               Projects
             </Link>
           </li>
@@ -88,11 +80,12 @@ const Navbar2 = () => {
               Manage
             </Link>
           </li>
-          <li className={style.li1} style={{ float: "right" }}>
-            <Link to="" className={style.link1}>
-              Akash Keshari
-            </Link>
-            <Box className={style.dropbox}>
+          <li className={style.li1} style={{ float: "right" }} >
+          
+            {/* <Box display="flex"  border="1px solid white"> <Box w="30px" h="30px" borderRadius="50%" border="1px solid rgb(93,64,55)" bgColor="rgb(93,64,55)"><Image src=""  borderRadius="50%" w="100%"/></Box> <Text>Akash Keshari</Text></Box> */}
+            <Text color="white"  display="flex" alignItems="center" gap={2} pt={2} pl={1} pr={1} _hover={{bgColor:"rgba(218, 218, 218,.3)"}}><Box w="35px" h="35px" border="1px solid rgb(93,64,55)" borderRadius="50%" bgColor="rgb(93,64,55)"><Image src="profile.ico" borderRadius="50%" /></Box><Text>Akash</Text></Text>
+          
+            <Box className={style.dropbox} >
               <Box
                 w="100%"
                 display="flex"
@@ -106,13 +99,17 @@ const Navbar2 = () => {
                   gap="10px"
                   paddingLeft={5}
                 >
+                  <Box w="20%" borderRadius="50%" border="1px solid rgb(93,64,55)">
                   <Image
-                    src="favicon.ico"
+                    w="100%"
+                    src="profile.ico"
                     alt="user pic"
                     borderRadius="50%"
-                    w="20%"
+              
+                    bgSize="cover" 
                   />
-                  <Box w="80%" fontSize={22} textAlign="justify">
+                  </Box >
+                  <Box w="80%" fontSize={22} textAlign="justify" >
                     <Text>Akash Keshari</Text>
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}
@@ -160,49 +157,49 @@ const Navbar2 = () => {
           <Box className={style.box3}>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/time">
                 <Box onClick={()=>handleClose("Time")} >Time</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="expanses">
                 <Box onClick={()=>handleClose("Expenses")}>Expenses</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/projects">
                 <Box onClick={()=>handleClose("Projects")}>Projects</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/team">
                 <Box onClick={()=>handleClose("Team")}>Team</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/reports">
                 <Box onClick={()=>handleClose("Reports")}>Reports</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="invoices">
                 <Box onClick={()=>handleClose("Invoices")}>Invoices</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/manage">
                 <Box onClick={()=>handleClose("Manage")}>Manage</Box>
               </Link>
             </Box>
             <Box className={style.box31}>
               {" "}
-              <Link to="">
+              <Link to="/company_account">
                 <Box onClick={()=>handleClose("Setting")}>Setting</Box>
               </Link>
             </Box>
@@ -250,7 +247,7 @@ const Navbar2 = () => {
             <Box className={style.box411}>
               {" "}
               <Link to="">
-                <Box onClick={()=>handleClose("Signout")}>Signout</Box>
+                <Box onClick={handleSignout }>Signout</Box>
               </Link>
             </Box>
 
@@ -262,7 +259,7 @@ const Navbar2 = () => {
 
       </Box>
 
-
+{/* 
         <Box
           display="flex"
           justifyContent="center"
@@ -372,12 +369,14 @@ const Navbar2 = () => {
               <Box className={style.box411}>
                 {" "}
                 <Link to="">
+
                   <Box onClick={handleSignout}>Sign Out</Box>
+
                 </Link>
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
   );
 };

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Box,Text,Grid, Image, Link, Divider, GridItem, Button} from "@chakra-ui/react";
 import { ArrowDownIcon } from '@chakra-ui/icons'
-
 import styles from "./Home.module.css"
+import { useNavigate } from 'react-router-dom';
 
 
 const Feature = () => {
+  const navigate = useNavigate();
 return (
 <Box className={styles.Feature_Section}>
   <Text className={styles.Feature_Section_txt}>FEATURES</Text>
@@ -50,8 +51,9 @@ return (
           </Box>
         </GridItem>
       </Grid>
-
-      <Button bg='#1D1E1C' color='#ffff' margin='60px 0' size='lg' borderRadius='15px'> Discover all features </Button>
+     
+      <Button bg='#1D1E1C' color='#ffff' size='lg' variant='solid' onClick={()=>{navigate("/features")}} className={styles.Feature_Section_GI_btn}>Discover all features </Button>
+     
     </Box>
     <Box width="60%">
       <Image
