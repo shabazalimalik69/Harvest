@@ -2,10 +2,12 @@ import { AUTH_SIGNIN_ERROR, AUTH_SIGNIN_LOADING, AUTH_SIGNIN_SUCCESS, AUTH_SIGNO
 
 
 let token = localStorage.getItem("token") || "" ;
+let first_name = localStorage.getItem("first_name") || "" ;
 const initState = {
     token:token,
     loading:false,
     error:false,
+    first_name:first_name,
 }
 
 export const authReducer = (state=initState,{type,payload})=>{
@@ -32,6 +34,7 @@ export const authReducer = (state=initState,{type,payload})=>{
                 loading:false,
                 error:false,
                 token:payload.token,
+                first_name:payload.first_name,
             }
         }
 
