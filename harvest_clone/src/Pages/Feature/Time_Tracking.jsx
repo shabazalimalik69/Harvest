@@ -1,8 +1,10 @@
 import { Box, Button, Divider, Grid, GridItem, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import styles from "./Feature.module.css";
 
 const TimeTracking = () => {
+  const navigate = useNavigate();
   return (
     <Box name="time_tracking" >
       <Box mb="100px" mt="100px"  >
@@ -10,7 +12,7 @@ const TimeTracking = () => {
         <GridItem className={styles.gridItem1}>
          <Text className={styles.text4}>Time tracking</Text>
          <Text className={styles.text5}>An intuitive, lightweight time tracking experience that’s easy to adopt and use every day.</Text>
-         <Button display="block" alignItems = "flex-start" color="white" backgroundColor="#FA5D00" borderRadius="10px">Start your free trial</Button>
+         <Button display="block" alignItems = "flex-start" color="white" backgroundColor="#FA5D00" borderRadius="10px" onClick={()=>{navigate("/signup")}}>Start your free trial</Button>
         </GridItem>
         <GridItem className={styles.gridItem2}>
             <Image borderTopLeftRadius="10px" borderBottomRightRadius="10px" src='https://www.getharvest.com/hs-fs/hubfs/screenshot-features-timesheets.png?width=787&name=screenshot-features-timesheets.png'/>

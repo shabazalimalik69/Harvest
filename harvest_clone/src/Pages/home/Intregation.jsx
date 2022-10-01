@@ -3,9 +3,11 @@ import { Box,Text,Grid, Image, Link, Divider, GridItem, Button} from "@chakra-ui
 import { ArrowDownIcon } from '@chakra-ui/icons'
 
 import styles from "./Home.module.css"
+import { useNavigate } from 'react-router-dom';
 
 
 const Intregation = () => {
+  const navigate = useNavigate();
   return (
     <Box className={styles.Intregation_Section}>
         <Box  className={styles.Intregation_Section_box1}>
@@ -18,7 +20,7 @@ const Intregation = () => {
           <Text className={styles.Intregation_Section_box2_txt_3}>Your favorite apps work seamlessly with Harvest so you can keep projects on track however you work.
           </Text>
           <Link to="/intregations">
-          <Button bg='#1D1E1C' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' className={styles.Intregation_Section_box2_btn}> Browse integrations </Button>   </Link>
+          <Button bg='#1D1E1C' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' className={styles.Intregation_Section_box2_btn} onClick={()=>{navigate("/intregations")}}> Browse integrations </Button>   </Link>
         </Box>
       
     </Box>

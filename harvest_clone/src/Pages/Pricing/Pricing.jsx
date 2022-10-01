@@ -11,6 +11,7 @@ import {
 import React from "react";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AskedQsn } from "./AskedQsn";
 import FeaturesSection from "./FeaturesSection";
 import FeaturesSection2 from "./FeaturesSection2";
@@ -18,8 +19,7 @@ import style from "./Pricing.module.css";
 
 const Pricing = () => {
   const [toggle, setToggle] = useState(false);
-
-
+  const navigate = useNavigate();
   const toggleChange = () => {
     setToggle(!toggle);
   };
@@ -127,6 +127,7 @@ const Pricing = () => {
                   outline: "rgb(56, 204, 56)",
                   bgColor: "rgb(56, 204, 56)",
                 }}
+                onClick={()=>{navigate("/signup")}}
               >
                 30-days free trial
               </Button>
@@ -197,6 +198,7 @@ const Pricing = () => {
                   outline: "rgb(56, 204, 56)",
                   bgColor: "rgb(56, 204, 56)",
                 }}
+                onClick={()=>{navigate("/signup")}}
               >
                 30-days free trial
               </Button>
@@ -263,7 +265,7 @@ const Pricing = () => {
 
 <Button bg='#FA5D00' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' onClick={() => {
           window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-        }}>Back To plan & Pricing</Button>
+        }} >Back To plan & Pricing</Button>
     </Box>
   );
 };
