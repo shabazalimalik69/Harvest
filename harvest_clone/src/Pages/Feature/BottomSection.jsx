@@ -11,8 +11,8 @@ import styles from "./Feature.module.css";
 const BottomSection = () => {
   const navigate = useNavigate();
   return (
-    <Box width="100%" backgroundColor="white">
-      <Grid pt="70px" className={styles.grid4}>
+    <Box width="100%" backgroundColor="white" pb="30px">
+      <Grid pt='40px' className={styles.grid4}>
         <GridItem className={styles.gridItem5}>
         <Text className={styles.text4}>Start tracking time today</Text>
          <Text className={styles.text5}>Join 70,000+ companies spending their time wisely with Harvest.</Text>
