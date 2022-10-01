@@ -49,6 +49,8 @@ const Expanses = () => {
   useEffect(() => {
     if (data) {
       setShow1(false);
+    } else {
+      setShow1(true);
     }
     dispatch(getData(token, page));
   }, [page]);
