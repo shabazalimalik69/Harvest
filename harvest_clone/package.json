@@ -2,7 +2,6 @@
   "name": "harvest_clone",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "@chakra-ui/icons": "^2.0.10",
     "@chakra-ui/react": "^2.3.4",

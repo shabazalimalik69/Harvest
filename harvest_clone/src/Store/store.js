@@ -8,11 +8,14 @@ import {
 import thunk from "redux-thunk";
 import { authReducer } from "./auth/auth.reducer";
 import expanseReducer from "./expanse/expanse.reducer";
+import { projectReducer } from "./project2/project.reducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
   expanse: expanseReducer,
+  projects:projectReducer
 });
+
 
 const createComposer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

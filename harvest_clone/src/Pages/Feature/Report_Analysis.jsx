@@ -1,6 +1,11 @@
 import { Box, Button, Divider, Grid, GridItem, HStack, Image, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+
+
+import { HashLink } from 'react-router-hash-link';
+
+
 import styles from "./Feature.module.css";
 
 const ReportAnalysis = () => {

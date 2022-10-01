@@ -27,6 +27,7 @@ export const authReducer = (state=initState,{type,payload})=>{
         case AUTH_SIGNUP_SUCCESS:{
             localStorage.setItem("token",payload.token);
             localStorage.setItem("first_name",payload.first_name);
+
             return{
                 ...state,
                 loading:false,
@@ -65,7 +66,9 @@ export const authReducer = (state=initState,{type,payload})=>{
                     loading:false,
                     error:false,
                     token:"",
-                    first_name:"",
+
+                    first_name:""
+
                 }
         }
         default:{

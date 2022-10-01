@@ -10,8 +10,9 @@ const Navbar2 = () => {
   const [show, hide] = useState(false);
   const [text, setText] = useState("");
   const dispatch = useDispatch();
-  const {first_name} = useSelector((store)=>store.auth);
-  console.log(first_name);
+
+  const first_name = useSelector((store)=>store.auth.first_name);
+
   const navigate=useNavigate()
   const handleNav2 = () => {
     hide(!show);
@@ -83,7 +84,7 @@ const Navbar2 = () => {
           </li>
           <li className={style.li1} style={{ float: "right" }} >
           
-            {/* <Box display="flex"  border="1px solid white"> <Box w="30px" h="30px" borderRadius="50%" border="1px solid rgb(93,64,55)" bgColor="rgb(93,64,55)"><Image src=""  borderRadius="50%" w="100%"/></Box> <Text>Akash Keshari</Text></Box> */}
+
             <Text color="white"  display="flex" alignItems="center" gap={2} pt={2} pl={1} pr={1} _hover={{bgColor:"rgba(218, 218, 218,.3)"}}><Box w="35px" h="35px" border="1px solid rgb(93,64,55)" borderRadius="50%" bgColor="rgb(93,64,55)"><Image src="profile.ico" borderRadius="50%" /></Box><Text>{first_name}</Text></Text>
           
             <Box className={style.dropbox} >
@@ -112,7 +113,7 @@ const Navbar2 = () => {
                   </Box >
                   <Box w="80%" fontSize={22} textAlign="justify" >
 
-                    <Text>{first_name}</Text>
+                    <Text>{first_name} </Text>
 
                     <Text mt={-2}>masai</Text>
                   </Box>{" "}

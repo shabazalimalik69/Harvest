@@ -12,7 +12,7 @@
 .text1{
     color: #1D1E1C;
     font-size: 50px;
-    text-align: start;
+    /* text-align: start; */
     margin-top: 40px;
 }
 .text2{
