@@ -1,6 +1,6 @@
 # afraid-shoe-4639
 
-![Logo](http://localhost:3000/harvest_Logo.png)
+![Logo]([http://localhost:3000/harvest_Logo.png](https://logos-world.net/wp-content/uploads/2022/04/Harvest-New-Logo.png))
 
 
 # Harvest-Clone
