@@ -27,7 +27,9 @@ export const authReducer = (state=initState,{type,payload})=>{
             }
         }
         case AUTH_SIGNUP_SUCCESS:{
-            localStorage.setItem("token",payload.token,"first_name",payload.first_name);
+            localStorage.setItem("token",payload.token);
+            localStorage.setItem("first_name",payload.first_name);
+
             return{
                 ...state,
                 loading:false,
@@ -51,7 +53,8 @@ export const authReducer = (state=initState,{type,payload})=>{
             }
         }
         case AUTH_SIGNIN_SUCCESS:{
-            localStorage.setItem("token",payload.token,"first_name",payload.first_name);
+            localStorage.setItem("token",payload.token);
+            localStorage.setItem("first_name",payload.first_name);
             return{
                 ...state,
                 loading:false,
@@ -61,12 +64,13 @@ export const authReducer = (state=initState,{type,payload})=>{
             }
         }
             case AUTH_SIGNOUT:{
-                localStorage.removeItem("token");
+                localStorage.removeItem("token","first_name");
                 return{
                     ...state,
                     loading:false,
                     error:false,
                     token:"",
+                    first_name:""
                 }
         }
         default:{

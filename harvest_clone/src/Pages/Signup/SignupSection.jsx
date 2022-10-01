@@ -13,7 +13,7 @@ import { useRef } from 'react';
 const initData={
     first_name:"",
     last_name:"",
-    company_name:"",
+    company:"",
     email:"",
     password:"",
 }
@@ -26,7 +26,7 @@ const SignupSection = () => {
     const [check,setCheck] = useState("")
 
     const token = useSelector((store)=>store.auth.token)
-    const {first_name,last_name,company_name,email,password} = userData;
+    const {first_name,last_name,company,email,password} = userData;
 
     const inputValue1 = useRef(null);
     const inputValue2 = useRef(null);
@@ -59,7 +59,7 @@ const SignupSection = () => {
     //         headers:{
     //             "Content-Type":"application/json",
     //         },
-    //         body:JSON.stringify({first_name,last_name,company_name,email,password})
+    //         body:JSON.stringify({first_name,last_name,company,email,password})
     //     })
     //     const data = await response.json();
     //     if(data.status===422 || !data){
@@ -96,11 +96,10 @@ const SignupSection = () => {
         
   
         dispatch(signupAPI(userData))
+        navigate("/signin")
       }else{
         alert("Password length must be min 8")
       }
-     
-
     }
 
     useEffect(()=>{
@@ -124,7 +123,7 @@ const SignupSection = () => {
        <Grid className={styles.grid2}>
        <Input ref={inputValue1} value={first_name} onChange={handleChange} type='text' name='first_name' placeholder='First name' />
        <Input ref={inputValue2} value={last_name} onChange={handleChange} type='text' name='last_name' placeholder='First name' />
-       <Input ref={inputValue3} value={company_name} onChange={handleChange} type='text' name='company_name' placeholder='Company name' />
+       <Input ref={inputValue3} value={company} onChange={handleChange} type='text' name='company' placeholder='Company name' />
        <Input ref={inputValue4} value={email} onChange={handleChange} type='email' name='email' placeholder='Work email' />
        <Input  ref={inputValue} value={password}  onChange={(e)=>{checkPassword(e); handleChange(e)}} className={styles.input} type='password' name='password' placeholder='Password' />
        </Grid>
