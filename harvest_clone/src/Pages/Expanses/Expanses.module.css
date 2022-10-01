@@ -122,6 +122,10 @@ select {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+.Expanse_detail_submit {
+  display: flex;
+  gap: 20px;
+}
 .Expanse_detail_submit :nth-child(2) {
   margin-left: 10px;
   border: 1px solid;
@@ -131,12 +135,18 @@ select {
   padding: 1px 10px;
   height: 35px;
 }
+.Expanse_detail_submit :nth-child(3) {
+  width: 20%;
+}
 .show_elem {
   display: flex;
   background-color: #fff1cd;
   justify-content: left;
   align-items: center;
   border: 1px solid white;
+}
+.hide_elem {
+  display: none;
 }
 .elem_date {
   width: 10%;

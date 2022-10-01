@@ -1,92 +1,58 @@
 import style from "./Expanses.module.css";
-import axios from "axios";
 import { useEffect, useState } from "react";
-
-const getProjectData = async () => {
-  const response = await axios.get(
-    "http://localhost:8000/expenses/expenses"
-    // "http://localhost:8000/expenses/expenses?project_name=Abishek"
-  );
-
-  return response.data;
-};
+import { useDispatch, useSelector } from "react-redux";
+import {
+  allDeleteData,
+  deleteData,
+  getData,
+  patchData,
+  postData,
+} from "../../Store/expanse/expanse.action";
 
 const Expanses = () => {
-  const [data, setData] = useState([]);
+  const { data } = useSelector((store) => store.expanse);
+  const token = useSelector((store) => store.auth.token);
   const [show, setShow] = useState(true);
+  const [page, setPage] = useState(1);
   const [show1, setShow1] = useState(true);
-  const [checkbox, setCheckbox] = useState(false);
-  const [project, setProject] = useState("");
-  const [category, setCategory] = useState("");
-  const [date, setDate] = useState("");
-  const [amount, setAmount] = useState("");
+  const [creds, setCreds] = useState({});
+  const [edit, setEdit] = useState(true);
+  const dispatch = useDispatch();
 
-  const postProjectData = async (project, category, date, amount) => {
-    console.log(project, category, date, amount);
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/expenses/expenses",
-        {
-          project_name: project,
-          category: category,
-          date: date,
-          amount: amount,
-        }
-      );
-      console.log(response);
-      // if (response) {
-      //   getProjectData();
-      // }
-    } catch (e) {
-      console.log(e.message);
-    }
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setCreds({
+      ...creds,
+      [name]: value,
+    });
   };
-
-  console.log(show);
-  const handleDate = (e) => {
-    console.log(e);
-    setDate(e);
+  const onEdit = (id) => {
+    console.log(id);
+    setEdit(!edit);
   };
-  const handleProject = (e) => {
-    console.log(e);
-    setProject(e);
+  const deleteExpanses = (id) => {
+    console.log(id);
+    dispatch(deleteData(id, page));
   };
-  const handleNotes = (e) => {
-    console.log(e);
-    // setNotes(e)
+  const patchExpanses = (id) => {
+    console.log(id);
+    dispatch(patchData(id, page, creds));
   };
-  const handleCheckbox = () => {
-    setCheckbox(!checkbox);
-  };
-  const handleAmount = (e) => {
-    console.log(e);
-    setAmount(e);
-  };
-  const handleCategory = (e) => {
-    console.log(e);
-    setCategory(e);
+  const allDeleteExpanses = () => {
+    console.log("hi");
+    dispatch(allDeleteData());
   };
   const addExpanses = () => {
-    setShow1(false);
-    postProjectData(project, category, date, amount).then((d) => {
-      setData([...data], d);
-    });
-    console.log("data saved");
+    dispatch(postData(creds));
   };
 
-  const handleData = async () => {
-    try {
-      const pData = await getProjectData();
-      console.log(pData.data);
-      setData(pData.data);
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
   useEffect(() => {
-    handleData();
-  }, []);
-  console.log(data);
+    if (data) {
+      setShow1(false);
+    }
+    dispatch(getData(token, page));
+  }, [page]);
+  // console.log(data);
   return (
     <div className={style.expanses}>
       <div className={style.sub_expanses}>
@@ -103,21 +69,23 @@ const Expanses = () => {
             <div className={style.column1}>
               <h2 className={style.h2}>Date</h2>
               <input
-                onChange={(e) => handleDate(e.target.value)}
+                onChange={onChange}
                 type="date"
+                name="date"
                 placeholder="Date"
               />
             </div>
             <div className={style.column2}>
               <h2 className={style.h2}>Project/Category</h2>
               <input
-                onChange={(e) => handleProject(e.target.value)}
+                onChange={onChange}
+                name="project_name"
                 className={style.input_data}
                 type="text"
                 placeholder="project name"
               />
               <select
-                onChange={(e) => handleCategory(e.target.value)}
+                onChange={onChange}
                 name="category"
                 className={style.input_data}
               >
@@ -129,19 +97,27 @@ const Expanses = () => {
                 <option value="Transportation">Transportation</option>
               </select>
               <input
-                onChange={(e) => handleNotes(e.target.value)}
+                onChange={onChange}
+                name="notes"
                 className={style.input_data}
                 type="text"
                 placeholder="Notes"
               />
               <input className={style.input_data} type="file" />
               <div className={style.column}>
-                <input onChange={() => handleCheckbox()} type="checkbox" />
+                <input
+                  onChange={onChange}
+                  type="checkbox"
+                  name="billable"
+                  value="Billable"
+                />
                 <p>This expense is billable</p>
               </div>
               <div className={style.Expanse_detail_submit}>
                 <button
-                  onClick={() => addExpanses()}
+                  onClick={() => {
+                    addExpanses();
+                  }}
                   className={style.expanses_save_button}
                   type="button"
                 >
@@ -155,7 +131,8 @@ const Expanses = () => {
             <div className={style.column3}>
               <h2 className={style.h2}>Amount</h2>
               <input
-                onChange={(e) => handleAmount(e.target.value)}
+                onChange={onChange}
+                name="amount"
                 className={style.amount_input}
                 type="number"
                 placeholder="Amount"
@@ -163,10 +140,10 @@ const Expanses = () => {
             </div>
           </div>
         </form>
-
+        {/* ----------------------------------------------------------------------------------------- */}
         <div className="show_added_data">
-          {data.map((elem) => (
-            <div className={style.show_elem}>
+          {data?.map((elem) => (
+            <div key={elem.id} className={style.show_elem}>
               <div className={style.elem_date}>
                 <p>{elem.date}</p>
               </div>
@@ -175,13 +152,126 @@ const Expanses = () => {
                 <p>{elem.category}</p>
               </div>
               <div className={style.elem_amount}>
-                <p>{elem.amount}</p>
+                <p>$&nbsp;{elem.amount}</p>
               </div>
-              <button className={style.elem_button} type="button">
+              <button
+                className={style.elem_button}
+                onClick={() => {
+                  onEdit(elem.id);
+                }}
+                type="button"
+              >
                 Edit
               </button>
+              <form className={edit ? style.hide_expanse : style.show_expanse}>
+                <div className={style.expanse_form}>
+                  <div className={style.column1}>
+                    <h2 className={style.h2}>Date</h2>
+                    <input
+                      onChange={onChange}
+                      type="date"
+                      name="date"
+                      placeholder="Date"
+                    />
+                  </div>
+                  <div className={style.column2}>
+                    <h2 className={style.h2}>Project/Category</h2>
+                    <input
+                      onChange={onChange}
+                      name="project_name"
+                      className={style.input_data}
+                      type="text"
+                      placeholder="project name"
+                    />
+                    <select
+                      onChange={onChange}
+                      name="category"
+                      className={style.input_data}
+                    >
+                      <option value="">Choose category</option>
+                      <option value="Entertainment">Entertainment</option>
+                      <option value="Lodging">Lodging</option>
+                      <option value="Meal">Meals</option>
+                      <option value="Milage">Milage</option>
+                      <option value="Transportation">Transportation</option>
+                    </select>
+                    <input
+                      onChange={onChange}
+                      name="notes"
+                      className={style.input_data}
+                      type="text"
+                      placeholder="Notes"
+                    />
+                    <input className={style.input_data} type="file" />
+                    <div className={style.column}>
+                      <input
+                        onChange={onChange}
+                        type="checkbox"
+                        name="billable"
+                        value="Billable"
+                      />
+                      <p>This expense is billable</p>
+                    </div>
+                    <div className={style.Expanse_detail_submit}>
+                      <button
+                        onClick={() => patchExpanses(elem.id)}
+                        className={style.expanses_save_button}
+                        type="button"
+                      >
+                        Update Expanses
+                      </button>
+                      <button type="button" onClick={() => onEdit()}>
+                        Cancel
+                      </button>
+                      <button
+                        className={style.elem_button}
+                        onClick={() => {
+                          deleteExpanses(elem.id);
+                        }}
+                        type="button"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                  <div className={style.column3}>
+                    <h2 className={style.h2}>Amount</h2>
+                    <input
+                      onChange={onChange}
+                      name="amount"
+                      className={style.amount_input}
+                      type="number"
+                      placeholder="Amount"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           ))}
+          <button type="button" onClick={allDeleteExpanses}>
+            DELETE ALL
+          </button>
+          <div className={style.page}>
+            <button
+              type="button"
+              disabled={page <= 1}
+              onClick={() => {
+                setPage(page - 1);
+              }}
+            >
+              Prev
+            </button>
+            <button>{page}</button>
+            <button
+              type="button"
+              disabled={page >= 10}
+              onClick={() => {
+                setPage(page + 1);
+              }}
+            >
+              Next
+            </button>
+          </div>
         </div>
 
         <div className={show1 ? style.static_body : style.static_body_hide}>
