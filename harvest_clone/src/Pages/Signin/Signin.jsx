@@ -29,7 +29,7 @@ const handleSubmit = (e)=>{
   e.preventDefault();
   console.log("clicked")
   dispatch(signinAPI(userData))
-
+  navigate("/time")
 };
 
 useEffect(()=>{
@@ -47,7 +47,7 @@ useEffect(()=>{
      <Text marginTop="20px">or with your email below</Text>
      <FormControl method="POST">
      <Input backgroundColor="white" marginTop="20px" value={email} onChange={handleChange} type='email' name='email' placeholder='Work email' />
-      <Input backgroundColor="white" marginTop="10px" value={password} onChange={handleChange}  type='password' name='password' placeholder='Password' />
+      <Input backgroundColor="white" marginTop="10px" value={password} onChange={handleChange}  type='password' name='password' placeholder='Password'/>
       <Button onClick={handleSubmit}  marginBottom="20px" marginTop="20px" color="white" height="50px" width="100%" backgroundColor="#11742A" borderRadius="20px">Sign In</Button>
     </FormControl>
      </Box>

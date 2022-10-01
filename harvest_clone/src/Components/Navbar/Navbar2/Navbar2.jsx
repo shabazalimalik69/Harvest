@@ -7,7 +7,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Navbar2.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +18,7 @@ const Navbar2 = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
   const token = useSelector((store)=>store.auth.token);
-
+  const navigate=useNavigate()
   const handleNav2 = () => {
     hide(!show);
   };
@@ -32,7 +32,9 @@ const Navbar2 = () => {
   };
 
   const handleSignout = () => {
+ 
     dispatch(logoutAPI())
+    navigate("/")
   };
 
   return (

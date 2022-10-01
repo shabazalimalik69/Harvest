@@ -1,56 +1,99 @@
 import { useEffect, useRef, useState } from "react";
 
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-
-// const fixTime=(time)=>(time<10?'0'+time:time);
-// const formateTimeToString=(time)=>{
-//   const second=time%60;
-//   const min= Math.floor((time/60)%60);
-//   const hour= Math.floor((time/3600)%60);
-//   return `${fixTime(hour)}:${fixTime(min)}:${fixTime(second)}`
-// }
+import Common from "./Common";
+import Modal1 from "./Modal1";
+import style from "./Time.module.css"
+import Data1 from "./Data1";
+const fixTime=(time)=>(time<10?'0'+time:time);
+const formateTimeToString=(time)=>{
+  const second=time%60;
+  const min= Math.floor((time/60)%60);
+  const hour= Math.floor((time/3600)%60);
+  return `${fixTime(hour)}:${fixTime(min)}:${fixTime(second)}`
+}
 const Time = () => {
-  const [time, setTime] = useState(3610);
-  const [checkit,setCheckit]=useState(false)
 
-  // const timeRef = useRef(null);
+  const [checkit,setCheckit]=useState(false);
+  const [time,setTime]=useState(0);
 
-  // const handlePlay = () => {
-  //   if (timeRef.current !== null) return;
+  const iniValue={
+       
+    projects:"",
+    category:""
+}
+  const [form1,setForm1]=useState(iniValue)
+    const [addTask,setAddTask]=useState([])
+ 
 
-  //   timeRef.current = setInterval(() => {
-  //     setTime((time) => time + 1);
-  //   }, 1000);
-  // };
 
-  // const handleStop = () => {
-  //   clearInterval(timeRef.current);
-  //   timeRef.current = null;
-  // };
+  const timeRef = useRef(null);
 
-  // const handleReset = () => {
-  //   handleStop();
-  //   setTime(0);
-  // };
+  // const stoptimmerRef=useRef(id);
 
-  // useEffect(() => {
-  //   handleStop();
-  // }, []);
+  const handlePlay = (id) => {
 
-  {
-    /* <h1>TimeCount:{formateTimeToString(time)}</h1>
-      <button onClick={handlePlay}>Play</button>
-      <button onClick={handleStop}>Stop</button>
-      <button onClick={handleReset}>Reset</button> */
-  }
+if(addTask.map((el)=>(el.id===id))){
+  if (timeRef.current !== null) return;
+   
+  timeRef.current = setInterval(() => {
+  
+    setTime((time) => time + 1);
+  }, 1000);
+}
+  };
+
+  const handleStop = (id) => {
+ 
+
+    clearInterval(timeRef.current);
+    timeRef.current = null;
+
+  
+  };
+
+ 
+
+  const handleSave=()=>{
+    fetch(`http://localhost:8080/products`,{
+        method:"POST",
+        headers:{
+            "content-type":"application/json"
+        },
+        body:JSON.stringify({
+        id:Math.random()*435354343+Date.now()+Math.random()*10654+"abcd"+Math.random()*435354343,
+        projects:form1.projects,
+        category:form1.category,
+        })
+    }).then((res)=>res.json())
+    .then((data)=>{
+            setAddTask([...addTask,data])
+            console.log(data)
+            setForm1("")
+    })
+}
+
+useEffect(()=>{
+fetch(`http://localhost:8080/timeTracking`)
+.then(res=>res.json())
+.then((data)=>{
+        setAddTask(data)
+        console.log("Abcd",data);  
+})
+},[])
+
+  useEffect(() => {
+    handleStop();
+  }, []);
+
 
   return (
-    <Box mt="50px" w="100%" border="1px solid red"  display="flex"  justifyContent="center">
-      <Box w="90%" display="flex" flexDirection="column" justifyContent="center" border="1px solid black">
+    <Box pt="50px" pb="50px" h="93vh" w="100%"  display="flex"  justifyContent="center"  className={style.box1} overflow="auto"  bgImage="url('https://cache.harvestapp.com/static/aura-6Q7WJ4OE.jpg')" bgSize="cover">
+      <Box w="90%" display="flex" flexDirection="column" overflow="auto" >
         {/* hidden box */}
         <Box><Image src=""/></Box>
         {/* 1st box */}
-        <Box w="100%" display="flex" justifyContent="space-between" border="1px solid green">
+        <Box w="100%" display="none" justifyContent="space-between" >
           <Box display="flex">
          <Box><Button>{"<"}</Button><Button>{">"}</Button></Box>
         <Box display="flex"><Text>Today</Text><Text>Friday,30 Sep</Text></Box>
@@ -61,33 +104,23 @@ const Time = () => {
         {/* 1st box end */}
 
         {/* 2nd box */}
-        <Box display="flex" border="1px solid blue">
-          <Box w="10%"  border="1px solid teal">
-            <Button>+</Button>
+        <Box display="flex">
+          <Box w="10%">
+            <Modal1 form1={form1} setForm1={setForm1} handleSave={handleSave}/>
           </Box>
 
-          <Box w="90%"  border="1px solid orange">
-            <Box  h={["90px"]}>
-              <Box display="flex" justifyContent="space-between">
-                <Box> <Text>Mon</Text><Text>00:00</Text></Box>
-                <Box><Text>Tue</Text><Text>00:00</Text></Box>
-                <Box> <Text>Wes</Text><Text>00:00</Text></Box>
-                <Box><Text>Thu</Text><Text>00:00</Text></Box>
-                <Box><Text>Fri</Text><Text>00:00</Text></Box>
-                <Box><Text>Sat</Text><Text>00:00</Text></Box>
-                <Box><Text>Sun</Text><Text>00:00</Text></Box>
-
-              </Box>
+          <Box w="90%"   >
+            <Box  h={["90px"]} display="flex" alignItems="center" justifyContent="space-between"   borderBottom="1px solid lightGray">
+             <Common/>
             </Box>
 
             {/* mapping here */}
             <Box>
               {checkit?"data":
                 <Box>
-                    <Box border="1px solid red" display="flex" justifyContent="space-between" h={["90px"]}>
-                      <Box w="max-content"><Text>Project name</Text><Text>category</Text></Box>
-                      <Box display="flex" justifyContent="center" w="max-content"><button disabled>{time}</button><button>{"start"}</button><button>Edit</button></Box>
-                    </Box>
+                  {addTask?.map((el)=>(   
+               <Data1 {...el } handlePlay={handlePlay} handleStop={handleStop} formateTimeToString={formateTimeToString} time={time} />
+  ))}
                 </Box>
               }
             </Box>
