@@ -16,9 +16,9 @@ Have a look ⬇️
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript, React, Redux
+**Client:**  React, Redux, MogoDB, Express, Redux-Thunk, Chakra UI
 
-**Deploying:** Netlify
+**Deploying:** Netlify, Heroku
 
 
 
@@ -38,11 +38,11 @@ Have a look ⬇️
 
 
 ##Contributors:
-## @Shabaz
-## @Sumit
-## @Akash
-## @Sombir
-## @Ankur
+## @shabazalimalik69
+## @AkashKeshari111
+## @Ankur982
+## @SumitKDSarkar
+## @sombir5
 
 
 ## THANK YOU ❤️
