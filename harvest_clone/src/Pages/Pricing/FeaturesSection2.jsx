@@ -10,31 +10,32 @@ const FeaturesSection2 = () => {
         <GridItem className={styles.Feature_Section_GI}>
           <Box className={styles.Feature_Section_GI_box1}>
             <Image className={styles.Feature_Section_GI_img}
-              src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-time.svg' />
+              src='https://res.cloudinary.com/spiralyze/image/upload/v1656310941/Harvest/2016_Harvest_Pricing_Big_Redesign-20220621/Money.svg' />
           </Box>
           <Box className={styles.Feature_Section_GI_box2}>
-            <Text fontSize='26px'>Time tracking</Text>
-            <Text fontSize='17px'>Simple and intuitive time tracking your team will love.</Text>
+            <Text fontSize='26px'>$7.4 billion</Text>
+            <Text fontSize='17px'>Lost per day due to incorrectly recorded work activities</Text>
           </Box>
         </GridItem>
         <GridItem className={styles.Feature_Section_GI}>
           <Box className={styles.Feature_Section_GI_box1}>
             <Image className={styles.Feature_Section_GI_img}
-              src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-reporting.svg' />
+              src='https://res.cloudinary.com/spiralyze/image/upload/v1656310706/Harvest/2016_Harvest_Pricing_Big_Redesign-20220621/less-admintime.svg' />
           </Box>
           <Box className={styles.Feature_Section_GI_box2}>
-            <Text fontSize='26px'>Reports & analysis</Text>
-            <Text fontSize='17px'>Unlock the insights that help your business thrive.</Text>
+            <Text fontSize='26px'>
+80%</Text>
+            <Text fontSize='17px'>Less admin with automated time tracking</Text>
           </Box>
         </GridItem>
         <GridItem className={styles.Feature_Section_GI}>
           <Box className={styles.Feature_Section_GI_box1}>
             <Image className={styles.Feature_Section_GI_img}
-              src='https://www.getharvest.com/hubfs/raw_assets/public/harvest-theme/images/homepage/nav-invoicing.svg' />
+              src='https://res.cloudinary.com/spiralyze/image/upload/v1656311111/Harvest/2016_Harvest_Pricing_Big_Redesign-20220621/Employee_Tracking.svg' />
           </Box>
           <Box className={styles.Feature_Section_GI_box2}>
-            <Text fontSize='26px'>Invoicing & payments</Text>
-            <Text fontSize='17px'>Seamless invoicing and fast online payments.</Text>
+            <Text fontSize='26px'>$52,000</Text>
+            <Text fontSize='17px'>Extra billable time per employee with better time tracking</Text>
           </Box>
         </GridItem>
       </Grid>
