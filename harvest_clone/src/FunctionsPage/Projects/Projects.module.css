@@ -27,6 +27,7 @@
     height: 100%;
     border-radius: 5px;
     border: 1px solid;
+    padding-left: 5px;
     
 
 }
@@ -63,3 +64,190 @@
 .bekar_btn:hover{
     border: 1px solid gray;
 }
+.h1{
+    font-size: 30px;
+    color: #1D1B1C;
+    /* border: 1px solid; */
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 4%;
+
+}
+.third_div{
+    border-bottom: 1px solid gray;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    margin-top: 3%;
+    justify-content: space-between;
+    display: flex;
+
+}
+.third_div_first_div{
+    /* border: 1px solid; */
+    width: 20%;
+    height: 100%;
+}
+.select{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 90%;
+    height: 80%;
+    margin-left: -10%;
+    padding: 5px;
+    /* margin-top: 5%; */
+
+    
+
+}
+.select:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.select:focus{
+    background-color:gainsboro ;
+    
+}
+.third_div_second_div{
+    /* border: 1px solid; */
+    width: 30%;
+    height: 100%;
+}
+.third_div_second_div>div{
+    display: flex;
+    margin: 5px;
+}
+.select1{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+    margin-left:3%;
+    padding: 5px;
+
+}
+.select1:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.select1:focus{
+    background-color:gainsboro ;
+    
+}
+.fourth_div{
+    width: 90%;
+    height: 30px;
+    border-bottom: 1px solid gray;
+    margin: auto;
+    display: flex;
+    background-color:gainsboro;
+    /* margin-top: 1%; */
+    font-size: 13px;
+    color: gray;
+    justify-content: space-between;
+}
+.fourth_div>div{
+    display: flex;
+    /* margin-left: -8%; */
+    font-size: 13px;
+    color: gray;
+}
+/* .fourth_div>div>p{
+    margin-left: 5px;
+    margin-top: 5%;
+} */
+
+
+
+
+.footer_end{
+    /* border: 1px solid; */
+    width: 60%;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer_end>img{
+width: 100px;
+height: 60px;
+opacity: 0.5;
+}
+.footer_end>img:hover{
+    
+    opacity:0.9;
+    cursor: pointer;
+    }
+
+.p3{
+   
+    color: gray;
+    font-size: 13px;
+    margin: 5px;
+    margin-top: 5%;
+
+}
+.p3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.p1{
+    text-align: justify;
+    color: gray;
+    font-size: 13px;
+}
+.footer{
+    /* border: 1px solid; */
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-top: 8%;
+}
+.footer_btn{
+    display: flex;
+    /* border: 1px solid; */
+    height: 30px;
+    margin: auto;
+    width: 50%;
+}
+.footer>div>button{
+    background-color:#FFFFFF;
+    color:black;
+    display: inline-block;
+    margin-left: 5%;
+    /* margin-top: 4%; */
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    border: 1px solid gray;
+    display: inline-block;
+    
+    
+}
+.projects{
+    border-bottom: 1px solid gray;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 1%;
+    
+}
+.projects>p{
+    margin-left: 1%;
+}
+.p13{
+    margin-right: 2%;
+    /* margin-top: 5%; */
+
+ } 
+ .p45{
+    margin-left: 2%;
+    /* margin-top: 5%; */
+
+ }
