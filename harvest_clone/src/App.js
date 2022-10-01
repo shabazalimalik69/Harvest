@@ -7,7 +7,6 @@ import "./App.css";
 import { Footer } from "./Components/Footer/Footer";
 import AllRoutes2 from "./Routes/AllRoutes2";
 import { useSelector } from "react-redux";
-import AllRoutes3 from "./Pages/Feature/AllRoutes3";
 
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
           </Box>
         </Box>
       )}
-      <AllRoutes3/>
     </div>
   );
 }

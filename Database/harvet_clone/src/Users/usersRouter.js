@@ -4,7 +4,9 @@ const usersModel = require("./usersModel");
 const app = express.Router();
 
 app.post("/login", async (req, res) => {
+
   let { first_name, email, password } = await req.body;
+
 
   try {
     let user = await usersModel.findOne({ email, password });
@@ -12,6 +14,7 @@ app.post("/login", async (req, res) => {
       res.status(401).send("Authentication failed!");
     } else {
       res.send({first_name:user.first_name, token: `${Math.random() * 10000}:${user.id}:${user.email}:${Math.random() * 10000}:${Math.random() * 10000}` });
+
     }
   } catch (e) {
     res.status(500).send(e.message);
@@ -36,7 +39,6 @@ app.post("/signup", async (req, res) => {
     res.status(500).send(e.message);
   }
 });
-
 
 
 
