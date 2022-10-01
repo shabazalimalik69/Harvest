@@ -26,9 +26,14 @@ Have a look ⬇️
 
 ## Screenshots
 
+![App Screenshot](https://biz30.timedoctor.com/images/2022/04/harvest-homepage-2022-1024x522.png)
+
 ![App Screenshot](https://images.g2crowd.com/uploads/attachment/file/67160/review-screenshot-1.png)
 
 ![App Screenshot](https://attachments.developer.intuit.com/appcard-6bf5d87d-6c67-421d-873a-8efb5630b3a0.png)
+
+
+
 
 
 
