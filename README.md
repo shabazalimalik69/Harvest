@@ -16,7 +16,7 @@ Have a look ⬇️
 
 ## Tech Stack
 
-**Client:**  React, Redux, MogoDB, Express, Redux-Thunk, Chakra UI
+**Client:**  React, Redux, JavaScript, MogoDB, Express, Redux-Thunk, Chakra UI 
 
 **Deploying:** Netlify, Heroku
 
