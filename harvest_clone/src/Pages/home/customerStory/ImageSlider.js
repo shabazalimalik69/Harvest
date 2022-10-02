@@ -22,7 +22,7 @@ const ImageSlider = ({ slides }) => {
                 <Text className={styles.customer_Section_car_box_txt2}>
                     {slide.user} 
                     </Text>
-                    <Button bg='#1D1E1C' color='#ffff' size='lg' className={styles.customer_Section_car_box_btn} onClick={()=>{navigate("/customers")}}> Meet our customers </Button>
+                    <Button colorScheme='black' bg='#1D1E1C' color='#ffff' size='lg' className={styles.customer_Section_car_box_btn} onClick={()=>{navigate("/customers")}}> Meet our customers </Button>
             </Box>
             <Box className={styles.customer_Section_car_box_sb2}>
                 <Image src={slide.image} height="auto" className={styles.customer_Section_car_box_sb2_img}/>

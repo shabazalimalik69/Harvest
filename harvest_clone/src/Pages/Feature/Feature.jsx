@@ -8,7 +8,7 @@ import ReportAnalysis from './Report_Analysis';
 import Invoice from './Invoice';
 import BottomSection from './BottomSection';
 import { HashLink } from 'react-router-hash-link';
-import AllRoutes3 from './AllRoutes3';
+
 
 const Feature = () => {
   

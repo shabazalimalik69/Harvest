@@ -25,4 +25,4 @@ const BotChat = () => {
         )
       }
       
-export default BotChat
+export default BotChat;
