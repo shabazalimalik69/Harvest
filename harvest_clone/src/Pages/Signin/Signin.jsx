@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signinAPI } from '../../Store/auth/auth.actions';
 import styles from "./Signin.module.css";
+import { HashLink  } from 'react-router-hash-link';
 
 const initData={
   email:"",
@@ -51,7 +52,7 @@ useEffect(()=>{
       <Button onClick={handleSubmit}  marginBottom="20px" marginTop="20px" color="white" height="50px" width="100%" backgroundColor="#11742A" borderRadius="20px">Sign In</Button>
     </FormControl>
      </Box>
-     <Text pt="20px" pb="120px">Forgot password? Terms of service Privacy policy</Text>
+     <Text pt="20px" pb="120px"> <HashLink to="/signup" > Forgot password?</HashLink> Terms of service Privacy policy</Text>
     </Box>
   )
 }

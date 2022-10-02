@@ -10,7 +10,6 @@ import {
 
 let token = localStorage.getItem("token") || "";
 let first_name = localStorage.getItem("first_name") || "";
-
 const initState = {
   token: token,
   loading: false,
@@ -37,12 +36,12 @@ export const authReducer = (state = initState, { type, payload }) => {
     case AUTH_SIGNUP_SUCCESS: {
       localStorage.setItem("token", payload.token);
       localStorage.setItem("first_name", payload.first_name);
-
       return {
         ...state,
         loading: false,
         error: false,
         token: payload.token,
+        first_name: payload.first_name,
       };
     }
 
@@ -67,10 +66,11 @@ export const authReducer = (state = initState, { type, payload }) => {
         loading: false,
         error: false,
         token: payload.token,
+        first_name: payload.first_name,
       };
     }
     case AUTH_SIGNOUT: {
-      localStorage.removeItem("token");
+      localStorage.removeItem("token", "first_name");
       localStorage.removeItem("first_name");
       return {
         ...state,

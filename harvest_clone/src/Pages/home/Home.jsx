@@ -2,7 +2,7 @@ import { StarIcon } from '@chakra-ui/icons'
 import { Box, Button, Divider, Image, Input, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import BottomSection from '../Feature/BottomSection'
+// import BottomSection from '../Feature/BottomSection'
 import CustomersStory from './customerStory/CustomersStory'
 import Feature from './Fitures'
 import styles from "./Home.module.css"

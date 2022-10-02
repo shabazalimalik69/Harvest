@@ -7,11 +7,12 @@ import "./App.css";
 import { Footer } from "./Components/Footer/Footer";
 import AllRoutes2 from "./Routes/AllRoutes2";
 import { useSelector } from "react-redux";
+import AllRoutes3 from "./Pages/Feature/AllRoutes3";
 
 
 function App() {
   const token = useSelector((store)=>store.auth.token);
-  console.log(token);
+  //console.log(token);
   return (
     <div className="App"  >
       {token ? (
@@ -30,6 +31,7 @@ function App() {
           </Box>
         </Box>
       )}
+      <AllRoutes3/>
     </div>
   );
 }
