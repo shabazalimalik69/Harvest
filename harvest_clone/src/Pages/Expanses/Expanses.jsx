@@ -17,6 +17,7 @@ const Expanses = () => {
   const [show1, setShow1] = useState(true);
   const [creds, setCreds] = useState({});
   const [editId, setEditId] = useState(-1);
+  const [editHide, setEditHide] = useState(true);
   const dispatch = useDispatch();
 
   const onChange = (e) => {
@@ -27,6 +28,7 @@ const Expanses = () => {
     });
   };
   const onEdit = (id) => {
+    setEditHide(true);
     setEditId(id);
   };
   const deleteExpanses = (id) => {
@@ -34,6 +36,7 @@ const Expanses = () => {
     dispatch(deleteData(id, page));
   };
   const patchExpanses = (id) => {
+    setEditHide(false);
     console.log(id);
     dispatch(patchData(id, page, creds));
   };
@@ -154,6 +157,7 @@ const Expanses = () => {
                       type="date"
                       name="date"
                       placeholder="Date"
+                      value={elem.date}
                     />
                   </div>
                   <div className={style.column2}>
@@ -164,11 +168,13 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="project name"
+                      value={elem.project_name}
                     />
                     <select
                       onChange={onChange}
                       name="category"
                       className={style.input_data}
+                      value={elem.category}
                     >
                       <option value="">Choose category</option>
                       <option value="Entertainment">Entertainment</option>
@@ -183,6 +189,7 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="Notes"
+                      value={elem.notes}
                     />
                     <input className={style.input_data} type="file" />
                     <div className={style.column}>
@@ -190,7 +197,7 @@ const Expanses = () => {
                         onChange={onChange}
                         type="checkbox"
                         name="billable"
-                        value="Billable"
+                        value={elem.billable}
                       />
                       <p>This expense is billable</p>
                     </div>
@@ -224,6 +231,7 @@ const Expanses = () => {
                       className={style.amount_input}
                       type="number"
                       placeholder="Amount"
+                      value={elem.amount}
                     />
                   </div>
                 </div>

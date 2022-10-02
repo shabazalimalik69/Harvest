@@ -138,6 +138,7 @@ select {
 .Expanse_detail_submit :nth-child(3) {
   width: 20%;
 }
+
 .show_elem {
   display: flex;
   background-color: #fff1cd;
