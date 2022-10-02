@@ -49,7 +49,13 @@ useEffect(()=>{
      <FormControl method="POST">
      <Input backgroundColor="white" marginTop="20px" value={email} onChange={handleChange} type='email' name='email' placeholder='Work email' />
       <Input backgroundColor="white" marginTop="10px" value={password} onChange={handleChange}  type='password' name='password' placeholder='Password'/>
-      <Button onClick={handleSubmit}  marginBottom="20px" marginTop="20px" color="white" height="50px" width="100%" backgroundColor="#11742A" borderRadius="20px">Sign In</Button>
+      <Button onClick={handleSubmit}  marginBottom="20px" marginTop="20px" color="white" height="50px" width="100%" backgroundColor="#11742A" borderRadius="20px" _hover={{ 
+                  outline: "#11742A",
+                  bgColor: "#11742A",
+                }}
+                _focus={{
+                  outline: "#11742A",
+                  bgColor: "#11742A",}}>Sign In</Button>
     </FormControl>
      </Box>
      <Text pt="20px" pb="120px"> <HashLink to="/signup" > Forgot password?</HashLink> Terms of service Privacy policy</Text>

@@ -70,9 +70,8 @@ const SignupSection = () => {
       // console.log(value);
       // console.log(inputValue5);
       dispatch(signupAPI(userData));
-      // if (token) {
-      //   navigate("/signin");
-      // }
+
+      navigate("/signin");
     } else {
       alert("Password length must be min 8");
     }
