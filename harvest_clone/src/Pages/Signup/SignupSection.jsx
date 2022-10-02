@@ -100,19 +100,19 @@ const SignupSection = () => {
       console.log(value);
 
       dispatch(signupAPI(userData));
-      if (token) {
+      
         navigate("/signin");
-      }
+      
     } else {
       alert("Password length must be min 8");
     }
   };
 
-  useEffect(() => {
-    if (token) {
-      navigate("/signin");
-    }
-  }, [token, navigate]);
+  // useEffect(() => {
+  //   if (token) {
+  //     navigate("/signin");
+  //   }
+  // }, [token, navigate]);
 
   return (
     <Box className={styles.signupSection}>
