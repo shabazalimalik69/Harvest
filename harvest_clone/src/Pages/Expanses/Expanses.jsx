@@ -16,7 +16,8 @@ const Expanses = () => {
   const [page, setPage] = useState(1);
   const [show1, setShow1] = useState(true);
   const [creds, setCreds] = useState({});
-  const [edit, setEdit] = useState(true);
+  const [editId, setEditId] = useState(-1);
+  const [editHide, setEditHide] = useState(true);
   const dispatch = useDispatch();
 
   const onChange = (e) => {
@@ -27,14 +28,15 @@ const Expanses = () => {
     });
   };
   const onEdit = (id) => {
-    console.log(id);
-    setEdit(!edit);
+    setEditHide(true);
+    setEditId(id);
   };
   const deleteExpanses = (id) => {
     console.log(id);
     dispatch(deleteData(id, page));
   };
   const patchExpanses = (id) => {
+    setEditHide(false);
     console.log(id);
     dispatch(patchData(id, page, creds));
   };
@@ -49,6 +51,8 @@ const Expanses = () => {
   useEffect(() => {
     if (data) {
       setShow1(false);
+    } else {
+      setShow1(true);
     }
     dispatch(getData(token, page));
   }, [page]);
@@ -142,28 +146,9 @@ const Expanses = () => {
         </form>
         {/* ----------------------------------------------------------------------------------------- */}
         <div className="show_added_data">
-          {data?.map((elem) => (
-            <div key={elem.id} className={style.show_elem}>
-              <div className={style.elem_date}>
-                <p>{elem.date}</p>
-              </div>
-              <div className={style.elem_project_name}>
-                <h3>{elem.project_name}</h3>
-                <p>{elem.category}</p>
-              </div>
-              <div className={style.elem_amount}>
-                <p>$&nbsp;{elem.amount}</p>
-              </div>
-              <button
-                className={style.elem_button}
-                onClick={() => {
-                  onEdit(elem.id);
-                }}
-                type="button"
-              >
-                Edit
-              </button>
-              <form className={edit ? style.hide_expanse : style.show_expanse}>
+          {data?.map((elem) =>
+            elem.id === editId ? (
+              <form className={style.show_expanse}>
                 <div className={style.expanse_form}>
                   <div className={style.column1}>
                     <h2 className={style.h2}>Date</h2>
@@ -172,6 +157,7 @@ const Expanses = () => {
                       type="date"
                       name="date"
                       placeholder="Date"
+                      value={elem.date}
                     />
                   </div>
                   <div className={style.column2}>
@@ -182,11 +168,13 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="project name"
+                      value={elem.project_name}
                     />
                     <select
                       onChange={onChange}
                       name="category"
                       className={style.input_data}
+                      value={elem.category}
                     >
                       <option value="">Choose category</option>
                       <option value="Entertainment">Entertainment</option>
@@ -201,6 +189,7 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="Notes"
+                      value={elem.notes}
                     />
                     <input className={style.input_data} type="file" />
                     <div className={style.column}>
@@ -208,7 +197,7 @@ const Expanses = () => {
                         onChange={onChange}
                         type="checkbox"
                         name="billable"
-                        value="Billable"
+                        value={elem.billable}
                       />
                       <p>This expense is billable</p>
                     </div>
@@ -242,12 +231,35 @@ const Expanses = () => {
                       className={style.amount_input}
                       type="number"
                       placeholder="Amount"
+                      value={elem.amount}
                     />
                   </div>
                 </div>
               </form>
-            </div>
-          ))}
+            ) : (
+              <div key={elem.id} className={style.show_elem}>
+                <div className={style.elem_date}>
+                  <p>{elem.date}</p>
+                </div>
+                <div className={style.elem_project_name}>
+                  <h3>{elem.project_name}</h3>
+                  <p>{elem.category}</p>
+                </div>
+                <div className={style.elem_amount}>
+                  <p>$&nbsp;{elem.amount}</p>
+                </div>
+                <button
+                  className={style.elem_button}
+                  onClick={() => {
+                    onEdit(elem.id);
+                  }}
+                  type="button"
+                >
+                  Edit
+                </button>
+              </div>
+            )
+          )}
           <button type="button" onClick={allDeleteExpanses}>
             DELETE ALL
           </button>
