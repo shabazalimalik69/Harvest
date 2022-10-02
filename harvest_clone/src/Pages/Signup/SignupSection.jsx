@@ -46,41 +46,11 @@ const SignupSection = () => {
     setUserData({ ...userData, [name]: value });
   };
 
-  //  const handleLenCheck = (e)=>{
-  //   //console.log(e)
-  //   const {value} = e.target;
-  //  const passLenCheck = (value.length)>=8;
-  // //  console.log(passLenCheck)
-  //  setCheck({passLenCheck});
-  //  }
-  //  console.log(check.passLenCheck);
-
-  // const handleCreate = async(e)=>{
-  //     e.preventDefault();
-
-  //     let response = await fetch("http://localhost:8000/users/signup",{
-  //         method:"POST",
-  //         headers:{
-  //             "Content-Type":"application/json",
-  //         },
-  //         body:JSON.stringify({first_name,last_name,company_name,email,password})
-  //     })
-  //     const data = await response.json();
-  //     if(data.status===422 || !data){
-  //         alert("Not Valid User");
-  //         console.log("Not valid user");
-  //     }else{
-  //         alert("Account Created Successfully");
-  //         console.log("Account Created Successfully");
-  //         navigate("/signin");
-  //     }
-  // }
-
   const checkPassword = (e) => {
     //console.log(e.target.value)
     setCheck(e.target.value);
   };
-  //console.log(check)
+  // console.log(inputValue1);
 
   const handleCreate = (e) => {
     if (check.length > 7) {
@@ -97,12 +67,11 @@ const SignupSection = () => {
       inputValue8 === "" ? alert("Please Enter Email") : setValue(true);
       inputValue9 === "" ? alert("Please Enter Email") : setValue(true);
 
-      console.log(value);
-
+      // console.log(value);
+      // console.log(inputValue5);
       dispatch(signupAPI(userData));
-      
-        navigate("/signin");
-      
+
+      navigate("/signin");
     } else {
       alert("Password length must be min 8");
     }
