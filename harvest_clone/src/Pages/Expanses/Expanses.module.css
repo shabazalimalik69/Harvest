@@ -172,3 +172,27 @@ select {
   text-align: left;
   margin: 0px10px;
 }
+.buttons {
+  width: 80px;
+  height: 30px;
+  margin: 0px 10px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.buttons:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+.deletebuttons {
+  width: 120px;
+  height: 30px;
+  margin: 10px 10px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.deletebuttons:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}

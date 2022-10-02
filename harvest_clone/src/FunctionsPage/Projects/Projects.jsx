@@ -86,6 +86,7 @@ const Projects = () => {
       <div className={ProjectCSS.page}>
         <button
           type="button"
+          className={ProjectCSS.buttons}
           disabled={page <= 1}
           onClick={() => {
             setPage(page - 1);
@@ -96,6 +97,7 @@ const Projects = () => {
         <button>{page}</button>
         <button
           type="button"
+          className={ProjectCSS.buttons}
           disabled={page >= 10}
           onClick={() => {
             setPage(page + 1);

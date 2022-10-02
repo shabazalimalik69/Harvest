@@ -7,7 +7,7 @@ import {
 } from "./expanse.type";
 
 const initialState = {
-  data: [],
+  data1: [],
   page: 1,
 };
 const expanseReducer = (state = initialState, { type, payload }) => {
@@ -16,19 +16,19 @@ const expanseReducer = (state = initialState, { type, payload }) => {
     case GET_PROJECT: {
       return {
         ...state,
-        data: payload,
+        data1: payload,
       };
     }
     case ADD_PROJECT: {
       return {
         ...state,
-        data: [...state.data, payload],
+        data1: [...state.data1, payload],
       };
     }
     case EDIT_PROJECT: {
       return {
         ...state,
-        data: [...state.data, payload],
+        data1: [...state.data1, payload],
       };
     }
     case DELETE_PROJECT: {
