@@ -12,7 +12,7 @@ import AllRoutes3 from "./Pages/Feature/AllRoutes3";
 
 function App() {
   const token = useSelector((store)=>store.auth.token);
-  console.log(token);
+  //console.log(token);
   return (
     <div className="App"  >
       {token ? (

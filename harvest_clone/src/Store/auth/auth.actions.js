@@ -11,7 +11,7 @@ export const signinAPI = (userData)=>async(dispatch)=>{
        let response = await axios.post("http://localhost:8000/users/login",userData);
        dispatch({type:AUTH_SIGNIN_SUCCESS,payload:response.data});
        
-       console.log(response.data);
+       //console.log(response.data);
        return response.data;
        
     }catch(err){
@@ -26,7 +26,7 @@ export const logoutAPI = ()=>({type:AUTH_SIGNOUT});
 
 
 export const signupAPI = (userData)=>async(dispatch)=>{
-    console.log(userData)
+    //console.log(userData)
     dispatch({type:AUTH_SIGNUP_LOADING});
     try{
        let response = await axios.post("http://localhost:8000/users/signup",userData);

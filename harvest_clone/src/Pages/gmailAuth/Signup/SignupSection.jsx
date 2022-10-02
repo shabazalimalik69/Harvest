@@ -104,11 +104,11 @@ const SignupSection = () => {
 
     }
 
-    useEffect(()=>{
-      if(token){
-        navigate("/signin")
-      }
-    },[token,navigate])
+    // useEffect(()=>{
+    //   if(token){
+    //     navigate("/signin")
+    //   }
+    // },[token,navigate])
 
 
 

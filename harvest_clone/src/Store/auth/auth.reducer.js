@@ -59,10 +59,12 @@ export const authReducer = (state=initState,{type,payload})=>{
                 loading:false,
                 error:false,
                 token:payload.token,
+                first_name:payload.first_name,
             }
         }
             case AUTH_SIGNOUT:{
                 localStorage.removeItem("token","first_name");
+                localStorage.removeItem("first_name");
                 return{
                     ...state,
                     loading:false,

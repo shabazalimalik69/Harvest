@@ -10,7 +10,7 @@ let initialState = {
 export const projectReducer  =  (state=initialState,{type, payload}) => {
         
     
-    console.log(payload)
+    //console.log(payload)
     
     switch(type){
         case GET_PROJECTS_LOADING:{

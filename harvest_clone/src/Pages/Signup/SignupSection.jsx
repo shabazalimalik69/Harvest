@@ -27,7 +27,7 @@ const SignupSection = () => {
 
     const token = useSelector((store)=>store.auth.token)
     const {first_name,last_name,company_name,email,password} = userData;
-
+  console.log("token",token)
     const inputValue1 = useRef(null);
     const inputValue2 = useRef(null);
     const inputValue3 = useRef(null);
@@ -73,15 +73,15 @@ const SignupSection = () => {
     // }
 
     const checkPassword = (e)=>{
-      console.log(e.target.value)
+      //console.log(e.target.value)
       setCheck(e.target.value)
     }
- console.log(check)
+ //console.log(check)
 
      const handleCreate = (e)=>{
       if(check.length>7){
         e.preventDefault();
-        console.log("clicked")
+        console.log("clicked",value)
         const inputValue5 = inputValue1.current.value;
         const inputValue6 = inputValue2.current.value;
         const inputValue7 = inputValue3.current.value;
@@ -93,10 +93,12 @@ const SignupSection = () => {
         (inputValue8===""?alert("Please Enter Email"):setValue(true));
         (inputValue9===""?alert("Please Enter Email"):setValue(true));
   
-        
+        console.log(value)
   
         dispatch(signupAPI(userData))
-        navigate("/signin")
+        if(token){
+          navigate("/signin")
+        }
       }else{
         alert("Password length must be min 8")
       }
