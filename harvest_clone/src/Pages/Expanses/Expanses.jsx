@@ -16,7 +16,7 @@ const Expanses = () => {
   const [page, setPage] = useState(1);
   const [show1, setShow1] = useState(true);
   const [creds, setCreds] = useState({});
-  const [edit, setEdit] = useState(true);
+  const [editId, setEditId] = useState(-1);
   const dispatch = useDispatch();
 
   const onChange = (e) => {
@@ -27,8 +27,7 @@ const Expanses = () => {
     });
   };
   const onEdit = (id) => {
-    console.log(id);
-    setEdit(!edit);
+    setEditId(id);
   };
   const deleteExpanses = (id) => {
     console.log(id);
@@ -49,6 +48,8 @@ const Expanses = () => {
   useEffect(() => {
     if (data) {
       setShow1(false);
+    } else {
+      setShow1(true);
     }
     dispatch(getData(token, page));
   }, [page]);
@@ -142,28 +143,9 @@ const Expanses = () => {
         </form>
         {/* ----------------------------------------------------------------------------------------- */}
         <div className="show_added_data">
-          {data?.map((elem) => (
-            <div key={elem.id} className={style.show_elem}>
-              <div className={style.elem_date}>
-                <p>{elem.date}</p>
-              </div>
-              <div className={style.elem_project_name}>
-                <h3>{elem.project_name}</h3>
-                <p>{elem.category}</p>
-              </div>
-              <div className={style.elem_amount}>
-                <p>$&nbsp;{elem.amount}</p>
-              </div>
-              <button
-                className={style.elem_button}
-                onClick={() => {
-                  onEdit(elem.id);
-                }}
-                type="button"
-              >
-                Edit
-              </button>
-              <form className={edit ? style.hide_expanse : style.show_expanse}>
+          {data?.map((elem) =>
+            elem.id === editId ? (
+              <form className={style.show_expanse}>
                 <div className={style.expanse_form}>
                   <div className={style.column1}>
                     <h2 className={style.h2}>Date</h2>
@@ -246,8 +228,30 @@ const Expanses = () => {
                   </div>
                 </div>
               </form>
-            </div>
-          ))}
+            ) : (
+              <div key={elem.id} className={style.show_elem}>
+                <div className={style.elem_date}>
+                  <p>{elem.date}</p>
+                </div>
+                <div className={style.elem_project_name}>
+                  <h3>{elem.project_name}</h3>
+                  <p>{elem.category}</p>
+                </div>
+                <div className={style.elem_amount}>
+                  <p>$&nbsp;{elem.amount}</p>
+                </div>
+                <button
+                  className={style.elem_button}
+                  onClick={() => {
+                    onEdit(elem.id);
+                  }}
+                  type="button"
+                >
+                  Edit
+                </button>
+              </div>
+            )
+          )}
           <button type="button" onClick={allDeleteExpanses}>
             DELETE ALL
           </button>
