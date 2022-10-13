@@ -1,212 +1,208 @@
 .Footer {
-    background-color: #1d1e1c;
-    color: #ffff;
-    font-weight: 600;
-    padding-bottom: 1px;
-    text-align: start;
-  }
+  background-color: #1d1e1c;
+  color: #ffff;
+  font-weight: 600;
+  padding-bottom: 1px;
+  text-align: start;
+}
+.footer {
+  width: 85%;
+  margin: auto;
+  padding-top: 20px;
+}
+.sitemap {
+  display: flex;
+}
+.harvest {
+  width: 25%;
+  margin-right: 10px;
+}
+.harvest > h4 {
+  margin: 10px 0;
+}
+.harvest > div {
+  padding: 3px 0px;
+  color: #ffff;
+  font-weight: 600;
+}
+.harvest > div > a {
+  color: #ffff;
+  font-weight: 600;
+}
+.harvest > div > a:hover {
+  color: #fa6102;
+  text-decoration: underline;
+}
+
+.f_card {
+  height: 100px;
+  width: 100%;
+  background-color: #4e4e4e;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(100%);
+}
+.f_title {
+  width: 70%;
+  padding: 0px 10px;
+}
+.f_title > h5,
+h2 {
+  margin: 5px;
+}
+.f_title > h5 {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.f_img > img {
+  width: 150px;
+  height: 90px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.f_card:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  border: 2px solid #fa6102;
+}
+
+/* forecast */
+
+.forcast {
+  margin-top: 50px;
+  border: 1px solid #ffff;
+  padding: 10px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.forcast:hover {
+  background-color: #a5a19c;
+}
+
+/* Copyright */
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px;
+  gap: 20px;
+  border-top: 2px solid gray;
+  padding: 20px 0px;
+}
+
+.copyright > div {
+  display: flex;
+  gap: 25px;
+}
+
+.copyright > div > div {
+  display: flex;
+  gap: 10px;
+}
+
+.copyright > div > div:hover {
+  color: #fa6102;
+}
+
+.copyright img {
+  width: 21px;
+}
+
+@media screen and (min-width: 770px) and (max-width: 850px) {
   .footer {
-    width: 85%;
+    width: 90%;
     margin: auto;
-    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 949px) {
+  .footer {
+    width: 95%;
+    margin: auto;
+  }
+  .copyright > div > div {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 750px) {
+  .footer {
+    width: 95%;
+    margin: auto;
+  }
+  .copyright {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .copyright > div > div {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 580px) {
+  .footer {
+    width: 80%;
+    margin: auto;
   }
   .sitemap {
-    display: flex;
+    display: block;
+    margin: auto;
   }
-  .harvest {
-    width: 25%;
-    margin-right: 10px;
-  }
-  .harvest > h4 {
-    margin: 10px 0;
-  }
-  .harvest > div {
-    padding: 3px 0px;
-    color: #ffff;
-    font-weight: 600;
-  }
-  .harvest > div > a {
-    color: #ffff;
-    font-weight: 600;
-  }
-  .harvest > div > a:hover {
-    color: #fa6102;
-    text-decoration: underline;
-  }
-  
   .f_card {
-    height: 100px;
-    width: 100%;
-    background-color: #4e4e4e;
-    display: flex;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 5px;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(100%); 
+    display: block;
+    margin: auto;
   }
-  .f_title {
-    width: 70%;
-    padding: 0px 10px;
-  }
-  .f_title > h5,
-  h2 {
-    margin: 5px;
-  }
-  .f_title > h5 {
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-  
-  .f_img > img {
-    width: 150px;
-    height: 90px;
-    position: relative;
-    top: 20px;
-    left: 20px;
-  }
-  
-  .f_card:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%); 
-    border: 2px solid #fa6102;
-  }
-
-
-    /* forecast */
-
-   .forcast{
-    margin-top: 50px;
-    border: 1px solid #ffff;
-    padding: 10px 0;
-    border-radius: 20px;
-    text-align: center;
-   }
-
-   .forcast:hover{
-    background-color: #a5a19c;
-   }
-
-   
-  
-  /* Copyright */
-  
   .copyright {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0px;
-    gap: 20px;
-    border-top: 2px solid gray;
-    padding: 20px 0px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
   }
+  .copyright > div > div {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
 
-  .copyright>div{
-    display: flex;
-    gap: 25px;
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .footer {
+    width: 90%;
+    margin: auto;
   }
-
-
-  .copyright>div>div{
-    display: flex;
-    gap: 10px;
+  .sitemap {
+    display: block;
+    margin: auto;
   }
-
-  .copyright>div>div:hover{
-    color: #fa6102;
+  .f_card {
+    display: block;
+    margin: auto;
   }
-
-  .copyright img{
-    width: 21px;
+  .copyright {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
   }
-  
-  
- 
-  @media screen  and (min-width:770px) and (max-width:850px){
-    .footer {
-      width: 90%;
-      margin: auto;
-    }
+  .copyright > div > div {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
   }
-
-  @media screen and (min-width: 750px) and (max-width: 949px) {
-    .footer {
-      width: 95%;
-      margin: auto;
-    }
-    .copyright>div>div{
-      display: block;
-      margin: auto;
-      margin-top: 40px;
-    }
-  }
-  
-  @media screen and (min-width: 580px) and (max-width: 750px) {
-    .footer {
-      width: 95%;
-      margin: auto;
-    }
-    .copyright{
-      display: block;
-      margin: auto;
-      margin-top: 50px;
-    }
-    .copyright>div>div{
-      display: block;
-      margin: auto;
-      margin-top: 40px;
-    }
-  }
-  
-  @media screen and (min-width: 450px) and (max-width: 580px) {
-    .footer {
-      width: 80%;
-      margin: auto;
-    }
-    .sitemap {
-      display: block;
-      margin: auto;
-    }
-    .f_card{
-      display: block;
-      margin: auto;
-    }
-    .copyright{
-      display: block;
-      margin: auto;
-      margin-top: 50px;
-    }
-    .copyright>div>div{
-      display: block;
-      margin: auto;
-      margin-top: 40px;
-    }
-  }
-  
-  @media screen and (min-width: 385px) and (max-width: 450px) {
-    .footer {
-      width: 90%;
-      margin: auto;
-    }
-    .sitemap {
-      display: block;
-      margin: auto;
-    }
-    .f_card{
-      display: block;
-      margin: auto;
-    }
-    .copyright{
-      display: block;
-      margin: auto;
-      margin-top: 50px;
-    }
-    .copyright>div>div{
-      display: block;
-      margin: auto;
-      margin-top: 50px;
-    }
-
-  
-   
-  }
+  /* .copyright_box2 > div > img {
+    width: 20px;
+    height: 10px;
+    border: 1px solid white;
+  } */
+}
