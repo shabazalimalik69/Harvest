@@ -169,7 +169,7 @@ const Expanses = () => {
                       type="date"
                       name="date"
                       placeholder="Date"
-                      value={elem.date}
+                      // value={elem.date}
                     />
                   </div>
                   <div className={style.column2}>
@@ -180,13 +180,13 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="project name"
-                      value={elem.project_name}
+                      // value={elem.project_name}
                     />
                     <select
                       onChange={onChange}
                       name="category"
                       className={style.input_data}
-                      value={elem.category}
+                      // value={elem.category}
                     >
                       <option value="">Choose category</option>
                       <option value="Entertainment">Entertainment</option>
@@ -201,7 +201,7 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="Notes"
-                      value={elem.notes}
+                      // value={elem.notes}
                     />
                     <input className={style.input_data} type="file" />
                     <div className={style.column}>
@@ -209,7 +209,7 @@ const Expanses = () => {
                         onChange={onChange}
                         type="checkbox"
                         name="billable"
-                        value={elem.billable}
+                        // value={elem.billable}
                       />
                       <p>This expense is billable</p>
                     </div>
@@ -246,7 +246,7 @@ const Expanses = () => {
                       className={style.amount_input}
                       type="number"
                       placeholder="Amount"
-                      value={elem.amount}
+                      // value={elem.amount}
                     />
                   </div>
                 </div>
