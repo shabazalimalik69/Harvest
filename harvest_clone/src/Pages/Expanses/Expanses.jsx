@@ -12,6 +12,7 @@ import {
 
 const Expanses = () => {
   const { expanseData } = useSelector((store) => store.expanse);
+  const { totalPages } = useSelector((store) => store.expanse);
   const token = useSelector((store) => store.auth.token);
   const { data } = useSelector((store) => store.projects);
   const [show, setShow] = useState(true);
@@ -298,7 +299,7 @@ const Expanses = () => {
             <button
               className={style.button}
               type="button"
-              disabled={page >= 10}
+              disabled={page >= totalPages}
               onClick={() => {
                 setPage(page + 1);
               }}

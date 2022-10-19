@@ -15,13 +15,34 @@ export const getProject = (page) => async (dispatch) => {
     let res = await axios.get(
       `https://harvest3.herokuapp.com/projects/projects?page=${page}`
     );
-    // console.log("j:", res.data.data);
-    dispatch({ type: GET_PROJECTS_SUCCESS, payload: res.data.data });
+    // console.log("j:", res.data);
+    dispatch({
+      type: GET_PROJECTS_SUCCESS,
+      payload: res.data.data,
+      totalPages: res.data.totalPages,
+    });
     return res.data.data;
   } catch (error) {
     dispatch({ type: GET_PROJECTS_ERROR });
   }
 };
+// export const getClient = (client, page) => async (dispatch) => {
+//   dispatch({ type: GET_PROJECTS_LOADING });
+//   try {
+//     let res = await axios.get(
+//       `https://harvest3.herokuapp.com/projects/projects?client_name=${client}page=${page}`
+//     );
+//     // console.log("j:", res.data);
+//     dispatch({
+//       type: GET_PROJECTS_SUCCESS,
+//       payload: res.data.data,
+//       totalPages: res.data.totalPages,
+//     });
+//     return res.data.data;
+//   } catch (error) {
+//     dispatch({ type: GET_PROJECTS_ERROR });
+//   }
+// };
 
 export const postData = (creds) => async (dispatch) => {
   console.log(creds);

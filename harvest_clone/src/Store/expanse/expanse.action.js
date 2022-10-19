@@ -14,8 +14,12 @@ export const getData = (token, page) => async (dispatch) => {
       `https://harvest3.herokuapp.com/expenses/expenses?page=${page}`,
       { headers: { token: token } }
     );
-    // console.log(response.data.data);
-    dispatch({ type: GET_PROJECT, payload: response.data.data });
+    // console.log(response);
+    dispatch({
+      type: GET_PROJECT,
+      payload: response.data.data,
+      totalPages: response.data.totalPages,
+    });
     return response.data;
   } catch (r) {
     console.log(r.message);

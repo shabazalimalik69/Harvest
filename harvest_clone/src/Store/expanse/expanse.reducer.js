@@ -9,14 +9,19 @@ import {
 const initialState = {
   expanseData: [],
   page: 1,
+  totalPages: 1,
 };
-const expanseReducer = (state = initialState, { type, payload }) => {
-  //   console.log(payload);
+const expanseReducer = (
+  state = initialState,
+  { type, payload, totalPages }
+) => {
+  // console.log(totalPages);
   switch (type) {
     case GET_PROJECT: {
       return {
         ...state,
         expanseData: payload,
+        totalPages: totalPages,
       };
     }
     case ADD_PROJECT: {

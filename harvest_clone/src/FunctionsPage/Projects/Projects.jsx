@@ -8,9 +8,14 @@ import ProjectCSS from "./Projects.module.css";
 
 const Projects = () => {
   const [page, setPage] = useState(1);
-  const { loading, data } = useSelector((store) => store.projects);
-  console.log(data);
+  const { totalPages, data } = useSelector((store) => store.projects);
+  // console.log(totalPages);
+  // const [client, setClient] = useState("");
   const dispatch = useDispatch();
+
+  // const filterClient = () => {
+  //   dispatch(getClient(client, page));
+  // };
   useEffect(() => {
     dispatch(getProject(page));
   }, [page]);
@@ -26,7 +31,11 @@ const Projects = () => {
           <button className={ProjectCSS.bekar_btn}>Export</button>
         </div>
         <div className={ProjectCSS.searchInput}>
-          <input type="text" placeholder="Search by project or client" />
+          <input
+            type="text"
+            placeholder="Search by project or client"
+            // onChange={onSearch}
+          />
         </div>
       </div>
 
@@ -42,12 +51,18 @@ const Projects = () => {
         </div>
         <div className={ProjectCSS.third_div_second_div}>
           <div>
-            <select className={ProjectCSS.select1}>
-              <option value="">Filter by client</option>
-              <option value="">All Client</option>
-              <option value="">Active Client</option>
-              <option value="">Akash</option>
-              <option value="">Sumit</option>
+            <select
+              className={ProjectCSS.select1}
+              // onChange={(e) => {
+              //   setClient(e.target.value);
+              //   filterClient;
+              // }}
+            >
+              {data.map((elem) => (
+                <option key={elem.id} value={elem.client_name}>
+                  {elem.client_name}
+                </option>
+              ))}
             </select>
             <select className={ProjectCSS.select1}>
               <option value="">Filter by managers </option>
@@ -85,6 +100,7 @@ const Projects = () => {
       </button> */}
       <div className={ProjectCSS.page}>
         <button
+          className={ProjectCSS.button}
           type="button"
           disabled={page <= 1}
           onClick={() => {
@@ -93,10 +109,11 @@ const Projects = () => {
         >
           Prev
         </button>
-        <button>{page}</button>
+        <button className={ProjectCSS.button}>{page}</button>
         <button
+          className={ProjectCSS.button}
           type="button"
-          disabled={page >= 10}
+          disabled={page >= totalPages}
           onClick={() => {
             setPage(page + 1);
           }}
