@@ -1,6 +1,7 @@
 import style from "./Expanses.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getProject } from "../../Store/project2/project.action";
 import {
   allDeleteData,
@@ -223,7 +224,7 @@ const Expanses = () => {
                         className={style.expanses_save_button}
                         type="button"
                       >
-                        Update Expanses
+                        <Link to="/expenses">Update Expanses</Link>
                       </button>
                       <button type="button" onClick={() => setEditHide(true)}>
                         Cancel

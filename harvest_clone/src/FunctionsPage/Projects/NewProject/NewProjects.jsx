@@ -238,7 +238,7 @@ const NewProjects = () => {
           onClick={addProject}
           className={NewProjectCSS.saveProjectbtn}
         >
-          Save project
+          <Link to="/projects">Save project</Link>
         </button>
 
         <button className={NewProjectCSS.cancelcss}>Cancel</button>

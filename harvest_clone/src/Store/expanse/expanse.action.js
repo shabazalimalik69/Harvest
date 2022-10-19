@@ -40,7 +40,7 @@ export const postData = (creds) => async (dispatch) => {
   }
 };
 export const patchData = (id, page, creds) => async (dispatch) => {
-  console.log(creds);
+  // console.log(creds);
   try {
     const response = await axios.patch(
       "https://harvest3.herokuapp.com/expenses/expenses/" + id,
@@ -48,7 +48,7 @@ export const patchData = (id, page, creds) => async (dispatch) => {
     );
     console.log("response", response);
     dispatch({ type: EDIT_PROJECT, payload: response.data });
-    dispatch(getData(null, page));
+    // getData(null, page);
   } catch (e) {
     console.log(e.message);
   }
