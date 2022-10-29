@@ -32,7 +32,6 @@ const Expanses = () => {
       [name]: value,
     });
   };
-
   const onEdit = (id) => {
     setEditId(id);
   };
@@ -44,6 +43,9 @@ const Expanses = () => {
 
     dispatch(patchData(id, page, creds));
   };
+
+  // console.log(creds, creds2);
+
   const allDeleteExpanses = () => {
     dispatch(allDeleteData());
   };
@@ -59,7 +61,7 @@ const Expanses = () => {
     }
     dispatch(getData(token, page));
     dispatch(getProject(page));
-  }, [page, expanseData.length]);
+  }, [page, expanseData.length, dispatch]);
   // console.log(data);
   return (
     <div className={style.expanses}>
@@ -224,7 +226,7 @@ const Expanses = () => {
                         className={style.expanses_save_button}
                         type="button"
                       >
-                        <Link to="/expenses">Update Expanses</Link>
+                        Update Expanses
                       </button>
                       <button type="button" onClick={() => setEditHide(true)}>
                         Cancel
