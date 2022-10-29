@@ -649,7 +649,7 @@ Features page */
   margin: auto;
 }
 
-.Learning_Section_box2_G {
+.Learning_Section_box2_G{
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
@@ -661,11 +661,18 @@ Features page */
   border-top: 1px solid #fa5d00;
 }
 
-.Learning_Section_box2_GI_sb1 {
+
+.Learning_Section_box2_GI:hover{
+  color: #FA5D00;
+  background-color: #ffeee0;
+}
+
+.Learning_Section_box2_GI_sb1{
   margin-top: 25px;
 }
 
-.Learning_Section_box2_GI_sb1_img {
+.Learning_Section_box2_GI_sb1_img{
+
   margin-bottom: 20px;
   height: 75px;
 }

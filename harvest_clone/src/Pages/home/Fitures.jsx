@@ -52,7 +52,7 @@ return (
         </GridItem>
       </Grid>
      
-      <Button bg='#1D1E1C' color='#ffff' size='lg' variant='solid' onClick={()=>{navigate("/features")}} className={styles.Feature_Section_GI_btn}>Discover all features </Button>
+      <Button colorScheme='black' bg='#1D1E1C' color='#ffff' size='lg' variant='solid' onClick={()=>{navigate("/features")}} className={styles.Feature_Section_GI_btn}>Discover all features </Button>
      
     </Box>
     <Box width="60%">

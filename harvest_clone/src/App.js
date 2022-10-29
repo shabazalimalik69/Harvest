@@ -26,7 +26,9 @@ function App() {
           <Navbar1 />
           <Box pt="90px">
             <AllRoutes />
+
             <AllRoutes3 />
+
             <Footer />
           </Box>
         </Box>

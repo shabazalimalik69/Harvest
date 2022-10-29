@@ -1,4 +1,5 @@
 .Footer {
+
   background-color: #1d1e1c;
   color: #ffff;
   font-weight: 600;
@@ -119,6 +120,12 @@ h2 {
 @media screen and (min-width: 770px) and (max-width: 850px) {
   .footer {
     width: 90%;
+
+    background-color: #1d1e1c;
+    color: #ffff;
+    font-weight: 600;
+    padding-bottom: 1px;
+    text-align: start;
     margin: auto;
   }
 }
