@@ -263,7 +263,7 @@ const Pricing = () => {
 <AskedQsn/>
 <Divider borderColor={'#FA5D00'} orientation='horizontal' />
 
-<Button bg='#FA5D00' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' onClick={() => {
+<Button colorScheme='orange' bg='#FA5D00' color='#ffff' margin='40px 0' size='lg' borderRadius='15px' onClick={() => {
           window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
         }} >Back To plan & Pricing</Button>
     </Box>

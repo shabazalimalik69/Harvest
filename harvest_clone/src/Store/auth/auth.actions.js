@@ -13,7 +13,7 @@ export const signinAPI = (userData) => async (dispatch) => {
   dispatch({ type: AUTH_SIGNIN_LOADING });
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/login",
+      "https://harvest3.herokuapp.com/users/login",
       userData
     );
     dispatch({ type: AUTH_SIGNIN_SUCCESS, payload: response.data });
@@ -31,7 +31,7 @@ export const signupAPI = (userData) => async (dispatch) => {
   dispatch({ type: AUTH_SIGNUP_LOADING });
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/signup",
+      "https://harvest3.herokuapp.com/users/signup",
       userData
     );
     dispatch({ type: AUTH_SIGNUP_SUCCESS, payload: response.data });

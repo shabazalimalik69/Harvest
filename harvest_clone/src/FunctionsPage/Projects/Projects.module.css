@@ -225,6 +225,7 @@
   margin-left: 2%;
   /* margin-top: 5%; */
 }
+<<<<<<< HEAD
 .buttons {
   width: 80px;
   height: 30px;
@@ -236,4 +237,18 @@
 .buttons:hover {
   border: 1px solid black;
   cursor: pointer;
+=======
+.button {
+  margin-top: 2%;
+  border: 1px solid black;
+  padding: 2.5px;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: white;
+}
+.button:hover {
+  border: 1px solid grey;
+  background-color: rgb(179, 174, 174);
+>>>>>>> 55d74f266efc98d35d6f1c0975505fa940c59f7e
 }

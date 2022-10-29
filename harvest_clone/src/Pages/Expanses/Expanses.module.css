@@ -138,6 +138,7 @@ select {
 .Expanse_detail_submit :nth-child(3) {
   width: 20%;
 }
+
 .show_elem {
   display: flex;
   background-color: #fff1cd;
@@ -172,6 +173,7 @@ select {
   text-align: left;
   margin: 0px10px;
 }
+<<<<<<< HEAD
 .buttons {
   width: 80px;
   height: 30px;
@@ -195,4 +197,31 @@ select {
 .deletebuttons:hover {
   border: 1px solid black;
   cursor: pointer;
+=======
+.button {
+  border: 1px solid black;
+  padding: 2.5px;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: white;
+}
+.button:hover {
+  border: 1px solid grey;
+
+  background-color: rgb(179, 174, 174);
+}
+.deleteButton {
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 2.5px 5px;
+  border-radius: 10px;
+  width: max-content;
+  height: 30px;
+  background-color: white;
+}
+.button:hover {
+  border: 1px solid grey;
+  background-color: rgb(179, 174, 174);
+>>>>>>> 55d74f266efc98d35d6f1c0975505fa940c59f7e
 }

@@ -137,8 +137,9 @@
 }
 .story_team_grid {
   display: grid;
+
   grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(7, 260px);
+  grid-template-rows: repeat(7, max-content);
   gap: 20px;
 }
 .story_team_grid > div {

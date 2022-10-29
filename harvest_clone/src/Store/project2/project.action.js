@@ -13,21 +13,42 @@ export const getProject = (page) => async (dispatch) => {
   dispatch({ type: GET_PROJECTS_LOADING });
   try {
     let res = await axios.get(
-      `http://localhost:8000/projects/projects?page=${page}`
+      `https://harvest3.herokuapp.com/projects/projects?page=${page}`
     );
-    console.log("j:", res.data.data);
-    dispatch({ type: GET_PROJECTS_SUCCESS, payload: res.data.data });
+    // console.log("j:", res.data);
+    dispatch({
+      type: GET_PROJECTS_SUCCESS,
+      payload: res.data.data,
+      totalPages: res.data.totalPages,
+    });
     return res.data.data;
   } catch (error) {
     dispatch({ type: GET_PROJECTS_ERROR });
   }
 };
+// export const getClient = (client, page) => async (dispatch) => {
+//   dispatch({ type: GET_PROJECTS_LOADING });
+//   try {
+//     let res = await axios.get(
+//       `https://harvest3.herokuapp.com/projects/projects?client_name=${client}page=${page}`
+//     );
+//     // console.log("j:", res.data);
+//     dispatch({
+//       type: GET_PROJECTS_SUCCESS,
+//       payload: res.data.data,
+//       totalPages: res.data.totalPages,
+//     });
+//     return res.data.data;
+//   } catch (error) {
+//     dispatch({ type: GET_PROJECTS_ERROR });
+//   }
+// };
 
 export const postData = (creds) => async (dispatch) => {
   console.log(creds);
   try {
     const response = await axios.post(
-      "http://localhost:8000/projects/projects",
+      "https://harvest3.herokuapp.com/projects/projects",
       creds
     );
     // console.log(response);
@@ -41,10 +62,10 @@ export const patchData = (id, page, creds) => async (dispatch) => {
   console.log(creds);
   try {
     const response = await axios.patch(
-      "http://localhost:8000/expenses/expenses/" + id,
+      "https://harvest3.herokuapp.com/expenses/expenses/" + id,
       creds
     );
-    console.log(response);
+    // console.log(response);
     dispatch({ type: EDIT_PROJECTS, payload: response.data });
     dispatch(getProject(null, page));
   } catch (e) {
@@ -54,7 +75,9 @@ export const patchData = (id, page, creds) => async (dispatch) => {
 
 export const deleteData = (id, page) => async (dispatch) => {
   try {
-    await axios.delete("http://localhost:8000/expenses/expenses/" + id);
+    await axios.delete(
+      "https://harvest3.herokuapp.com/expenses/expenses/" + id
+    );
     // console.log(response);
     dispatch({ type: DELETE_PROJECTS });
     dispatch(getProject(null, page));
@@ -64,7 +87,7 @@ export const deleteData = (id, page) => async (dispatch) => {
 };
 export const allDeleteData = (page) => async (dispatch) => {
   try {
-    await axios.delete("http://localhost:8000/expenses/expenses/");
+    await axios.delete("https://harvest3.herokuapp.com/expenses/expenses/");
     // console.log(response);
     dispatch({ type: ALL_DELETE_PROJECTS });
     dispatch(getProject(null, page));
