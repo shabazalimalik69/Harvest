@@ -12,10 +12,14 @@ let initialState = {
   loading: false,
   error: false,
   data: [],
+  totalPages: 1,
 };
 
-export const projectReducer = (state = initialState, { type, payload }) => {
-  //console.log(payload)
+export const projectReducer = (
+  state = initialState,
+  { type, payload, totalPages }
+) => {
+  // console.log(totalPages);
 
   switch (type) {
     case GET_PROJECTS_LOADING: {
@@ -37,6 +41,7 @@ export const projectReducer = (state = initialState, { type, payload }) => {
         loading: false,
         error: false,
         data: payload,
+        totalPages: totalPages,
       };
     }
 

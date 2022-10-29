@@ -113,7 +113,7 @@ const SignupSection = () => {
               onChange={handleChange}
               type="text"
               name="last_name"
-              placeholder="First name"
+              placeholder="Last name"
             />
             <Input
               ref={inputValue3}

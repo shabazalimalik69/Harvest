@@ -8,28 +8,22 @@ import { getProject, postData } from "../../../Store/project2/project.action";
 
 const NewProjects = () => {
   let { loading, data } = useSelector((store) => store.projects);
-  const [creds, setCreds] = useState({}); 
+  const [creds, setCreds] = useState({});
   console.log(data);
 
   const dispatch = useDispatch();
 
   const addProject = () => {
-    dispatch (postData(creds));
+    dispatch(postData(creds));
   };
 
   const onChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setCreds({
-        ...creds,
-        [name]: value,
+      ...creds,
+      [name]: value,
     });
   };
-
-
-    
-
-  
-
 
   useEffect(() => {
     dispatch(getProject());
@@ -92,7 +86,7 @@ const NewProjects = () => {
             <div className={NewProjectCSS.date_start_end}>
               <input
                 className={NewProjectCSS.date}
-                type="text"
+                type="date"
                 name="date"
                 placeholder="Starts on "
                 onChange={onChange}
@@ -102,11 +96,9 @@ const NewProjects = () => {
               {/* date */}
               <input
                 className={NewProjectCSS.date}
-                type="text"
-                
+                type="date"
                 placeholder="Ends on"
                 // value={user.date}
-                
               />
             </div>
             <p className={NewProjectCSS.p1}>
@@ -181,9 +173,11 @@ const NewProjects = () => {
               <div className={NewProjectCSS.budget_first_box}>
                 {/* rates */}
 
-                <input type="text" placeholder="Project billable rate" 
-                name="rates"
-                onChange={onChange}
+                <input
+                  type="text"
+                  placeholder="Project billable rate"
+                  name="rates"
+                  onChange={onChange}
                 />
                 <p className={NewProjectCSS.p2}>$</p>
                 <input
@@ -203,12 +197,11 @@ const NewProjects = () => {
                   <input
                     type="text"
                     placeholder="Total project hour"
-                    
+
                     // value={user.budgetperhour}
-                
                   />
 
-                  <input type="text" name="budgetperhour"     onChange={onChange}/>
+                  <input type="text" name="budgetperhour" onChange={onChange} />
                   <p className={NewProjectCSS.p2}>hour</p>
                 </div>
 
@@ -245,7 +238,7 @@ const NewProjects = () => {
           onClick={addProject}
           className={NewProjectCSS.saveProjectbtn}
         >
-          Save project
+          <Link to="/projects">Save project</Link>
         </button>
 
         <button className={NewProjectCSS.cancelcss}>Cancel</button>

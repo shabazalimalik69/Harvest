@@ -11,11 +11,15 @@ export const getData = (token, page) => async (dispatch) => {
   //   console.log(page);
   try {
     const response = await axios.get(
-      `http://localhost:8000/expenses/expenses?page=${page}`,
+      `https://harvest3.herokuapp.com/expenses/expenses?page=${page}`,
       { headers: { token: token } }
     );
-    // console.log(response.data.data);
-    dispatch({ type: GET_PROJECT, payload: response.data.data });
+    // console.log(response);
+    dispatch({
+      type: GET_PROJECT,
+      payload: response.data.data,
+      totalPages: response.data.totalPages,
+    });
     return response.data;
   } catch (r) {
     console.log(r.message);
@@ -26,7 +30,7 @@ export const postData = (creds) => async (dispatch) => {
   console.log(creds);
   try {
     const response = await axios.post(
-      "http://localhost:8000/expenses/expenses",
+      "https://harvest3.herokuapp.com/expenses/expenses",
       creds
     );
     // console.log(response);
@@ -36,15 +40,15 @@ export const postData = (creds) => async (dispatch) => {
   }
 };
 export const patchData = (id, page, creds) => async (dispatch) => {
-  console.log(creds);
+  // console.log(creds);
   try {
     const response = await axios.patch(
-      "http://localhost:8000/expenses/expenses/" + id,
+      "https://harvest3.herokuapp.com/expenses/expenses/" + id,
       creds
     );
-    console.log(response);
+    console.log("response", response);
     dispatch({ type: EDIT_PROJECT, payload: response.data });
-    dispatch(getData(null, page));
+    // getData(null, page);
   } catch (e) {
     console.log(e.message);
   }
@@ -52,7 +56,9 @@ export const patchData = (id, page, creds) => async (dispatch) => {
 
 export const deleteData = (id, page) => async (dispatch) => {
   try {
-    await axios.delete("http://localhost:8000/expenses/expenses/" + id);
+    await axios.delete(
+      "https://harvest3.herokuapp.com/expenses/expenses/" + id
+    );
     // console.log(response);
     dispatch({ type: DELETE_PROJECT });
     dispatch(getData(null, page));
@@ -62,7 +68,7 @@ export const deleteData = (id, page) => async (dispatch) => {
 };
 export const allDeleteData = (page) => async (dispatch) => {
   try {
-    await axios.delete("http://localhost:8000/expenses/expenses/");
+    await axios.delete("https://harvest3.herokuapp.com/expenses/expenses/");
     // console.log(response);
     dispatch({ type: ALL_DELETE_PROJECT });
     dispatch(getData(null, page));

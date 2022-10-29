@@ -1,6 +1,8 @@
 import style from "./Expanses.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { getProject } from "../../Store/project2/project.action";
 import {
   allDeleteData,
   deleteData,
@@ -10,8 +12,10 @@ import {
 } from "../../Store/expanse/expanse.action";
 
 const Expanses = () => {
-  const { data } = useSelector((store) => store.expanse);
+  const { expanseData } = useSelector((store) => store.expanse);
+  const { totalPages } = useSelector((store) => store.expanse);
   const token = useSelector((store) => store.auth.token);
+  const { data } = useSelector((store) => store.projects);
   const [show, setShow] = useState(true);
   const [page, setPage] = useState(1);
   const [show1, setShow1] = useState(true);
@@ -19,6 +23,7 @@ const Expanses = () => {
   const [editId, setEditId] = useState(-1);
   const [editHide, setEditHide] = useState(true);
   const dispatch = useDispatch();
+  // console.log(data);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -28,20 +33,20 @@ const Expanses = () => {
     });
   };
   const onEdit = (id) => {
-    setEditHide(true);
     setEditId(id);
   };
   const deleteExpanses = (id) => {
-    console.log(id);
     dispatch(deleteData(id, page));
   };
   const patchExpanses = (id) => {
     setEditHide(false);
-    console.log(id);
+
     dispatch(patchData(id, page, creds));
   };
+
+  // console.log(creds, creds2);
+
   const allDeleteExpanses = () => {
-    console.log("hi");
     dispatch(allDeleteData());
   };
   const addExpanses = () => {
@@ -49,13 +54,14 @@ const Expanses = () => {
   };
 
   useEffect(() => {
-    if (data) {
+    if (expanseData.length > 0) {
       setShow1(false);
     } else {
       setShow1(true);
     }
     dispatch(getData(token, page));
-  }, [page]);
+    dispatch(getProject(page));
+  }, [page, expanseData.length, dispatch]);
   // console.log(data);
   return (
     <div className={style.expanses}>
@@ -81,13 +87,19 @@ const Expanses = () => {
             </div>
             <div className={style.column2}>
               <h2 className={style.h2}>Project/Category</h2>
-              <input
+              <select
                 onChange={onChange}
                 name="project_name"
                 className={style.input_data}
                 type="text"
                 placeholder="project name"
-              />
+              >
+                {data.map((elem) => (
+                  <option key={elem.id} value={elem.project_name}>
+                    {elem.project_name}
+                  </option>
+                ))}
+              </select>
               <select
                 onChange={onChange}
                 name="category"
@@ -121,6 +133,7 @@ const Expanses = () => {
                 <button
                   onClick={() => {
                     addExpanses();
+                    setShow(true);
                   }}
                   className={style.expanses_save_button}
                   type="button"
@@ -146,10 +159,13 @@ const Expanses = () => {
         </form>
         {/* ----------------------------------------------------------------------------------------- */}
         <div className="show_added_data">
-          {data?.map((elem) =>
+          {expanseData?.map((elem) =>
             elem.id === editId ? (
-              <form className={style.show_expanse}>
-                <div className={style.expanse_form}>
+              <form
+                key={elem.id}
+                className={editHide ? style.hide_expanse : style.show_expanse}
+              >
+                <div key={elem.id} className={style.expanse_form}>
                   <div className={style.column1}>
                     <h2 className={style.h2}>Date</h2>
                     <input
@@ -157,7 +173,7 @@ const Expanses = () => {
                       type="date"
                       name="date"
                       placeholder="Date"
-                      value={elem.date}
+                      // value={elem.date}
                     />
                   </div>
                   <div className={style.column2}>
@@ -168,13 +184,13 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="project name"
-                      value={elem.project_name}
+                      // value={elem.project_name}
                     />
                     <select
                       onChange={onChange}
                       name="category"
                       className={style.input_data}
-                      value={elem.category}
+                      // value={elem.category}
                     >
                       <option value="">Choose category</option>
                       <option value="Entertainment">Entertainment</option>
@@ -189,7 +205,7 @@ const Expanses = () => {
                       className={style.input_data}
                       type="text"
                       placeholder="Notes"
-                      value={elem.notes}
+                      // value={elem.notes}
                     />
                     <input className={style.input_data} type="file" />
                     <div className={style.column}>
@@ -197,19 +213,22 @@ const Expanses = () => {
                         onChange={onChange}
                         type="checkbox"
                         name="billable"
-                        value={elem.billable}
+                        // value={elem.billable}
                       />
                       <p>This expense is billable</p>
                     </div>
                     <div className={style.Expanse_detail_submit}>
                       <button
-                        onClick={() => patchExpanses(elem.id)}
+                        onClick={() => {
+                          patchExpanses(elem.id);
+                          setEditHide(true);
+                        }}
                         className={style.expanses_save_button}
                         type="button"
                       >
                         Update Expanses
                       </button>
-                      <button type="button" onClick={() => onEdit()}>
+                      <button type="button" onClick={() => setEditHide(true)}>
                         Cancel
                       </button>
                       <button
@@ -231,7 +250,7 @@ const Expanses = () => {
                       className={style.amount_input}
                       type="number"
                       placeholder="Amount"
-                      value={elem.amount}
+                      // value={elem.amount}
                     />
                   </div>
                 </div>
@@ -252,6 +271,7 @@ const Expanses = () => {
                   className={style.elem_button}
                   onClick={() => {
                     onEdit(elem.id);
+                    setEditHide(false);
                   }}
                   type="button"
                 >
@@ -260,11 +280,16 @@ const Expanses = () => {
               </div>
             )
           )}
-          <button type="button" onClick={allDeleteExpanses}>
+          <button
+            type="button"
+            className={style.deleteButton}
+            onClick={allDeleteExpanses}
+          >
             DELETE ALL
           </button>
           <div className={style.page}>
             <button
+              className={style.button}
               type="button"
               disabled={page <= 1}
               onClick={() => {
@@ -273,10 +298,11 @@ const Expanses = () => {
             >
               Prev
             </button>
-            <button>{page}</button>
+            <button className={style.button}>{page}</button>
             <button
+              className={style.button}
               type="button"
-              disabled={page >= 10}
+              disabled={page >= totalPages}
               onClick={() => {
                 setPage(page + 1);
               }}
